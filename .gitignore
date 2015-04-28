@@ -1,3 +1,7 @@
+*.nav
 *.aux
-*.out
 *.log
+*.toc
+*.out
+*.snm
+*.vrb
