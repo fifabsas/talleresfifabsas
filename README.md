@@ -1,9 +1,12 @@
 # Talleres FIFA Bs As
 ![Tayer de Python](https://github.com/Fifabsas/TayeresFifabsas/raw/master/python/difusion/python_flyer_2015_1c.png)
 
+### Inscripción
+Para mejorar nuestros talleres te pedimos que completes [un formulario](http://goo.gl/forms/x8ZkT2g026), que se tarda tres segundos en completar (cronometrados). Obviamente el formulario no es requisito para tomar parte del taller.
+
 ### Recursos
 Para los que no llegaron a anotar o se lo perdieron pero quieren venir al segundo, [acá está la presentación](https://github.com/Fifabsas/TayeresFifabsas/raw/master/python/introductorio/presentacion.pdf).  
-Si lograste terminar la guía, no vas a tener problemas en el próximo encuentro. De todos modos *¡No te lo pierdas!*
+Si lograste terminar [la guía](https://github.com/Fifabsas/TayeresFifabsas/raw/master/python/introductorio/ejercicios.pdf), no vas a tener problemas en el próximo encuentro. Aún así, venite. *¡No te lo pierdas!*
 
 ### Más info
 Para consultas tenemos un [grupo en Facebook](https://www.facebook.com/groups/303815376436624/) y además podés mandar un mail a [fifabsas@gmail.com](mailto:fifabsas@gmail.com)
