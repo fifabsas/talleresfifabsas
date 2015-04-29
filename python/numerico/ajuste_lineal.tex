@@ -1,0 +1,144 @@
+\documentclass[twoside]{article}
+%\include{amsfonts}
+\usepackage{amssymb,amsmath,amsthm,latexsym,epsfig,euscript,multicol}
+%\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}% idioma castellano
+
+% Caracteres especiales
+\def\A{\mathbb{A}}
+\def\C{\mathbb{C}}
+\def \N{\mathbb{N}}
+\def \P{\mathbb{P}}
+\def \Q{\mathbb{Q}}
+\def \R{\mathbb{R}}
+\def \Z{\mathbb{Z}}
+
+\def\zC{\mathbb{C}}
+\def \zN{\mathbb{N}}
+
+\def \zQ{\mathbb{Q}}
+\def \zR{\mathbb{R}}
+\def \zZ{\mathbb{Z}}
+
+%  Ejercicio:
+\newtheorem{ejer}{Unidad}
+\newcommand{\bej}{\begin{ejer} \rm}
+\newcommand{\fej}{\end{ejer}}
+
+
+%
+\def\d{\displaystyle}
+
+%Encabezado y pie de página
+\usepackage{fancyhdr} % Headers and footers
+\setlength{\headwidth}{16.5cm}
+\pagestyle{fancy} % All pages have headers and footers
+
+
+\renewcommand{\headrulewidth}{1.5pt}
+
+
+\renewcommand{\footrulewidth}{1.5pt}
+
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[L]{Taller de Programación para laboratorio} % Custom header text
+\fancyhead[R]{{\small Departamento de Física, FCEN, UBA}}% Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+\fancyfoot[LO,RE]{FIFA}
+
+
+\topmargin-2cm \vsize 29.5cm \hsize 21cm
+\setlength{\textwidth}{16.5cm} \setlength{\textheight}{23.5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%\linespread{1.4cm}
+\usepackage{setspace}
+ \onehalfspacing
+
+%-------------------------------------------------------------------------------------------------
+%-------------------------------COMIENZA EL TEXTO-------------------------------------------------
+%-------------------------------------------------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+
+\vskip 1cm
+
+\centerline{{\small \textit{Departamento de Física}}}
+\centerline{{\small \textit{Facultad de Ciencias Exactas y Naturales }}}
+\centerline{{\small \textit{Universidad de Buenos Aires}}}
+\vskip 1cm
+
+\centerline{{\bf\large {\sc Programación para laboratorio}}}
+
+\centerline{{\bf\large {\sc $1^{er}$ cuatrimestre 2015}}}
+
+\centerline{{\ttfamily Talleres FIFA}}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.15\textwidth]{fig/Python.png}
+ \label{FIFA}
+ \end{figure}
+ 
+
+\bigskip
+
+
+\centerline{\bf  Ajuste lineal}
+
+\bigskip
+
+Se puede probar, dentro del contexto de \textit{cuadrados mínimos} que para un ajuste lineal vale que:
+
+\begin{equation}
+a = \displaystyle\frac{N\sum x_i y_i - \sum x_i \sum y_i}{N \sum x_i^2 - (\sum x_i)^2}
+\end{equation}
+
+\begin{equation}
+b = \d\frac{\sum x_i^2 \sum y_i - \sum x_i \sum x_i y_i}{N \sum x_i^2 - (\sum x_i)^2}
+\end{equation}
+
+
+Donde las desviaciones son calculadas como:
+
+\begin{equation}
+\sigma_a = \sigma_y \sqrt{ \d\frac{N}{N \sum x_i^2 - (\sum x_i)^2}}
+\end{equation}
+
+\begin{equation}
+\sigma_b = \sigma_y \sqrt{\d\frac{\sum x_i^2}{N \sum x_i^2 - (\sum x_i)^2}}
+\end{equation}
+
+\begin{equation}
+\sigma_y = \sqrt{\d\frac{1}{N-2}\sum [y_i -y(x_i)]^2}
+\end{equation}
+
+
+
+En último lugar, la determinación del coeficiente de Pearson, R2, para la bondad del ajuste se calcula, a partir de los datos experimentales, por medio de la siguiente expresión:
+
+\begin{equation}
+R^2 = \d\frac{[N\sum x_i y_i - \sum x_i \sum y_i]^2}{[N \sum x_i^2 - (\sum x_i)^2][N \sum y_i^2 - (\sum y_i)^2]}
+\end{equation}
+
+Aplicaremos entonces estas funciones considerando que en \textit{Python}, estas expresiones se escriben como:
+
+\begin{enumerate}
+\item $x_i$ es x
+\item $x_i^2$ es x**2
+\item $\sqrt{x_i}$ es np.sqrt(x)
+\item $\sum x_i$ es np.sum(x)
+\item $\sum x_i^2$ es np.sum(x**2)
+\item $\sum x_i y_i$ es np.sum(x*y)
+\item $(\sum x_i)^2$ es np.sum(x)**2
+\end{enumerate}
+
+\end{document}
