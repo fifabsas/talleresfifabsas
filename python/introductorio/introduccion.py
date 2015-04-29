@@ -1,12 +1,43 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 19 15:23:33 2015
+
+@author: FIFA
+
+Lista de temas: 
+
+
+>> Print y raw_input
+
+>> Variables y operaciones:
+
+    >> Integers
+    >> Floats
+    >> Booleans
+    >> List and tuples
+
+>> Condicionales y ciclos: if, for and while
+
+>> Funciones def y lambda
+
+>> Gráficos:
+
+    >> Creación de una lista de valores aleatorios
+    >> Gráfico en scatter y plot
+
+"""
+
+
 print('Hola mundo')
 print('\t')
 print('Mi nuevo mundo')
 
-texto = raw_input('Escribi algo: ')
+#texto = raw_input('Escribi algo: ')
 
-print('Acabas de decir: ' + '"' + texto + '"')
+#print('Acabas de decir: ' + '"' + texto + '"')
 
 
+#------------------------------------------------
 
 
 #Variables
@@ -112,3 +143,5 @@ plt.scatter(x, y)
 plt.xlabel('Variable independiente')
 plt.ylabel('x^2')
 plt.grid()
+
+plt.show()
