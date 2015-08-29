@@ -13,7 +13,8 @@ Con lo anterior se instala la mayoría de los paquetes, pero en caso de necesita
 ### Editores/IDEs de TeX
 Estos programas son editores de texto con ventajas para la escritura de LaTeX o TeX, como autocompletado, búsqueda de referencias, marcado de sintaxis, generación de tablas. 
 - [TeXMaker](http://www.xm1math.net/texmaker/download.html)
-- [ShareLatex](http://www.sharelatex.com)
+- [ShareLatex](http://www.sharelatex.com)  
+ 
 Después cada uno elige el que le gusta más para trabajar.
 
 ### Visores de archivo .pdf
