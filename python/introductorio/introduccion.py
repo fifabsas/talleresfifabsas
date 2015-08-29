@@ -1,31 +1,27 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Apr 19 15:23:33 2015
 
-@author: FIFA
+# #Curso introductorio de Python
 
-Lista de temas: 
+# ##Lista de temas: 
 
 
->> Print y raw_input
+# * Print y raw_input
 
->> Variables y operaciones:
+# * Variables y operaciones:
 
-    >> Integers
-    >> Floats
-    >> Booleans
-    >> List and tuples
+#    - Integers
+#    - Floats
+#    - Booleans
+#    - List and tuples
 
->> Condicionales y ciclos: if, for and while
+# * Condicionales y ciclos: if, for and while
 
->> Funciones def y lambda
+# * Funciones def y lambda
 
->> Gráficos:
+# * Gráficos:
+#   - Creación de una lista de valores aleatorios
+#   - Gráfico en scatter y plot
 
-    >> Creación de una lista de valores aleatorios
-    >> Gráfico en scatter y plot
-
-"""
 
 
 print('Hola mundo')

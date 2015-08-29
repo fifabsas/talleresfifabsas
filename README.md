@@ -4,10 +4,12 @@
 ### Inscripción
 Para mejorar nuestros talleres te pedimos que completes [un formulario](http://goo.gl/forms/x8ZkT2g026), que se tarda tres segundos en completar (cronometrados). Obviamente el formulario no es requisito para tomar parte del taller.
 
-### Recursos
+### Talleres
 
 #### LaTeX
-Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [ShareLatex](http://www.sharelatex.com), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles.
+Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [ShareLatex](http://www.sharelatex.com), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles. 
+
+[Recursos LaTeX](http://github.com/fifabsas/talleresfifabsas/raw/master/latex/README.md)
 
 #### Python
 Nosotros usamos Python 2.7, que lo podés bajar con todas las librerías en el paquete [Anaconda](http://continuum.io/downloads). Como entorno de desarrollo podemos usar Spyder, que lo instala Anaconda, o podemos usar IPython, en la versión notebook, que te da un entorno muy interactivo web.  
