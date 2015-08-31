@@ -28,43 +28,33 @@ print('Hola mundo')
 print('\t')
 print('Mi nuevo mundo')
 
-#texto = raw_input('Escribi algo: ')
 
+# #Entrada y salida, como interaccionar con Python
+#texto = raw_input('Escribi algo: ')
 #print('Acabas de decir: ' + '"' + texto + '"')
 
 
-#------------------------------------------------
-
-
-#Variables
-#--------------------------------------------------------------------------------------
+# #Variables
+# Acá vamos a crear algunas variables con sus respetivos tipos
 
 integer = 5
-
 print type(integer)
-
 flotante = 5.0
-
 print type(flotante)
 
 division = integer / flotante
-# +, -, *, **, log(), exp, pow. >>>>> Numpy!
-
 print division
 
-division = int(division)
-
+division = int(division)   #Transformación a entero
 print division,'\t', type(division)
 
-#round, ceil, floor, trunc >>>>>> Numpy!
-
-
+# En la próxima entrega vamos a ver otras funcionalidades con Numpy
+# Los tipos booleanos o de verdad son muy útiles para escribir relaciones lógicas
 boolean = 5==4
 # <, >, >=, <=, !=
-
 print boolean, '\t', type(boolean)
 
-
+# Las listas pueden mantener varias variables con diferentes tipos y valores. Son como una bolsa ordenada de datos.
 lista1= [1, 2, 3]
 print lista1[1]
 
@@ -79,52 +69,65 @@ print lista1
 lista1.extend(lista2)
 print lista1
 
-#probar insert, remove, pop, sort
-#que cosas se pueden hacer con tuplas?
+# Probar los métodos insert, remove, pop, sort de las listas
 
 
-#Funciones, condicionales y ciclos
-#------------------------------------------------------------------------------
+# ##Funciones, condicionales y ciclos
 
+# Control de flujo de código con condicionales (Ifs).
 if boolean == True:
     boolean = False
-    
+
+# Se puede volver tan complejo como uno quiera
 if 5>4:
     if 3 >2:
         if 2>1:
             if 1>0:
                 print 'Cadena de ifs'
 
+# También podemos agregarle un "si no"
+if boolean == True:
+    boolean = False
+else:
+    boolean = True
+    
+# Y también, un "si no, si"
+if boolean == True:
+    print("True")
+elif 1 < 5:
+    print(False)
+else:
+    print("Finalmente")
 
+# ### Bucles y repeticiones
+# Acá vamos a hacer algunas repeticiones
 nueva_lista = []
 for i in range (20):
     nueva_lista.append(i)
-    
-print nueva_lista
+print(nueva_lista)
 
 if len(nueva_lista) <= 20:
     for i in range(20):
         nueva_lista.append(i)
         
-print nueva_lista
+print(nueva_lista)
 
+# ###Funciones
 def factorialcasero(n):
     resultado = 1
     for i in range(n):
         resultado *= i+1
     return resultado
 
-print factorialcasero(6)
+print(factorialcasero(6))
 
+#Funciones anonimas o lambda
 par = lambda n: n%2 == 0 #Me devuelve True si es par
-
-print type(par), '\t', par(5)
-
+print(type(par), '\t', par(5))
 
 
-#Gráficos
-#---------------------------------------------------------------------------------
 
+# ##Gráficos
 import numpy as np
 from matplotlib import pyplot as plt
 
