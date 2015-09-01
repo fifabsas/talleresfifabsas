@@ -1,9 +1,12 @@
 # Taller de Python
 
+![talleres de python fifa](https://raw.githubusercontent.com/fifabsas/talleresfifabsas/master/python/difusion/logos_python_fifa.png)
+
 ## Recursos
 
 ### Elementos del taller
  - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/presentacion.pdf)
+ - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/introduccion.ipynb)
  - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/ejercicios.pdf)
  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf)
  - Cuaderno del taller numérico: EN PROGRESO
