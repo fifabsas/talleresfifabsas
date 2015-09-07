@@ -1,10 +1,10 @@
-﻿\documentclass[twoside]{article}
+\documentclass[a4paper]{article}
 %\include{amsfonts}
 \usepackage{amssymb,amsmath,amsthm,latexsym,epsfig,euscript,multicol}
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{float}
-
+\usepackage[margin=2cm]{geometry}
 \usepackage{hyperref}
 
 \usepackage[utf8x]{inputenc}
@@ -55,10 +55,10 @@
 \fancyfoot[LO,RE]{FIFA}
 
 
-\topmargin-2cm \vsize 29.5cm \hsize 21cm
-\setlength{\textwidth}{16.5cm} \setlength{\textheight}{23.5cm}
-\setlength{\oddsidemargin}{0.0cm}
-\setlength{\evensidemargin}{0.0cm}
+%\topmargin-2cm \vsize 29.5cm \hsize 21cm
+%\setlength{\textwidth}{16.5cm} \setlength{\textheight}{23.5cm}
+%\setlength{\oddsidemargin}{0.0cm}
+%\setlength{\evensidemargin}{0.0cm}
 
 %\linespread{1.4cm}
 \usepackage{setspace}
@@ -85,10 +85,10 @@
 
 \begin{figure}[H]
  \centering
- \includegraphics[width=0.15\textwidth]{../difusion/logo_python_fifa.png}
+   \includegraphics[width=0.3\textwidth]{../difusion/logos_python_fifa.png}
  \label{FIFA}
  \end{figure}
- 
+
 \bigskip
 
 
@@ -121,7 +121,7 @@ Haga que Python realice las siguientes tareas:
 \begin{enumerate}
  \item Escriba el texto 'Hola mundo'.
  \item A continuación deje un espacio de tabulación (pruebe con $\backslash t$).
- 
+
  \item Guarde en una variable el texto 'Me tiemblan los dedos de la emoción de saber que estoy programando'.
  \item Guarde en dos variables dos textos, y que imprima ambas variables separadas por un espacio de tabulación. (¿Se puede usar el + para eso?)
  \item Pruebe escribir a=int(raw\_input('Dale un valor a \textit{a}: ')) ¿Qué tipo de variable es $a$? ¿Por qué sería necesario el comando \textit{int}?
@@ -154,7 +154,7 @@ Haga que Python realice las siguientes tareas:
 
 ¿Qué diferencia hay entre ambos tipos de variables?
 
-\begin{enumerate} 
+\begin{enumerate}
  \item Arme una lista con las materias en las que debe el examen final.
  \item Pasó el cuatrimestre y nos colgamos todos. Agregue un elemento a la lista anterior (\textit{append}) y pedile que te muestre el segundo elemento.
  \item ¿Cuál es la diferencia entre \textit{extend} y \textit{append}? ¿Y con  \textit{insert}?
@@ -164,7 +164,7 @@ Haga que Python realice las siguientes tareas:
 \end{enumerate}
 \end{itemize}
 \fej
-  
+
   \bigskip
 
 \bej \textbf{Librerías}
@@ -248,4 +248,3 @@ Intente crear los siguientes juegos en Python:
 
 
 \end{document}
-
