@@ -1,5 +1,6 @@
 #define NUM_READINGS 128
 #define STEP_PIN 10
+#define GROUND_PIN 9
 #define SENSOR_PIN A0
 
 uint32_t times[NUM_READINGS];
@@ -9,6 +10,8 @@ uint16_t refValues[NUM_READINGS];
 void setup() {
  //ADCSRA=(ADCSRA&0xF80)|0x05; //Permite tener más muestras por segundo
  analogWrite(STEP_PIN, 127);
+ pinMode(GROUND_PIN, OUTPUT);
+ digitalWrite(GROUND_PIN, LOW);
  Serial.begin(9600);
 }
 
