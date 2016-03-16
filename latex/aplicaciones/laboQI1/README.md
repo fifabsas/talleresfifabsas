@@ -1,1 +1,1 @@
-Estos trabajos son informes del laboratorio de QuÌmica Inorg·nica 1. Est·n publicados con la licencia del proyecto, asÌ que deben ser referenciados correctamente si se piensa darle un uso. CortesÌa de Cecilia Rojas y David Zarate.
+Estos trabajos son informes del laboratorio de Qu√≠mica Inorg√°nica 1 de la carrera de Lic. en Ciencias Quimicas de la Universidad de Sarmiento. Est√°n publicados con la licencia del proyecto, as√≠ que deben ser referenciados correctamente si se piensa darle un uso. Cortes√≠a de Cecilia Rojas y David Zarate.
