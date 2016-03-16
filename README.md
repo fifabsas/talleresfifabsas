@@ -21,7 +21,7 @@ Si lograste terminar [la guía](https://github.com/Fifabsas/TayeresFifabsas/raw/
 Para consultas tenemos un [grupo en Facebook](https://www.facebook.com/groups/303815376436624/) y además podés mandar un mail a [fifabsas@gmail.com](mailto:fifabsas@gmail.com)
 
 ## Cómo usar este repositorio
-En la carpeta [tutorial_git]((http://github.com/fifabsas/talleresfifabsas/tree/master/tutorial_git) está un tutorial visual para manejarse con Github, más que nada si no son administradores y necesitan agregar contenido.
+En la carpeta [tutorial_git](http://github.com/fifabsas/talleresfifabsas/tree/master/tutorial_git) está un tutorial visual para manejarse con Github, más que nada si no son administradores y necesitan agregar contenido.
 
 ### Página web Talleres
 La página web está en la rama [gh-pages](https://github.com/fifabsas/talleresfifabsas/tree/gh-pages). Ahí hay un pequeño tutorial de como cambiarla.
