@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[symbols]{circuitikz}
+\usepackage{tikz}
+\begin{document}
+
+\begin{circuitikz} \draw
+ (0,0) to[C, l=$10\micro\farad$] (0,2) -- (0,3)
+  to[R, l=$2.2\kilo\ohm$] (4,3) -- (4,2)
+  to[L, l=$12\milli\henry$, i=$i_1$] (4,0) -- (0,0)
+ (4,2) to[D*, *-*] (2,0) to [D*, -*] (0,2)
+  to[R, l=$1\kilo\ohm$] (2,2)   to[cV, v=$0.3\kilo\ohm i_1$] (4,2)
+ (2,0) to[I, i=$1\milli\ampere$:15, -*] (2,2)
+;
+\end{circuitikz}
+
+\begin{circuitikz} \draw
+ (0,0) node[ground] {}
+  to[V, v=$e(t)$, *-*] (0,2) to[C, l=$4\nano\farad$] (2,2)
+  to [R, l=$\frac{1}{4}\kilo\ohm$, *-*] (2,0)
+ (2,2) to[R, l=$1\kilo\ohm$] (4,2)
+  to[C, l=$2\nano\farad$:-90, *-*] (4,0)
+ (5,0) to[I, i=$a(t)$:-90, -*] (5,2) -- (4,2)
+ (0,0) -- (5,0)
+ (0,2) -- (0,3) to[L, l=$2\milli\henry$] (5,3) -- (5,2)
+
+ {[anchor=south east] (0,2) node {1} (2,2) node {2} (4,2) node {3}}
+;\end{circuitikz}
+
+\begin{circuitikz} \draw
+ (0,0) node[anchor=east]{B}
+  to[short, o-*] (1,0)
+  to[R, l=$20\ohm$, *-*] (1,2)
+  to [R, v=$v_x$, l=$10\ohm$] (3,2)
+  to[short] (4,2) to[cI, i=$\frac{\siemens}{5}v_x$, *-*] (4,0)
+   to[short] (3,0) to[R, l=$5\ohm$, *-*] (3,2)
+ (3,0) -- (1,0)
+ (1,2) to[short, *-o] (0,2)
+  node[anchor=east]{A}
+;\end{circuitikz}
+
+\begin{circuitikz} \draw
+ (0,2) to[I, i=$1\milli\ampere$] (2,2)
+  to [R, l=$2\kilo\ohm$:-90, *-*] (0,0)
+  to [R, l=$2\kilo\ohm$] (2,0)
+  to[V, v=$2\volt$:-90] (2,2)
+  to[cspst, l=$t_0$] (4,2) -- (4,1.5)
+  to [generic, l=1, i=$i_1$, v=$v_1$] (4,-.5) -- (4,-1)
+ (0,2) -- (0,-1) to[V, v=$4\volt$] (2,-1)
+  to [R, l=$1\kilo\ohm$] (4,-1);
+
+ \begin{scope}[xshift=7.5cm, yshift=.5cm]
+  \draw [->] (-2,0)--(2.5,0) node[anchor=west] {$v_1 [\volt]$};
+  \draw [->] (0,-2)--(0,2) node[anchor=west] {$i_1 [\milli\ampere]$} ;
+  \draw (-1,0) node[anchor=north] {-2} (1,0) node[anchor=south] {2}
+   (0,1) node[anchor=west] {4} (0,-1) node[anchor=east] {-4} (2,0)
+   node[anchor=north west] {4} (-1.5,0) node[anchor=south east] {-3};
+  \draw [thick]
+   (-2,-1) -- (-1,1) -- (1,-1) -- (2,0) -- (2.5,.5);
+  \draw [dotted]
+   (-1,1) -- (-1,0) (1,-1) -- (1,0) (-1,1) -- (0,1) (1,-1) -- (0,-1);
+ \end{scope}
+\end{circuitikz}
+
+\end{document}
