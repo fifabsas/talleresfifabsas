@@ -1,1 +1,1 @@
-Este documento corresponde a la pr·ctica de Velocidad de ReacciÛn, efectuada en el laboratorio de QuÌmica Inorg·nica del DQI, FCEyN, UBA. CortesÌa de Cecilia Rojas y David Zarate
+Este documento corresponde a la pr√°ctica de Velocidad de Reacci√≥n, efectuada en el laboratorio de Qu√≠mica Inorg√°nica de la carrera de Lic. en Ciencias Quimicas de la Universidad de Sarmiento. Cortes√≠a de Cecilia Rojas y David Zarate
