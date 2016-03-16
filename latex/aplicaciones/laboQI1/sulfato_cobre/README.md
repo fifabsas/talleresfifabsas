@@ -1,1 +1,1 @@
-Este documento corresponde a la práctica de Purificación de sulfato de cobre, efectuada en el laboratorio de Química Inorgánica del DQI, FCEyN, UBA. Cortesía de Cecilia Rojas
+Este documento corresponde a la práctica de Purificación de sulfato de cobre, efectuada en el laboratorio de Química Inorgánica del la carrera Lic. en Ciencias Quimicas en la Universidad de Sarmiento. Cortesía de Cecilia Rojas
