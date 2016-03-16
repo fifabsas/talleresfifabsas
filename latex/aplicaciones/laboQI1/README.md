@@ -1,0 +1,1 @@
+Estos trabajos son informes del laboratorio de Química Inorgánica 1. Están publicados con la licencia del proyecto, así que deben ser referenciados correctamente si se piensa darle un uso. Cortesía de Cecilia Rojas y David Zarate.

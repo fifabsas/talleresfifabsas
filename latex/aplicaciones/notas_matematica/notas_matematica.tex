@@ -1,0 +1,339 @@
+\documentclass[%
+ aip,
+ jmp,%
+ amsmath,amssymb,
+%preprint,%
+ reprint,%
+%author-year,%
+%author-numerical,%
+]{revtex4-1}
+%\documentclass{revtex4-1}
+%{article} 
+%[a4paper,10pt]
+%paquetes
+\usepackage{graphicx}
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{amssymb}
+\usepackage{enumitem}
+%\usepackage{breqn}
+
+%caracteristicas de paginas
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\setlength\oddsidemargin{-0,21in}
+\setlength\evensidemargin{-0,21in}
+\setlength\topmargin{-2cm}
+\setlength\textwidth{7in}
+\setlength\textheight{9in}
+\setlength\parskip{0.1in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} 
+
+%\title{Notas}
+%\author{Fabrizio Dante Pauselli}
+%\maketitle
+
+%\tableofcontents  %lo ponemos para trabajo largos que necesiten indice
+
+\section{Axiomas de los Números Reales}
+
+Existe un conjunto que se denota por $\mathbb{R}$ que satisfacen los siguientes axiomas
+
+Existen dos operadores, $+$ y $\cdot$ de números reales que satisfacen:
+\begin{itemize}
+\item Axiomas de Cuerpo
+\begin{enumerate}[label=\bfseries S\arabic*)]
+\item Conmutatividad: $\forall a,b \in \mathbb{R}$, $a+b=b+a$.
+\item Asociatividad: $\forall a,b,c \in \mathbb{R}$, $(a+b)+c=a+(b+c)$.
+\item Existencia del neutro aditivo: $\exists !$ $ 0 \in \mathbb{R}$, tal que $\forall a \in \mathbb{R}$, $a+0=0+a=a$.
+\item Existencia del inverso aditivo: $\forall a \in \mathbb{R}$, $\exists !$ elemento notado $-a \in \mathbb{R}$, tal que $a+(-a)=(-a)+a=0$.
+\end{enumerate}
+\begin{enumerate}[label=\bfseries P\arabic*)]
+\item Conmutatividad: $\forall a,b \in \mathbb{R}$, $a \cdot b = b \cdot a$.
+\item Asociatividad: $\forall a,b,c \in \mathbb{R}$, $(a \cdot b)\cdot c=a \cdot (b \cdot c)$.
+\item Existencia del neutro multiplicativo: $\exists !$ $ 1 \in \mathbb{R}$, $1\neq 0$, tal que $\forall a \in \mathbb{R}$, $a \cdot 1= 1 \cdot a = a$.
+\item Existencia del inverso multiplicativo: $\forall a \in \mathbb{R}$, $a \neq 0$, $\exists !$ elemento notado $a^{-1}$ (o $\frac{1}{a}$) tal que $a \cdot a^{-1} = a^{-1} \cdot a = 1$.
+\end{enumerate}
+\begin{itemize}
+\item[\bfseries D)] Distributiva: $\forall a,b,c \in \mathbb{R}$, $a \ddot (b+c) = a \cdot b + a \cdot C$.
+\end{itemize}
+\end{itemize}
+
+Existe una relacion de orden $<$ tal que se cumplen:
+
+\begin{itemize}
+\item Axiomas de Orden
+\begin{enumerate}[label=\bfseries o\arabic*)]
+\item Orden total o dicotomía: $\forall a,b \in \mathbb{R}$, vale únicamente que $a<b$, o $a=b$, o $b<a$.
+\item Transitividad: $\forall a,b,c \ in \mathbb{R}$, si $a<b$ y $b<c$, entonces $a<c$.
+\item Compatibilidad de la suma: $forall a,b,c \in \mathbb{R}$, si $a<b$, entonces $a+c < b+c$.
+\item Compatibilidad con la multiplicacion: $\forall a,b \in \mathbb{R}$,
+\begin{itemize}
+\item si $c>0$ y $a<b$, entonces $a \cdot c< b \cdot c$
+\item si $c<0$ y $a<b$, entonces $a \cdot c> b \cdot c$
+\item si $c=0$, entonces $0 \cdot a = 0 = 0 \cdot b$.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+\item Axioma de Completitud
+\begin{itemize}
+\item[\bfseries C)] Toda sucesión creciente y acotada superiormente es convergente. 
+\end{itemize}
+\end{itemize}
+
+\subsection{Intervalos}
+\begin{itemize}
+\item Intervalo Abierto: $(a, b) = \{x \in \mathbb{R}$ $/  a < x < b\}$.
+\item Intervalo Cerrado: $[a, b] = \{x \in \mathbb{R}$ $ / a \leq x \leq b\}$.
+\item Intervalo semiabierto por la izquierda: $(a, b] = \{x \in \mathbb{R}$ $ / a < x \leq b\}$.
+\item Intervalo semiabierto por la derecha: $[a, b) = \{x \in \mathbb{R}$ $/ a \leq x < b\}$.
+\end{itemize}
+
+\subsection{Semirrectas}
+\begin{itemize}
+\item $x>a$: $(a, + \infty) = \{x \in \mathbb{R}$ $ / a < x < +\infty\}$.
+\item $x<a$: $(-\infty, a) = \{x \in \mathbb{R}$ $ / -\infty < x < a\}$.
+\item $x \geq a$: $[a, + \infty) = \{x \in \mathbb{R}$ $ / a \leq x < +\infty\}$.
+\item $x \leq a$: $(-\infty, a] = \{x \in \mathbb{R}$ $ / -\infty < x \leq a\}$.
+\end{itemize}
+
+\subsection{Unas palabras sobre números primos y números compuestos}
+Número primo es aquel número que tan sólo se puede dividir (dando resto 0) por 1 o por si mismo.
+
+Algunos números primos son; 1, 2, 3, 5, 7, 11, 13, 17, 19, $\cdots$
+
+Los números compuestos SIEMPRE se pueden escribir como el producto de dos o mas números primos, por ejemplo $4 = 2 \cdot 2$, $6 = 2 \cdot 3$, $8 = 2 \cdot 2 \cdot 2$, $9=3 \cdot 3$, $10 = 2 \cdot 5$, $12=2\cdot 2 \cdot 3$, $14= 2 \cdot 7$, $15 = 3 \cdot 5$, $16 = 2 \cdot 2 \cdot 2 \cdot 2$, $18 = 2 \cdot 3 \cdot 3$, $\cdots$ Este proceso se llama factorización, y sirve para poder resolver fracciones y exponenciales que en principio pueden parecer muy difíciles.
+
+\section{Propiedades de las operaciones}
+
+\subsection{Unas palabras}
+
+Sobre sumar no hay mucho que decir. En cuanto a la multiplicación, se la puede entender como una simplificación en la escritura de varias sumas de números iguales, así $2 \cdot 3 = 2 + 2 + 2 = 3 +3$, podemos pensar que es sumar 2 veces 3 o 3 veces 2.
+
+El siguiente paso lógico es buscar una simplificación en la escritura de varias multiplicaciones de números iguales, y esa es exactamente la idea de las exponenciales, de esa manera, $2^3=2\cdot 2\cdot 2 \neq 3\cdot 3$.
+
+Sobre la división, es una operación derivada de la multiplicación, que equivale a multiplicar por el inverso multiplicativo, por eso es llamada la inversa de la multiplicacion (asi como la resta es sumar el inverso aditivo y es llamada la inversa de la suma).
+
+Una fraccion $\frac{a}{b}$ no es otra cosa que tomar $a$ y dividirlo por $b$ ($a:b$), o lo que es lo mismo, tomar $a$ y multiplicarlo por $b^{-1}$ el inverso multiplicativo de $b$.
+
+Hablando de inversas, pensemos en la operacion exponencial. Si tengo una ecuacion de la forma $x^n=y$ y quiero saber el valor de $x$, me invento una operación que sea la inversa de elevar a la $n$, y la llamo raiz enésima, y la denoto $\sqrt[n]{a}$, tal que si $a=b^n$, entonces $\sqrt[n]{a}=b$. No tiene mayor dificultad salvo del detalle que si elevo a un número par, el resultado siempre es positivo, ($2^2=(-2)^2=4$) por mas que haya salido de un número negativo. Entonces, por convención, las raices pares dan como resultado un número positivo siempre (en nuestro ejemplo, $\sqrt{4}=\sqrt{(-2)^2}=2$), y no tiene sentido preguntarse cuánto es $\sqrt{-2}$, ya que cualquier número elevado al cuadrado siempre es positivo.
+
+Sigamos hablando de inversas y de exponenciales, recien vimos que para resolver una ecuación de la forma $x^n=y$ lo que hacía era tomar raiz, ¿Pero si en cambio la incógnita esta en el exponente? O sea $a^x=y$. Para ese caso, tengo que inventarme otra inversa, la llamada inversa de la exponencial, o logaritmo (que depende de la base, en nuestro caso, $a$), entonces la solución a esa ecuación seria $x=log_a(y)$. Por la forma en que se comportan las exponenciales, su inversa únicamente está definida para bases $a>0$, y para argumentos $y>0$.
+
+\subsection{Fracciones}
+
+\begin{itemize}
+\item $a=\frac{a}{1}$
+\item $\frac{a}{a}=1$
+\item $\frac{0}{a}=0$
+\item $\frac{a}{0}=\infty$ No esta definido
+\item $\frac{a}{b}=a \cdot \frac{1}{b}$
+\item $\frac{a + b}{c} = \frac{a}{c} + \frac{b}{c}$
+\item $\frac{a}{b + c} \neq \frac{a}{b} + \frac{a}{c}$
+\item $\frac{a}{b}+\frac{c}{d}=\frac{(a \cdot d) + (c \cdot b)}{b \cdot d}$
+\item $\frac{a \cdot b + a \cdot c}{a \cdot d + a \cdot e} = \frac{a \cdot (b + c)}{a \cdot (d +e)} = \frac{a}{a} \cdot \frac{b +c}{d + e} = \frac{b + c}{d + e}$
+\item $\frac{a/b}{c/d}=\frac{a}{b}:\frac{c}{d}=\frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b \cdot c}$
+\end{itemize}
+
+\subsection{Exponenciales}
+Para todo $a>0$, y $a \neq 1$, vale lo siguiente:
+\begin{itemize}
+\item $a^0=1$
+\item $a ^ 1 =a$
+\item $a^{-n} = \frac{1}{a^n}$
+\item $a^{\frac{m}{n}}=\sqrt[n]{a^m}$
+\item $a^m \cdot a^n = a^{m+n}$
+\item $\frac{a^m}{a^n} = a^{m-n}$
+\item $(a^m)^n = a^{m \cdot n}$
+\item $a^n \cdot b^n = (a \cdot b)^n$
+\item $\frac{a^n}{b^n} = (\frac{a}{b})^n$
+\end{itemize}
+
+\subsubsection{Logaritmos}
+\begin{itemize}
+\item $log_n(1)=0$
+\item $log_n(a \cdot b)=log_n(a)+log_n(b)$
+\item $log_n(\frac{a}{b})=log_n(a)-log_n(b)$
+\item $log_n(a^b)=b \cdot log_n(a)$
+\item $log_n(n)=1$
+\item $log_n(a)=\frac{ln(a)}{ln(n)}$
+\end{itemize}
+
+\subsection{Raices}
+Dado $\sqrt[n]{a}$, si $n$ es par, la raiz únicamente esta definida para los $a\geq 0$. Si en cambio $n$ es impar, la raiz está definida para todos los $a \in \mathbb{R}$.
+\begin{itemize}
+\item Las raices no son conmutativas en la suma: $\sqrt[n]{a+b} \neq \sqrt[n]{a} + \sqrt[n]{b}$.
+\item Si son conmutativas en la multiplicacion: $\sqrt[n]{a}\cdot\sqrt[n]{b} = \sqrt[n]{a \cdot b}$.
+\item $\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$.
+\item $(\sqrt[n]{a})^m=\sqrt[n]{a^m}$.
+\item $\sqrt[n]{\sqrt[m]{a}}=\sqrt[n \cdot m]{a}$.
+\end{itemize}
+
+\subsection{Racionalización}
+
+\begin{itemize}
+\item $\frac{a}{b \sqrt{c}} = \frac{a \cdot \sqrt{c}}{b \cdot \sqrt{c}\cdot \sqrt{c}} = \frac{a \cdot \sqrt{c}}{b \cdot (\sqrt{c})^2} = \frac{a \cdot \sqrt{c}}{b \cdot c}$
+\item $\frac{a}{b \sqrt[n]{c^m}} = \frac{a \cdot \sqrt[n]{c^{n-m}}}{b \sqrt[n]{c^m} \cdot \sqrt[n]{c^{n-m}}} = \frac{a \cdot \sqrt[n]{c^{n-m}}}{b \sqrt[n]{c^m \cdot c^{n-m}}} = \frac{a \cdot \sqrt[n]{c^{n-m}}}{b \sqrt[n]{c^n}} = \frac{a \cdot \sqrt[n]{c^{n-m}}}{b \cdot c}$
+\item $\frac{a}{\sqrt{b}+\sqrt{c}} = \frac{a}{\sqrt{b} + \sqrt{c}} \cdot \frac{\sqrt{b} - \sqrt{c}}{\sqrt{b} - \sqrt{c}} = \frac{a \cdot (\sqrt{b} - \sqrt{c}) }{(\sqrt{b} + \sqrt{c}) \cdot (\sqrt{b} - \sqrt{c})} = \frac{a \cdot (\sqrt{b} - \sqrt{c})}{(\sqrt{b})^2-(\sqrt{c})^2} = \frac{a \cdot (\sqrt{b} - \sqrt{c})}{b - c}$
+\end{itemize}
+En la última racionalizacion, utilice que $(a+b) \cdot (a-b) = a^2 - b^2$.
+
+\subsection{Módulo o Valor Absoluto}
+Definicion:
+\begin{itemize}
+\item $ |a| = \left\{
+ \begin{array}{lr}
+  a & : a \ge 0 \\
+  -a & : a <0
+ \end{array}
+ \right.
+ $
+ \end{itemize}
+ 
+ Tambien puede definirse como: $|a| = \sqrt{a^2}$
+ 
+ Propiedades
+ \begin{itemize}
+ \item $|a \cdot b| = |a| \cdot |b|$.
+ \item $|a + b| \leq |a| + |b|$.
+ \item La distancia entre dos números reales se define como d($a,b$)$=|b-a|$.
+ 
+ \end{itemize}
+
+\section{Funciones}
+Definimos $f: (\mathbb{A}\subseteq \mathbb{R}) \rightarrow (\mathbb{B}\subseteq \mathbb{R})$ como una función del conjunto $\mathbb{A}$ al conjunto $\mathbb{B}$ como una relación que debe cumplir que $\forall$ $a \in \mathbb{A}$, $\exists !$ $b \in \mathbb{B}$ tal que $f(a)=b$.
+
+Al conjunto $\mathbb{B}$ se lo llama codominio de $f$, y al conjunto $\mathbb{A}$ se lo llama dominio de $f$.
+
+Decimos que el gráfico de una funcion $f: (\mathbb{A} \subseteq \mathbb{R}) \rightarrow \mathbb{R}$ es el conjunto $Graf(f)=\{(x,y)\in \mathbb{R}^2$ $ /$ $ (x,y)=(x,f(x))\}$.
+
+Se llama Imagen de la función $f$ al conjunto $Im(f)=\{y \in \mathbb{B}$ $/$ $\exists x \in \mathbb{A}$ $/$ $y=f(x)\}$.
+
+$I=(a,b)$ es un intervalo de crecimiento si dados $x<x'$, con $x,x' \in (a,b)$, $f(x) \leq f(x')$.
+
+$I=(a,b)$ es un intervalo de decrecimiento si dados $x<x'$, con $x,x' \in (a,b)$, $f(x) \geq f(x')$.
+
+$f$ alcanza un máximo (local) en $x_0$ si $\exists$ $(a,b)$, con $x_0 \in (a,b)$ tal que $f(x_0) \geq f(x_1)$ $\forall x_1 \in (a,b)$.
+
+$f$ alcanza un mínimo (local) en $x_0$ si $\exists$ $(a,b)$, con $x_0 \in (a,b)$ tal que $f(x_0) \leq f(x_1)$ $\forall x_1 \in (a,b)$.
+
+\subsection{Función Lineal}
+Las funciones lineales son $f: \mathbb{R} \rightarrow \mathbb{R}$, y pueden escribirse como
+\begin{itemize}
+\item $f(x)= m  x + b$
+\end{itemize}
+
+El gráfico de una función lineal es una recta. ($im(f)=\mathbb{R}$
+
+Si quiero hallar la función lineal que para por los puntos $P_1=(x_1,y_1)$ y $P_2=(x_2,y_2)$, significa que $f(x_1)=y_1$ y $f(x_2)=y_2$, por lo que tengo que resolver el siguiente sistema de ecuaciones:
+
+\begin{itemize}
+\item $\left\{
+ \begin{array}{lr}
+  y_1 = m  x_1 + b \\
+  y_2 = m  x_2 + b
+ \end{array}
+ \right.$
+ \end{itemize}
+ 
+ Restando las dos ecuaciones, obtengo:
+ \begin{itemize}
+ \item $m(x_1 - x_2) = y_1 - y_2$
+ \item $m = \frac{y_1 - y_2}{x_1 - x_2}$
+ \end{itemize} 
+ 
+ $m$ define la pendiente de la recta. Dadas dos funciones lineales, $f_1(x) = m_1 x + b_1$, y $f_2(x) = m_2 x + b_2$, si $m_1 = m_2$, entonces $f_1 \parallel f_2$ (son paralelas), y si $m_2=-\frac{1}{m_1}$, entonces $f_1 \perp f_2$ (son perpendiculares, forman un ángulo de 90 grados).
+ 
+ Notar que $f(0)=b$, es la intersección con el eje $y$.
+ 
+\subsection{Funciones Cuadráticas}
+Las funciones cuadráticas son $f: \mathbb{R} \rightarrow \mathbb{R}$, y pueden escribirse como
+\begin{itemize}
+\item $f(x)= a x^2 + b x + c$
+\end{itemize}
+con $a,b,c \in \mathbb{R}$ y $a>0$. $a$ es llamado término cuadrático, $b$ es el término lineal, y $c$ es el término independiente ($f(0)=c$ es la intersección con el eje $y$).
+
+Vértice: $v=(x_v,y_v)$ es el máximo o mínimo de la parábola (si $a>0$ está "contenta", mientras si $a<0$ está "triste"). $ x_v=-\frac{b}{2a}$ y $y_v=f(x_v)$.
+
+Imagen: si $a>0$, entonces $Im(f)=[y_v,+\infty)$, en cambio si $a<0$ entonces $Im(f)=(-\infty,y_v]$.
+
+Raices: $x_{1,2} \in \mathbb{R}$ tal que $f(x_{1,2})=0$. 
+\begin{itemize}
+\item $ x_{1,2}=\frac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2\cdot a}$
+\end{itemize}
+
+\subsection{Funciones homográficas}
+Las funciones cuadráticas son $f: \mathbb{R} \smallsetminus \{-d/c\} \rightarrow \mathbb{R}$, con $a,b,c,d \in \mathbb{R}$ y $c \neq 0$, y pueden escribirse como
+\begin{itemize}
+\item $ f(x)= \frac{a  x + b}{c  x + d}$
+\end{itemize}
+
+Las asíntotas son en este caso puntos hacia los cuales la funcion tiende, sin llegar nunca a alcanzarlos, en el caso de la asíntota vertical, es un punto donde la función no esta definida, y tiende hacia mas o menos infinito al acercarse a ese punto. Mientras que la asíntota horizontal es un valor de $y$ hacia el cual la función tiende cuando x tiende a infinito.
+
+Asíntota vertical: $x=-d/c$.
+
+Asíntota horizontal: $y=a/c$.
+
+Imagen: $Im(f)=\mathbb{R} \smallsetminus \{a/c\}$
+
+\subsection{Composición de Funciones}
+
+Definición; Dadas dos funciones $f$ y $g$, defino otra funcion llamada $f \circ g$, tal que \begin{itemize}
+\item $(f \circ g)(x)=f(g(x))$
+\end{itemize} 
+
+Obs1: $(f \circ g) \neq (g \circ f)$.
+
+Obs2: $f(x)=x$ es el neutro de la composición
+
+\subsection{Función inversa}
+
+Definición: dada $f(x)$, diremos que otra funciön es su inversa (y la denotaremos $f^{-1}(x)$) cuando 
+\begin{itemize}
+\item $(f \circ f^{-1})(x) = x = (f^{-1} \circ f)(x)$
+\end{itemize}
+
+Obs: dada una función $f$, tengo función inversa $f^{-1}$ y $f(x)=y$, entonces $f^{-1}(y)=x$.
+
+\begin{itemize}
+\item Decimos que una función $f$ es inyectiva cuando $\forall x_1 \neq x_2$, $f(x_1)  f(x_2)$
+\begin{itemize}
+\item Si una función no es inyectiva, no puede tener inversa.
+\end{itemize}
+\item Decimos que una función $f$ es subyectiva o sobreyectiva cuando: $codom(f)=Im(f)$.
+\begin{itemize}
+\item Si una función no es sobreyectiva, no puede tener inversa.
+\end{itemize}
+\item Si $f$ es intectiva y sobreyectiva, diremos que $f$ es biyectiva o uno a uno.
+\end{itemize}
+
+\subsection{Función Exponencial}
+Las funciones exponenciales son $f: \mathbb{R} \rightarrow \mathbb{R}$, y pueden escribirse como ($a>0$, $a \neq 1$)
+\begin{itemize}
+\item $f(x)= a ^ x$
+\end{itemize}
+
+$Im(f)=\mathbb{R}>0$, y $f^{-1}(x)=log_a(x)$.
+
+Un caso especial de función exponencial, es $f(x)=e^x$, donde $e=\lim_{n\to\infty} (1 + \frac{1}{n})^n \approx 2.71828\cdots$, cuya función inversa tiene nombre propio, y es el logaritmo natural $f^{-1}(x)=ln(x)$. Sobre sucesiones y límites lo vemos en otra ocasión.
+
+\section{Símbolos usados}
+\begin{itemize}
+\item $\in$: perteneciente a.
+\item $\forall$: para todo.
+\item $/$: tal que.
+\item $\exists$: existe.
+\item $!$: único.
+\item $\mathbb{R}\smallsetminus \{a\}$: Todos los valores de $\mathbb{R}$ excepto $a$.
+\item $\subseteq$ Está incluido en (o es igual a).
+\end{itemize}
+
+\end{document}

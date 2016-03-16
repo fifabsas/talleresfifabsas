@@ -1,0 +1,482 @@
+\documentclass[a4paper,12pt]{article} 
+
+%paquetes
+\usepackage{graphicx}
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{chemfig}
+\usepackage{stackrel}
+
+%caracteristicas de paginas
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\setlength\oddsidemargin{-0,21in}
+\setlength\evensidemargin{-0,21in}
+\setlength\topmargin{-2cm}
+\setlength\textwidth{7in}
+\setlength\textheight{9in}
+\setlength\parskip{0.1in}
+
+\title{Velocidad de reaccion}
+\author{Cecilia Rojas, David Zarate}
+
+
+\begin{document} 
+
+
+
+\maketitle
+
+
+\section{Objetivos}
+Este informe tiene como objetivo verificar de manera experimental la cinética de la descomposición del agua oxigenada: 
+
+\hspace{6cm}$2H_2O_{2_{(ac)}} \to H_2O{(l)}+O_2{(g)}$
+
+  
+  La descomposición da como productos al $H_2O{(l)}$ y $O_2{(g)}$. Esta reacción es catalizada por el ion ioduro ($I^-$) proveniente de $KI$. Dicho ion, dependiendo de su concentración, va a  afectar a la velocidad de reacción del $H_2O_2$ y al valor de la constante específica de velocidad $K$. 
+
+\section{Resultados experimentales}
+
+  Se obtiene la siguiente tabla de datos según los resultados obtenidos.
+  
+  \begin{table}[h]
+\centering
+\caption{tiempo de desprendimiento de $O_2$.Mesa 2}
+\label{1}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+\hline
+exp & $\stackbin{1}{mL}$ & $\stackbin{2}{mL}$ & $\stackbin{3}{mL}$ & $\stackbin{4}{mL}$ & $\stackbin{5}{mL}$ & $\stackbin{6}{mL}$ & $\stackbin{7}{mL}$ & $\stackbin{8}{mL}$ & $\stackbin{9}{mL}$ & $\stackbin{10}{mL}$ & $\stackbin{11}{mL}$ & $\stackbin{12}{mL}$  &\\ \hline
+1 & $38"$ & $64.8"$ & $85.2"$ & $141"$ & $184.2"$ & $198"$ & $214.8"$ & $266.4"$ & $322,2"$ & $372,6"$ &  $424,8"$ & $448,2"$ & \\ \hline
+2 & $23"$ & $45"$ & $68"$ & $90"$ & $112"$ & $136"$ & $160"$ & $183"$ & $208"$ & $232"$ & $258"$ & $283"$ &  \\ \hline
+3 & $36"$ & $55"$ & $70"$ & $75"$ & $90"$ & $123"$ & $173"$ &  $191"$ & $209"$ & $229"$ & $243"$ &  $262"$ &   \\ \hline
+4 & $27,4"$ &  $52,4"$ & $66,6"$ & $81"$ & $121,8"$ & $135"$ & $151,2"$ & $190,8"$ & $208,2"$ & $247,8"$ & $264"$ & $304,2"$ &  \\ \hline
+5 & $35"$ & $53"$ &  $71"$ & $90"$ & $106"$ & $125"$ & $143"$ & $162"$ & $180"$ & $201"$ & $222"$ & $243"$ &   \\ \hline
+\end{tabular}
+\end{table}
+
+  \begin{center}
+\centering
+
+\label{volumen de oxigeno vs tiempo}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c}
+\hline
+exp & $\stackbin{13}{mL}$ & $\stackbin{14}{mL}$ & $\stackbin{15}{mL}$ & $\stackbin{16}{mL}$ & $\stackbin{17}{mL}$ & $\stackbin{18}{mL}$ & $\stackbin{19}{mL}$ & $\stackbin{20}{mL}$ & \\ \hline
+1 & $494,4"$ & $540"$ & $559,2"$ & $613,2"$ & $667,2"$ & $721,8"$ & $,750,6$ & $804,6"$ &\\ \hline
+ 2 & $309"$ & $337"$ & $368"$ & $389"$ & $419"$ & $450"$ & $478"$ & $507"$\\ \hline
+  3 & $281"$ & $300"$ & $315"$ & $335"$ & $352"$ & $372"$ & $390"$ & $421"$ \\  \hline
+   4 & $325,8"$ & $366,6"$ & $388,2"$ & $431,4"$ & $450,6"$ &  $497,4"$ & $542,4"$ & $566,4"$ \\ \hline
+    5 & $263"$ & $284"$ & $307"$ & $331"$ & $359"$ & $381"$ & $410"$ & $439"$  \\ \hline
+  \end{tabular}
+\end{center}
+
+La necesidad de medir el tiempo, es debido a que, más adelante, necesitamos calcular la velocidad de reacción, El agua oxigenada se descompone espontáneamente de modo tal que a medida que se consumen los reactivos, se genera una cantidad estequiométrica de productos.
+
+  Su expresion, en términos de la concentración de los reactivos es: 
+$$V= -\frac{1}{2}\times \frac{\Delta{[H_2O_2]}}{\Delta t}$$  
+
+ 
+ \section{Tratamiento de datos}
+ 
+    En cada experimento, se coloca agua oxigenada de diferentes concentraciones de agua y $KI$. La temperatura en el momento en el que se efectuaron los experimentos, era de $22^oC$ ($295K$). Los datos de las concentraciones iniciales de cada experimento, quedan comparados en la siguiente tabla
+
+\begin{center}
+\centering
+%\caption{Concentraciones y volúmenes}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c}
+\hline
+  exp & $\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[H_2O_2](M)}{Sc madre}$ & $\stackbin{V KI}{(ml)}$ & $\stackbin{[I^-]_o (M)}{Sc madre}$ & $\stackbin{H_2O_2}{mL}$ & $\stackbin{[H_2O_2]_o}{(M)}$ & $\stackbin{[I^-]_o}{M}$ &  \\ \hline
+1 & $3$ & $1.0 $ & $3$ & $0.1 $ & $3$ & $ 0.33 $ & $0.033 $ & \\ \hline
+  2 & $3$ & $1.5 $ & $3$ & $0.1 $ & $3$ & $ 0.50 $ & $0.033 $ & \\ \hline
+  3 & $3$ & $2.0 $ & $3$ & $0.1 $ & $3$ & $ 0.67 $ & $0.033 $ & \\ \hline
+  4 & $3$ & $1.0 $ & $4.5$ & $0.1 $ & $1.5$ & $ 0.33 $ & $0.05 $ & \\ \hline
+  5 & $3$ & $1.0 $ & $6$ & $0.1 $ & $0$ & $ 0.33 $ & $0.067 $ & \\ \hline
+  \end{tabular}
+\end{center}
+
+
+
+  \subsection {Experimento $N^o2$}
+  En cada experimento, hay diferentes concentraciones y volúmenes de agua oxigenada y $KI$. En las dos ultimas columnas $[H_2O_2]_o$ y $[I^-]_o$ son calculados, tomando como ejemplo la experiencia $N^o2$, que nos ha tocado realizar:
+  
+  Datos: $[H_2O_2]_o=?$ ; Vol $H_2O_2$= 3ml;   Sc madre $H_2O_2$= $1.5 M$ ;          Vol$KI$=3ml ;  Vol $H_2O$=3 ml
+  
+  $$Vol_f sc=VolH_2O_2 + Vol KI+ VolH_2O= 3ml+3ml+3ml=9ml$$
+  
+  $$1000ml sc \to 1.5 moles H_2O_2$$
+  $$3ml sc \to X=4.5x10^{-3} moles H_2O_2$$ 
+  Entonces: 
+  $$9ml sc \to 4,5x10^{-3} moles H_2O_2$$
+  $$1000ml sc \to X=0.50  moles H_2O_2$$
+  
+  Para $[I^-]_o =?$
+  
+  $$1000ml sc \to 0.1 moles I^-$$
+  $$3ml sc \to X=6.0x10^{-4} moles I^-$$ 
+  Enonces: 
+  $$9ml sc \to 6.0x10^{-4} moles I^-$$
+  $$1000ml sc \to X=0.033  moles I^-$$
+  
+  Este procedimiento de calculo se aplica para las demás experiencias, donde los resultados se muestran en la tabla correspondiente. 
+
+
+\section{Relación entre Vol $O_2$ (ml) liberado  y $[H_2O_2]$ (M) consumido y remanente.}
+
+   Tenemos como dato los volúmenes de $O_2$ consumidos y el tiempo. Para poder elaborar un gráfico en donde podamos relacionar la $[H_2O_2]$ remanente con el tiempo, y así poder calcular su velocidad, debemos realizar una serie de cálculos para convertir el volumen de $O_2$ en  $[H_2O_2]$ remanentes.
+\subsection{ $1^{er}$ paso.} Suponiendo que el $O_2$ se comporta como un gas ideal, podemos saber a cuantos moles de $O_2$ equivale dicho volumen de $O_2$.
+
+  Datos: Vol$O_2$= 1ml = 0,001 L ; P= 1 atm ; $n$=? ; T=295K ;$R=0.082 \frac{L.atm}{K.mol}$
+  
+  $$P.V=n.R.T$$
+$$n=\frac{P.V}{R.T}$$
+
+$$n=\frac{1atm . 0.01L}{0.082 \frac{L.atm}{K.mol}. 295K}$$
+$$n=4.13x10^{-5} moles O_2$$
+
+\subsection{ $2^{do}$ paso.} Para transformar dichos moles de $O_2$ en moles de $H_2O_2$ $consumidos$, considero la estequiometría de la reacción.
+
+$$1 mol O_2\to 2 moles H_2O_2$$
+$$4.13x10^{-5} moles O_2 \to X=8.26x10^{-5} moles H_2O_2 (consumidos)$$
+ 
+\subsection{ $3^{er}$ paso.}Para calcular los moles de $H_2O_2$ remanentes, considero la diferencia entre los moles de   $H_2O_2$ iniciales, menos los moles de  $H_2O_2$ consumidos (suponiendo que inicialmente tengo 3ml de $H_2O_2$ 1.5M)
+
+$$1000ml \to 1.5 moles H_2O_2$$
+$$3ml \to X= 4.5x10^{-3} moles H_2O_2$$
+
+Entonces: $nH_2O_{2i}= 4.5x10^{-3} moles$
+
+$$nH_2O_{2i} - nH_2O_{2_{consumidos}}=nH_2O_2 remanentes$$
+$$4.5x10^{-3} moles - 8.26x10^{-5} moles =nH_2O_2 remanentes$$
+$$4.42x10^{-3}moles=nH_2O_2 remanentes$$
+
+\subsection{ $4^{to}$ paso.}
+Se desea calcular la concentración molar de los moles sin consumir de $H_2O_2$, es decir la $[H_2O_2]$ $remanente$, se considera que los moles de $H_2O_2$ sin consumir están en 9 ml, por lo tanto se lo calcula en 1000 ml.
+
+$$9 ml sc\to 4.42x10^{-3}moles H_2O_2 remanentes$$
+$$1000 ml sc\to X= 0.49 moles H_2O_2 remanentes$$ 
+
+De este modo, se obtiene $H_2O_2$ remanentes para cada volumen de $O_2$. Dicha concentración, sera un valor en el eje $Y$ del gráfico , mientras que el tiempo que le corresponda a cada volumen, sera un valor del eje $X$
+  Se repite estos cálculos para las 5 experiencias. Donde se especificaran dichos datos en las siguientes tablas: 
+
+\subsection {tablas}
+
+Para la experiencia $N^o 2$ :
+
+\begin{center} 
+\centering
+%\caption{Vol $O_2$ vs $[H_2O_2]$}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|c}
+\hline
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2]}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline
+ $0ml$ & $0$ & $0$ & $0$ & $0.50$ & $0$\\ \hline
+$1ml$ & $4.1x10^{-5}$ & $8.27x10^{-5}$ & $4.421x10^{-3}$ & $0.49  $ &  $23$ \\ \hline 
+$2ml$ & $8.3x10^{-5}$ & $1.65x10^{-4}$ & $4.33x10^{-3}$ & $0.48 $ & $45$\\ \hline
+$3ml$ & $1.24x10^{-4}$ & $2.48x10^{-4}$ & $4.25x10^{-3}$ & $0.47 $ & $68$ \\ \hline
+$4 ml$ & $1.65x10^{-4}$ & $3.31x10^{-4}$ & $4.17x10^{-3}$ & $0.46 $ & $90$ \\ \hline
+$5 ml$ & $2.07x10^{-4}$ & $4.13x10^{-4}$ & $4.09x10^{-3}$ & $0.45 $ & $112$ \\ \hline
+$6 ml$ & $2.48x10^{-4}$ & $4.96x10^{-4}$ & $4.00x10^{-3}$ & $0.44 $ & $136$ \\ \hline
+$7 ml$ & $2.89x10^{-4}$ & $5.79x10^{-4}$ & $3.92x10^{-3}$ & $0.43 $ & $160$ \\ \hline
+$8 ml$ & $3.31x10^{-4}$ & $6.61x10^{-4}$ & $3.84x10^{-3}$ & $0.42 $ & $183$ \\ \hline
+$9 ml$ & $3.72x10^{-4}$ & $7.44x10^{-4}$ & $3.76x10^{-3}$ & $0.41 $ & $208$ \\ \hline
+$10 ml$ & $4.13x10^{-4}$ & $8.26x10^{-4}$ & $3.67x10^{-3}$ & $0.40 $ & $232$ \\ \hline
+$11 ml$ & $4.55x10^{-4}$ & $9.09x10^{-4}$ & $3.59x10^{-3}$ & $0.39 $ & $258$ \\ \hline
+$12 ml$ & $4.96x10^{-4}$ & $9.92x10^{-4}$ & $3.51x10^{-3}$ & $0.389 $ & $283$ \\ \hline
+$13 ml$ & $5.37x10^{-4}$ & $1.07x10^{-3}$ & $3.43x10^{-3}$ & $0.380 $ & $309$ \\ \hline
+$14 ml$ & $5.79x10^{-4}$ & $1.16x10^{-3}$ & $3.34x10^{-3}$ & $0.37 $ & $337$ \\ \hline
+$15 ml$ & $6.20x10^{-4}$ & $1.24x10^{-3}$ & $3.26x10^{-3}$ & $0.36 $ & $368$ \\ \hline
+$16 ml$ & $6.61x10^{-4}$ & $1.32x10^{-3}$ & $3.18x10^{-3}$ & $0.35 $ & $389$ \\ \hline
+$17 ml$ & $7.03x10^{-4}$ & $1.41x10^{-3}$ & $3.09x10^{-3}$ & $0.34 $ & $419$ \\ \hline
+$18 ml$ & $7.44x10^{-4}$ & $1.49x10^{-3}$ & $3.01x10^{-3}$ & $0.33 $ & $450$ \\ \hline
+$19 ml$ & $7.85x10^{-4}$ & $1.57x10^{-3}$ & $2.93x10^{-3}$ & $0.32 $ & $478$ \\ \hline
+$20 ml$ & $8.27x10^{-4}$ & $1.65x10^{-3}$ & $2.85x10^{-3}$ & $0.31 $ & $507$ \\ \hline
+\end{tabular}
+\end{center}
+
+
+Para la experiencia $N^o1$, mesa 2:
+ 
+\begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline 
+$0ml$ & $0$ & $0$ & $3x10^{-3}$ & $0.33  $ &  $0$ \\ \hline
+$1ml$ & $4.1x10^{-5}$ & $8.27x10^{-5}$ & $2.92x10^{-3}$ & $0.324  $ &  $38$ \\ \hline
+$2ml$ & $8.3x10^{-5}$ & $1.62x10^{-4}$ & $2.83x10^{-3}$ & $0.314 $ &  $64.8$ \\ \hline
+$3ml$ & $1.24x10^{-4}$ & $2.48x10^{-4}$ & $2.75x10^{-3}$ & $0.305 $ &  $85.2$\\ \hline
+$4ml$ & $1.65x10^{-4}$ & $3.30x10^{-4}$ & $2.67x10^{-3}$ & $0.297 $ &  $141$\\ \hline
+$5ml$ & $2.07x10^{-4}$ & $4.13x10^{-4}$ & $2.59x10^{-3}$ & $0.287 $ &  $184.2$\\ \hline
+$6 ml$ & $2.48x10^{-4}$ & $4.96x10^{-4}$ & $2.50x10^{-3}$ & $0.278 $ & $198$ \\ \hline
+$7 ml$ & $2.89x10^{-4}$ & $5.79x10^{-4}$ & $2,42x10^{-3}$ & $0.269 $ & $214,8$ \\ \hline
+$8 ml$ & $3.31x10^{-4}$ & $6.61x10^{-4}$ & $2.34x10^{-3}$ & $0.259 $ & $266,4$ \\ \hline
+$9 ml$ & $3.72x10^{-4}$ & $7.44x10^{-4}$ & $2,26x10^{-3}$ & $0.250 $ & $322,2$ \\ \hline
+$10 ml$ & $4.13x10^{-4}$ & $8.26x10^{-4}$ & $2.17x10^{-3}$ & $0.241 $ & $372,6$ \\ \hline
+$11 ml$ & $4.55x10^{-4}$ & $9.09x10^{-4}$ & $2.09x10^{-3}$ & $0.232 $ & $424,8$ \\ \hline
+$12 ml$ & $4.96x10^{-4}$ & $9.92x10^{-4}$ & $2,01x10^{-3}$ & $0.223 $ & $448,2$ \\ \hline
+$13 ml$ & $5.37x10^{-4}$ & $1.07x10^{-3}$ & $1,93x10^{-3}$ & $0.214 $ & $494,4$ \\ \hline
+$14 ml$ & $5.79x10^{-4}$ & $1.16x10^{-3}$ & $1.84x10^{-3}$ & $0.204 $ & $540$ \\ \hline
+$15 ml$ & $6.20x10^{-4}$ & $1.24x10^{-3}$ & $1.76x10^{-3}$ & $0,195 $ & $559,2$ \\ \hline
+$16 ml$ & $6.61x10^{-4}$ & $1.32x10^{-3}$ & $1.68x10^{-3}$ & $0,18 $ & $613,2$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline
+$17 ml$ & $7.03x10^{-4}$ & $1.41x10^{-3}$ & $1.59x10^{-3}$ & $0.177 $ & $667,2$ \\ \hline
+$18 ml$ & $7.44x10^{-4}$ & $1.49x10^{-3}$ & $1.51x10^{-3}$ & $0.168 $ & $721$ \\ \hline
+$19 ml$ & $7.85x10^{-4}$ & $1.57x10^{-3}$ & $1.43x10^{-3}$ & $0.159 $ & $750,6$ \\ \hline
+$20 ml$ & $8.27x10^{-4}$ & $1.65x10^{-3}$ & $1.35x10^{-3}$ & $0.150 $ & $804,6$ \\ \hline
+\end{tabular}
+\end{center}
+
+Para la experiencia $N^o3$, mesa 2: 
+
+\begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline 
+$0ml$ & $0$ & $0$ & $6x10^{-3}$ & $0.667  $ &  $0$ \\ \hline
+$1ml$ & $4.1x10^{-5}$ & $8.27x10^{-5}$ & $5.92x10^{-3}$ & $0.657  $ &  $36$ \\ \hline
+$2ml$ & $8.3x10^{-5}$ & $1.65x10^{-4}$ & $5.83x10^{-3}$ & $0.648 $ &  $55$ \\ \hline
+$3ml$ & $1.24x10^{-4}$ & $2.48x10^{-4}$ & $5.75x10^{-3}$ & $0.639 $ &  $70$\\ \hline
+$4ml$ & $1.65x10^{-4}$ & $3.30x10^{-4}$ & $5.67x10^{-3}$ & $0.630 $ &  $75$\\ \hline
+$5ml$ & $2.07x10^{-4}$ & $4.13x10^{-4}$ & $5.59x10^{-3}$ & $0.559 $ &  $90$\\ \hline
+$6 ml$ & $2.48x10^{-4}$ & $4.96x10^{-4}$ & $5.55x10^{-3}$ & $0.612 $ & $123$ \\ \hline
+$7 ml$ & $2,89x10^{-4}$ & $5,79x10^{-4}$ & $5,42x10^{-3}$ & $0,602 $ & $173$ \\ \hline
+$8 ml$ & $3,31x10^{-4}$ & $6,61x10^{-4}$ & $5,34x10^{-3}$ & $0,593 $ & $191$ \\ \hline
+$9 ml$ & $3,72x10^{-4}$ & $7,44x10^{-4}$ & $5,26x10^{-3}$ & $0,584 $ & $209$ \\ \hline
+$10 ml$ & $4,13x10^{-4}$ & $8,26x10^{-4}$ & $5,17x10^{-3}$ & $0,575 $ & $229$ \\ \hline
+$11 ml$ & $4,55x10^{-4}$ & $9,09x10^{-4}$ & $5,09x10^{-3}$ & $0,566 $ & $243$ \\ \hline
+$12 ml$ & $4,96x10^{-4}$ & $9,92x10^{-4}$ & $5,01x10^{-3}$ & $0,566 $ & $262$ \\ \hline
+$13 ml$ & $5,37x10^{-4}$ & $1,07x10^{-3}$ & $4,93x10^{-3}$ & $0,547 $ & $281$ \\ \hline
+$14 ml$ & $5,79x10^{-4}$ & $1,16x10^{-3}$ & $4,84x10^{-3}$ & $0,538 $ & $300$ \\ \hline
+$15 ml$ & $6,20x10^{-4}$ & $1,24x10^{-3}$ & $4,76x10^{-3}$ & $0,529 $ & $315$ \\ \hline
+$16 ml$ & $6,61x10^{-4}$ & $1,32x10^{-3}$ & $4,68x10^{-3}$ & $0,520 $ & $335$ \\ \hline
+$17 ml$ & $7,03x10^{-4}$ & $1,41x10^{-3}$ & $4,59x10^{-3}$ & $0,511 $ & $352$ \\ \hline
+$18 ml$ & $7,44x10^{-4}$ & $1,49x10^{-3}$ & $4,51x10^{-3}$ & $0,501 $ & $372$ \\ \hline
+$19 ml$ & $7,85x10^{-4}$ & $1,57x10^{-3}$ & $4,43x10^{-3}$ & $0,492 $ & $390$ \\ \hline
+$20 ml$ & $8,27x10^{-4}$ & $1,65x10^{-3}$ & $4,355x10^{-3}$ & $0,483 $ & $421$ \\ \hline
+\end{tabular}
+\end{center}
+
+ Para la experiencia $N^o4$, mesa 3 (se decide usar los datos de otra mesa, ya que los datos de este experimento en la mesa 2, no eran los correctos.): 
+ 
+ \begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+%$V H_2O_2$ & $[Moles O_2]$ & etc. \\
+%$(ml) & 
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline 
+$0ml$ & $0$ & $0$ & $3x10^{-3}$ & $0.33  $ &  $0$ \\ \hline
+$1ml$ & $4,13x10^{-5}$ & $8,26x10^{-5}$ & $2,92x10^{-3}$ & $0,32  $ &  $27,5$ \\ \hline
+$2ml$ & $8,27x10^{-5}$ & $1.65x10^{-4}$ & $2.83x10^{-3}$ & $0.31 $ &  $52,5$ \\ \hline
+$3ml$ & $1,24x10^{-4}$ & $2,48x10^{-4}$ & $2,75x10^{-3}$ & $0,305 $ &  $66,6$\\ \hline
+$4ml$ & $1,65x10^{-4}$ & $3,30x10^{-4}$ & $2,67x10^{-3}$ & $0,296 $ &  $81$\\ \hline
+$5ml$ & $2.07x10^{-4}$ & $4.13x10^{-4}$ & $2,59x10^{-3}$ & $0,287 $ &  $121,8$\\ \hline
+$6 ml$ & $2,48x10^{-4}$ & $4,96x10^{-4}$ & $2,50x10^{-3}$ & $0,278 $ & $135$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline 
+$7 ml$ & $2,89x10^{-4}$ & $5,79x10^{-4}$ & $2,42x10^{-3}$ & $0,269 $ & $151,2$ \\ \hline
+$8 ml$ & $3,31x10^{-4}$ & $6,61x10^{-4}$ & $2,34x10^{-3}$ & $0,259 $ & $190,8$ \\ \hline
+$9 ml$ & $3,72x10^{-4}$ & $7,44x10^{-4}$ & $2,26x10^{-3}$ & $0,251 $ & $208,2$ \\ \hline
+$10 ml$ & $4,13x10^{-4}$ & $8,26x10^{-4}$ & $2,17x10^{-3}$ & $0,241 $ & $247,8$ \\ \hline
+$11 ml$ & $4,55x10^{-4}$ & $9,09x10^{-4}$ & $2,09x10^{-3}$ & $0,232 $ & $264$ \\ \hline
+$12 ml$ & $4,96x10^{-4}$ & $9,92x10^{-4}$ & $2,01x10^{-3}$ & $0,223 $ & $304,2$ \\ \hline
+$13 ml$ & $5,37x10^{-4}$ & $1,07x10^{-3}$ & $1,93x10^{-3}$ & $0,213 $ & $325,8$ \\ \hline
+$14 ml$ & $5,79x10^{-4}$ & $1,16x10^{-3}$ & $1,84x10^{-3}$ & $0,204 $ & $366,6$ \\ \hline
+$15 ml$ & $6,20x10^{-4}$ & $1,24x10^{-3}$ & $1,76x10^{-3}$ & $0,195 $ & $388,2$ \\ \hline
+$16 ml$ & $6,61x10^{-4}$ & $1,32x10^{-3}$ & $1,68x10^{-3}$ & $0,186 $ & $431,4$ \\ \hline
+$17 ml$ & $7,03x10^{-4}$ & $1,41x10^{-3}$ & $1,59x10^{-3}$ & $0,177 $ & $450,6$ \\ \hline
+$18 ml$ & $7,44x10^{-4}$ & $1,49x10^{-3}$ & $1,51x10^{-3}$ & $0,167 $ & $497,4$ \\ \hline
+$19 ml$ & $7,85x10^{-4}$ & $1,57x10^{-3}$ & $1,43x10^{-3}$ & $0,159 $ & $542,4$ \\ \hline
+$20 ml$ & $8,27x10^{-4}$ & $1,65x10^{-3}$ & $1,35x10^{-3}$ & $0,149 $ & $566$ \\ \hline
+\end{tabular}
+\end{center}
+
+Para la experiencia $N^o5$, mesa 2: 
+
+\begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\stackbin{V H_2O_2}{(ml)}$ & $\stackbin{[Moles O_2}{}$ & $\stackbin{Moles H_2O_2}{consumidos}$ & $\stackbin{Moles H_2O_2}{sin reaccionar}$ & $\stackbin{[H_2O_2] remanente}{M}$ & $\stackbin{Tiempo}{seg}$ \\ \hline 
+$0ml$ & $0$ & $0$ & $3x10^{-3}$ & $0,333  $ &  $0$ \\ \hline
+$1ml$ & $4,1x10^{-5}$ & $8,27x10^{-5}$ & $2,92x10^{-3}$ & $0,32  $ &  $21$ \\ \hline
+$2ml$ & $8,3x10^{-5}$ & $1,65x10^{-4}$ & $2,92x10^{-3}$ & $0,31 $ &  $41$ \\ \hline
+$3ml$ & $1,24x10^{-4}$ & $2,48x10^{-4}$ & $2,88x10^{-3}$ & $0,305 $ &  $61$\\ \hline
+$4ml$ & $1,65x10^{-4}$ & $3,30x10^{-4}$ & $2,83x10^{-3}$ & $0,296 $ &  $80$\\ \hline
+$5ml$ & $2,07x10^{-4}$ & $4,13x10^{-4}$ & $2,79x10^{-3}$ & $0,278 $ &  $100$\\ \hline
+$6 ml$ & $2,48x10^{-4}$ & $4,96x10^{-4}$ & $2,75x10^{-3}$ & $0,269 $ & $118$ \\ \hline
+$7 ml$ & $2,89x10^{-4}$ & $5,79x10^{-4}$ & $2,71x10^{-3}$ & $0,259 $ & $138$ \\ \hline
+$8 ml$ & $3,31x10^{-4}$ & $6,61x10^{-4}$ & $2,67x10^{-3}$ & $0,251 $ & $159$ \\ \hline
+$9 ml$ & $3,72x10^{-4}$ & $7,44x10^{-4}$ & $2,63x10^{-3}$ & $0,241 $ & $179 $ \\ \hline
+$10 ml$ & $4,13x10^{-4}$ & $8,26x10^{-4}$ & $2,59x10^{-3}$ & $0,232 $ & $201 $ \\ \hline
+$11 ml$ & $4,55x10^{-4}$ & $9,09x10^{-4}$ & $2,55x10^{-3}$ & $0,223 $ & $223 $ \\ \hline
+$12 ml$ & $4,96x10^{-4}$ & $9,92x10^{-4}$ & $2,50x10^{-3}$ & $0,213 $ & $244 $ \\ \hline
+$13 ml$ & $5,37x10^{-4}$ & $1,07x10^{-3}$ & $2,46x10^{-3}$ & $0,204 $ & $268 $ \\ \hline
+$14 ml$ & $5,79x10^{-4}$ & $1,16x10^{-3}$ & $2,42x10^{-3}$ & $0,195 $ & $292 $ \\ \hline
+$15 ml$ & $6,20x10^{-4}$ & $1,24x10^{-3}$ & $2,38x10^{-3}$ & $0,186 $ & $316 $ \\ \hline
+$16 ml$ & $6,61x10^{-4}$ & $1,32x10^{-3}$ & $2,34x10^{-3}$ & $0,177 $ & $342 $ \\ \hline
+$17 ml$ & $7,03x10^{-4}$ & $1,41x10^{-3}$ & $2,30x10^{-3}$ & $0,167 $ & $369$ \\ \hline
+$18 ml$ & $7,44x10^{-4}$ & $1,49x10^{-3}$ & $2,26x10^{-3}$ & $0,159 $ & $396$ \\ \hline
+$19 ml$ & $7,85x10^{-4}$ & $1,57x10^{-3}$ & $2,21x10^{-3}$ & $0,149 $ & $425$ \\ \hline
+$20 ml$ & $8,27x10^{-4}$ & $1,65x10^{-3}$ & $2,17x10^{-3}$ & $0,141 $ & $455$ \\ \hline
+\end{tabular}
+\end{center}
+
+  Ahora se presentarán los gráficos correspondientes, donde se relaciona la concentración molar de agua oxigenada con el tiempo, de cada experiencia. Detallados en el anexo, inciso A.
+  
+ \section{Velocidad de reacción y pendientes.}
+   Para calcular la velocidad de reacción de : 
+    
+ \hspace{6cm}$2H_2O_{2_{(ac)}} \to H_2O{(l)}+O_2{(g)}$
+ 
+  Donde se reconoce que se consume 2 moles de $H_2O_2$, por cada mol de $O_2$ gaseoso que se forma. Entonces, la velocidad de la reacción se expresa como:
+  
+ $$V= -\frac{1}{2}\times \frac{\Delta{[H_2O_2]}}{\Delta t}$$  
+ 
+   Donde la pendiente es: 
+ 
+ $$Pendiente:\frac{\Delta{[H_2O_2]}}{\Delta t}$$ 
+ 
+   Se procede entonces, al calcular las pendientes y velocidades correspondientes a cada experiencia. 
+   Para ello se toma datos de los gráficos; dos puntos donde especifique una concentración final e inicial con su respectivo tiempo. Luego, según los siguientes datos: 
+   
+     Para la experiencia 2, mesa 2, se obtienen los siguientes puntos del gráfico
+  $[H_2O_2]_f=0,325M$; $T_f=440seg$; $[H_2O]_i=0,452M$; $T_i=120seg$
+  
+   $$Pendiente=\frac{[0,325] - [0,452]}{440seg - 120seg}$$
+   
+   $$Pendiente= -3,97x10^{-4} M.seg^{-1}$$
+   
+     A continuación reemplazamos la pendiente en la fórmula de la velocidad.
+   
+   $$Velocidad=\frac{-1}{2}\times(-3,97x10^{-4}M.seg^{-1})$$
+   
+   $$Velocidad= 1,98x10^{-4}M.seg^{-1}$$
+   
+   Los resultados de las pendientes y velocidades de las demás experiencias, se vuelcan en la siguiente tabla:
+   
+\begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|}
+\hline
+$\stackbin{experimento}$ & $\stackbin{pendiente}$ & $\stackbin{V^o (M/seg)}$ \\ \hline 
+$1$ & $- 2,44x10^{-4}$ & $1,22x10^{-4}$ \\ \hline 
+$2$ & $- 3,97x10^{-4}$ & $1,98x10^{-4}$ \\ \hline
+$3$ & $- 4,55x10^{-4}$ & $2.27x10^{-4}$ \\ \hline 
+$4$ & $- 5,19x10^{-4}$ & $2.59x10^{-4}$ \\ \hline   
+$5$ & $-6,42x10^{-4}$ & $3,21x10^{-4}$ \\ \hline 
+\end{tabular}
+\end{center}
+
+\section{Ley de velocidad y orden de reacción}
+  Ahora buscamos obtener finalmente, la ley de velocidad correspondiente para esta reacción. Dicha ley, relaciona la concentración del reactivo y en este caso, el catalizador ioduro $I^-$ y su constante de velocidad, llamado $K$.
+  En el siguiente cuadro, relacionamos $[H_2O_2]$, $[I^-]$ y $V^o$
+  La ley de velocidad de esta reacción es 
+  $$V=K[H_2O_2]^m\time[I^-]^n$$
+  
+  Donde $m$ y $n$ son ordenes de reacción. La función de estos es especificar la relación entre las concentraciones de los reactivos( y catalizadores) y la velocidad de la reacción y permite comprender la dependencia de la reacción con las concentraciones de los reactivos. No se debe confundir los ordenes de reacción con los coeficientes estequiométricos.
+  El dato del orden se obtiene por medio de los gráficos, relacionando $V^o$ con la $[H_2O_2]$ y $V^o$ con $[I^-]$. 
+  Para graficar, se toma los siguientes datos de la tabla:
+  
+ \begin{center}
+\centering
+%\caption{Vol O_2 vs [H_2O_2]}
+\label{2}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\stackbin{experimento}$ & $\stackbin{[H_2O_2]}$ & $\stackbin{[I^-]}$ & $\stackbin{V^o}$ \\ \hline 
+$1$ & $0,33M$ & $0,033M$ & $1,22x10^{-4}$ \\ \hline 
+$2$ & $0,50M$ & $0,033M$ & $1,98x10^{-4}$\\ \hline
+$3$ & $0,67M$ & $0,033M$ & $2.27x10^{-4}$\\ \hline 
+$4$ & $0,33M$ & $0,050M$ & $2,59x10^{-4}$\\ \hline   
+$5$ & $0,33M$ & $0,067M$ & $3,21x10^{-4}$\\ \hline 
+\end{tabular}
+\end{center}
+
+  Los gráficos se encuentran en el anexo inciso B.
+
+\subsection{Para $V^o$ vs $[H_2O_2]$:}
+ Cuando $[I^-]$ es constante, asumimos que según: 
+  $$V=K[H_2O_2]^m\time[I^-]^n$$
+  Si que $n=1$, entonces el gráfico debería ser una función lineal, por lo tanto su expresión queda si: 
+ 
+  $$K' =K[I^-]^n$$
+  
+  entonces:
+  $$Pendiente= K' =K[I^-] ^n$$
+ 
+  Finalmente, se expresa como: 
+  $$Velocidad =K'[H_2O_2]^m$$
+  Donde:
+   $$K'= \frac{\Delta V^o}{\Delta[H_2O_2] }= $$
+  Luego, para los siguientes datos extraídos del gráfico:
+  $[H_2O_2]_f=0,67M$; $V_f=2,5x10^{-4}M/seg$;$[H_2O_2]_i=0,28M$;$V_i=1,0x10^{-4}M/seg$.
+  $$K'=3,85x10^{-4}M^2/seg$$
+  Luego:
+  $$K=\frac{K'}{[I^-]}=$$
+  $$K=\frac{3,85x10^{-4}M^2/seg}{0,033M}
+  
+  $$K=0,012M/seg$$
+  
+  
+ \subsection{Para $V^o$ vs $[I^-]$}
+  Cuando $[H_2O_2]$ es constante, asumimos que según:
+  $$V=K[H_2O_2]^m\time[I^-]^n$$
+  
+  Si $n=1$, su gráfico debería daruna función lineal, por lo tanto su expresión queda así:
+  $$K''=K[H_2O_2]^n$$
+  entonces:
+  $$Pendiente=K''=K[H_2O_2]^m$$
+  Finalmente se expresa como:
+  $$K''= \frac{\Delta V^o}{\Delta[I^-] }=$$
+   Luego, para los siguientes datos extraídos del gráfico:
+   $[I^-]_f=0,06M$;$V_f=3x10^{-4}M/seg$;$[I^-]_i=0,03M$;$V_i=1x10^{-4}M/seg$
+   $$K''=6,66x10^{-4}M^2/seg$$
+   Luego:
+   $$K=\frac{K''}{[H_2O_2]}=$$
+   $$K=\frac{6,66x10^{-4}M^2/seg}{0,33M}$$
+   $$K=0,020M/seg$$
+   
+
+   \subsection{Promedio de $K$} A continuación se promedian los valores de $K$ calculados y obtenemos la Ley de velocidad a los $22^o$ (295 K): 
+   
+   $$Promedio de K=1,6x10^{-2} $$
+   Por lo tanto la ley de velocidad es:
+   $$V= 1,6x10^{-2}[H_2O_2]^1\time[I^-]^1$$
+   
+   
+   \section{Conclusión}: Se esperaba que las pseudosconstantes, es decir $K^'$ y $K^{''}$ dieran iguales o próximamente  parecidas. Dicho error pudo ser a causa de errores de mediciones durante el procedimiento experimental. Por ende, este grupo repetiría el procedimiento para observar los datos adquiridos y examinar si son diferentes nuevamente 
+   Aun así se cumplió con el objetivo de familiarizarse con los datos experimentales, su tratamiento y análisis.%\makeindex
+\end{document}

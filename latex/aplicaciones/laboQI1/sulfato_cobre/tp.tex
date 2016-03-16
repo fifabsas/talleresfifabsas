@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article} 
+
+%paquetes
+\usepackage{graphicx}
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{chemfig}
+\usepackage{stackrel}
+\usepackage{tikz}
+
+%caracteristicas de paginas
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\setlength\oddsidemargin{-0,21in}
+\setlength\evensidemargin{-0,21in}
+\setlength\topmargin{-2cm}
+\setlength\textwidth{7in}
+\setlength\textheight{9in}
+\setlength\parskip{0.1in}
+
+\title{Purificación del sulfato de cobre industrial}
+\author{Cecilia Rojas}
+
+
+\begin{document} 
+
+\maketitle
+
+
+\section{Objetivos}
+Se espera lograr la purificación del sulfato de cobre ($CuSO_4$) industrial, eliminando impurezas no deseadas. Analizar la eficacia del proceso mediante ensayos cualitativos.
+
+\section{Invesigaciones cualitativas 1 y 2 (IC 1 e IC 2). Parte A}
+Se desea determinar la presencia de impurezas insolubles y/o de hierro ($Fe^0$) en la muestra de $CuSO_4$.
+
+\subsection{IC 1}
+\subsubsection{1er paso}Se disuelve 2 gramos aproximadamente de la muestra de sulfato de cobre industrial en $10ml$ de agua en un tubo de ensayos: Al disolver $CuSO_4$ en agua(mejor llamado $CuSO_4\bullet5H_2O$ , la solución se torna celeste, que demuestra que hay acuacomplejos del catión $Cu^{2+}$, según:
+$$CuSO_4\bullet 5 H_2O{(s)} + H_2O_{(l)}\to Cu^{2+}_{(ac)} + {SO_4}^{2-}_{(ac)}$$
+$$Cu^{2+}_{(ac)} + 6H_2O_{(l)}\Leftrightarrow [Cu(H_2O)_6]^{2+}$$
+\subsubsection{2do paso}Se le agrega $HCl 6M$: En solución es:
+$$HCl_{(ac)} +  H_2O_{(l)} \Leftrightarrow H_3O_{(ac)} + Cl^{-}_{(ac)}$$
+ Se agrega el ácido para obsevar si la solución contenía impurezas insolubles en $HCl$. La presencia de los $H_3O_{(ac)}$ disminuye el pH de la solución, donde en medio ácido la solubilidad de los iones metálicos $Fe^{2+}$ y $Cu^{2+}$ se ve favorecida, sin embargo, gracias a este proceso se descartan las impurezas de mayor tamaño( polvo, arena). Luego de la filtración de observa polvo y arena que quedaron en el filtro. Se espera que en solución se encuentren los iones metalicos de cobre e hierro.
+
+\subsection{IC 2}
+\subsubsection{3er paso:Oxidación de $Fe(II)$ a $Fe(III)$} Agregar al líquido filtrado 5 gotas de agua oxigenada calentada: En solución 
+
+\hspace{4cm}$H_2{O_2}_{(ac)} + 2H^+ _{(ac)} + 2e^-\to 2H_2O_{(l)}$\hspace{2cm}reducción
+
+\hspace{4cm}$2(Fe^{2+}_{(ac)} \to Fe^{3+}_{(ac)} + 1e^-)$\hspace{2cm} oxidación
+
+\hspace{4cm}$2Fe^{2+}_{(ac)} + H_2{O_2}_{(ac)} + 2H^+ _{(ac)} \to 2H_2O_{(l)} + 2Fe^{3+}_{(ac)}$\hspace{2cm}Ec. neta global
+ 
+ $$\Delta E^o = E^o_{reduce} - E^o_{oxida}$$
+ $$\Delta E^o = E^o H_2{O_2}/H_2O - E^o_{Fe^{+3}/Fe^{+2}}$$
+ $$\Delta E^o =1,78V - 0,77V$$
+ $$\Delta E^o =1.01V$$
+ $$\Delta E^o > 0$$
+ $$\Delta G<0$$
+
+Se logra la oxidación del $Fe^{2+}$ al $Fe^{3+}$ gracias al agregado del agente oxidante $H_2O_2$, donde $Fe^{3+}$ tiene un radio atómico menor que $Fe^{2+}$, ya que al perder el $e^-$ la carga nuclear efectiva aumenta y no puede formar parte de la red cristalina que forma con el $Cu^{2+}$ (antes los radios atómicos del $Cu^{2+}$ y $Fe^{2+}$ eran parecidos). El $H_2{O_2}$ no afecta al catión cobre por que ya no tiene número de oxidación mayor de 2. El agua oxigenada es calentada para acelerar la reacción cinéticamente.
+ 
+ \subsubsection{4to paso:Precipitación del $Fe(III)$ y separación del $Cu^{2+}$ por filtración} Se agrega unas gotas de $NH_3$ $6M$ que es una base de Bronsted y base de Lewis y resulta que es mejor ligando que el agua para el cation cobre. 
+ $$NH_{3(ac)} + H_2O_{(l)}\Leftrightarrow NH_4^+_{(ac)} + OH^-_{(ac)}$$
+ El pH de la solución aumenta por la presencia de los iones $OH^-$. En primera instancia se observa un color verdoso con precipitado, esto se debe a la formación del hidróxido de cobre II, según:
+ $$Cu^{2+}_{(ac)} + 2OH^-_{(ac)}\Leftrightarrow Cu(OH)_{2(s)}$$
+ El $Fe^{3+}$ también precipita.
+ $$Fe^{3+}_{(ac)} + 3OH^-_{(ac)}\Leftrightarrow Fe(OH)_{3(s)}$$
+ Luego se observa que la solución se torna de color turquesa intenso,por el agregado en exceso de $NH_3$.
+  $$[Cu(H_2O)_6]^{2+} + 4NH_{3(ac)}\Leftrightarrow [Cu(NH_3)_4]^{2+} + 6H_2O_{(l)}$$
+
+$$Kf= \frac{[Cu(NH_3)_4]^{2+}}{[Cu(H_2O)_6]^{2+} (NH_3)^4}$$
+
+ $$K_f=1,1x10^{13}$$
+  El $Fe^{3+}$ no forma complejo con el $NH_3$, y se mantiene como hidróxido en solución.
+  Luego se filtra y se lava el precipitado del papel filtro con $NH_3$, para arrastrar el $[Cu(NH_3)_4]^{2+}$ que queda en el filtro.
+  
+  \subsubsection{5to paso:Agregado de $HCl$} Al precipiado que se encuentra en el papel($Fe(OH)_{3(s)}$), se le agregan 6 gotas de $HCl$ $6M$
+  $$HCl_{(ac)}\Leftrightarrow H_3O^+_{(ac)} + Cl^-_{(ac)}$$
+  $$Fe(OH)_{3(s)} + H_3O^+_{(ac)}\Leftrightarrow Fe^{3+}_{(ac)} + 2H_2O_{(l)}$$
+Al acidificar el medio, se forma agua, y se favorece la disolución del catión $Fe^{3+}$
+Al agregar el ácido en el filtro se observa un vapor blancuzco, esto se debe a la formación de cloruro de amonio:
+$$NH_3_{(ac)} + HCl_{(ac)}\Leftrightarrow NH_4Cl_{g)}$$
+El color amarillo del filtro se debe a que el $Fe^{3+}$ forma un complejo con cloruros, según:
+$$ Fe^{3+}_{(ac)} + 6Cl^-_{(ac)}\Leftrightarrow [FeCl_6]^{3-}$$
+
+\subsubsection{6to paso:Agregado de $KSCN$}: Luego del agregado del $KSCN$, se torna de un color rojizo intenso y esto se debe a la formación del complejo de coordinación, teniendo como ligando al $SCN^-$:
+ $$[Fe(H_2O)_6]^{3+} + 6SCN^-_{(ac)}\Leftrightarrow [Fe(SCN)_6]^{3-} + 6H_2O_{(l)}$$
+ 
+ $$Kf= \frac{[Fe(SCN)_6]^{3-}}{[Fe(H_2O)_6]^{3+} (SCN^-)^6}$$
+ 
+ $$K_f=1,1x10^{3}$$
+ Donde $K^+$ es ión espectador.
+ Por lo tanto, en conclusión, el$CuSO_4\bullet5H_2O$, tenía presente impurezas, como arena, polvo y $Fe^{2+}$ en la muestra analizada. Se la deja como tubo testigo.
+ 
+\subsection{Parte B: Purificación del $CuSO_4\bullet5H_2O$}: En esta parte del informe se desea purificar la muestra del sulfato de cobre,mediante las siquientes etapas del procedimiento experimental, y llegar a conclusiones cualitativas.
+
+ \subsubsection{Triturar la muestra} se tritura en un mortero 25g de la muestra. "Para qué se tritura inicialmente el sulfato de cobre?". Se tritura para aumentar la solubilidad a la hora de disolverlo, y permitir que el pesaje de la muestra sea más exacta. Se toma como "m1" los 25g de $CuSO_4\bullet5H_2O$}$.
+ 
+  \subsubsection{Agregado de agua} Se transfiere la masa  $m1$ a un vaso de precipitados, agregando $20ml$ de agua y se marca el nivel del liquido. Esta marca se pone para que, cuando se caliente a ebulición la solución, se pueda reponer el agua evaporada y no afecte a las siguientes etapas.
+  
+  \subsubsection{Calentado} Se calienta hasta ebullición suave con una agitación constante, para lograr su disolución total. Es importante tenero caliente y dejar lo menos posible, muestra solidificada en las paredes del vaso de precipitados, ya que podría afectar bruscamente a los cálculos finales.
+  
+  \subsubsection{Oxidación del Fe(II)}Se agrega gota a gota agua oxigenada manteniendo la ebullición suave. Como se aclaró en la PARTE A), el agregado del agua oxigenada tiene como objetivo lograr la xidación del $Fe^{2+}$ a $Fe^{3+}$. Debido a esto,el hierro no podrá formar parte de la red de cristalización del cobre, ya que $Fe^{3+}$ va a tener menor radio iónico que $Fe^{2+}$. La carga nuclear efectiva aumentacuando se libera un electrón, aumentando su atracción a los electrones de su útimo subnivel y por ende, su radio iónico disminuye. Su carga es $3+$ por lo tanto, según la relación $q/r$ su densidad aumenta y es cuando quedan excluidos de la red cristalina del $Cu^{2+}$.
+  
+  \subsubsection{Ebullición} se mantiene durante 2 minutos la ebullición para mantener el calor y acelerar la velocidad cinética del agua oxigenada. 
+  
+   \subsubsection{filtrado}"Por qué se filtra la solución en caliente?". Porque hay mas impurezas insolubles, aún en estado de ebullición, y si se filtrara en frío, precipitaría también los cristales que luego se van a recristalizar, con el $Cu^{2+}$. Es por eso que es importante que durante el proceso de filtración, no sea en frío. ( el filtrado se recoge en un kitasato).
+   
+   \subsubsection{Enfriado} se trasvasa el filtrado a un vaso de precipitados y se los deja enfriar en un baño de agua-helada. Esto sirve para formar las primeras partículas que serán el núcleo de cristañización y poder tener cristales medianos.
+   
+   \subsubsection{Filtrado de cristales} Una vez frío, por filtración con vacío se pueden separar los cristales formaos. Al filtrado que se obtiene en el ktasato se llama "aguas madres"con un volumen y temperatura determinada.
+   
+   \subsubsection{Enjuague de cristales} Se enjuagan el vaso de precipitados con agua helada y luego se vuelca sobre la red crsitalina. Esto se hace para arrastrar los cristales que quedaron en las paredes del vaso de precipitados. Luego se repite el proceso con una mezcla de agua-alcohol helada, esto descarta las aguas del lavado. Los cristales que quedaron em ell filtro tienen resto de aguas madres, si no son lavados, el líquido madre de impregna a los cristales y lueo puede alterar la pureza del cobre, por que se depositarían las impurezas en la superficie de los cristales. Se usa los solventes fríos para evitar pérdidas de cobre por disolución. Los lavados se descartan. Luego se dejan secar los cristales para iniciar el análisis cuantitativo. Las cuentas correspondientes se detallan en el anexo.
+
+ \subsection{Parte C: Presencia de $Fe$ en el product cristalizado.}: Se espera determinar si en el producto purificado, ha disminuido la cantidad de hierro.
+ Para verificar que la purificación ha sido adecuada, se investiga en los cristales obtenidos la presencia de hierro tal como se efectuó en la investigación cualitativa de $IC$, repitiendo los pasos 1,4,5 y 6.
+ Luego de la disolución de los cistales de cobre prificados en agua y el agregado del ácido $HCl 6M$, se filtra y se recoge el filtrado en un tubo de ensayos limpio. Se observa en el filtro que tiene un color levemente amarillento (más claro que el papel de filtro del $IC$) indicando que aún contiene hierro de impureza, pero en menor cantidad. Luego  del agregado del $KSCN$ se observa una coloración rojiza que, al compararlo con el tubo testigo del IC, se nota que la coloración rojiza es mas clara. Se deduce de esto que luego de la purificación (parte B), si bien el contenido de $Fe$ es menor en los cristales de cobre, aun sigue teniendo impurezas de polvo, arena y $Fe^{2+}$.
+ 
+ \subsection{Conclusiones.}: Mediante la relización de esta práctica es posible afirmar que el $CuSO_4\bullet5H_2O$ industrial contiene distintas impurezas, tanto solubles como insolubles. Las insolubles son el polvo y arena, mientras que los solubles es el $Fe^{2+}$. De la sección B, se deduce, que tan importante es la temperatura en cada paso, ya que eso depende la solubilidad del cobre, y los tiempos de filtrado en las soluciones, por que de ello depedende el rendiiento de la sal. Finalmente se deduce que, se debe tenerunestricto cuidado de esta práctica, ya que la pérdida de cristales por el trasvaso de la solución, temperaturas y tiempos, afecta al grado de purificación de $CuSO_4\bullet5H_2O$
+ \end{document}
