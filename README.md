@@ -1,5 +1,5 @@
 # Talleres FIFA Bs As
-![Taller de Python](https://github.com/Fifabsas/TayeresFifabsas/raw/master/difusion.png)
+![Taller de Python](https://github.com/Fifabsas/TayeresFifabsas/raw/master/difusion_1.png)
 
 ### Inscripción
 Para mejorar nuestros talleres te pedimos que completes [un formulario](http://goo.gl/forms/x8ZkT2g026), que se tarda tres segundos en completar (cronometrados). Obviamente el formulario no es requisito para tomar parte del taller.
