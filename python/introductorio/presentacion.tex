@@ -2,7 +2,6 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-
 \usepackage{url}
 
 % Más temas en
@@ -19,11 +18,11 @@
   \hspace*{.98\paperwidth}%
   \makebox[0pt][r]{\includegraphics[width=1.5cm]{fig/logo_fifa}}}
 
-\title{Taller de programación para laboratorio}
+\title{Taller de Python}
 \subtitle{Primer encuentro: Lo básico}
 \author{FIFA}
 \institute[FIFA]{Federación Interestudiantil de Física Argentina}
-\date{25 de abril de 2014}
+\date{\today}
 
 %\AtBeginSubsection[]
 %{
@@ -67,7 +66,7 @@
     Para instalar los paquetes, tenemos algunas opciones
     \begin{enumerate}
     \item{Instaladores, para Windows en \url{http://www.lfd.uci.edu/~gohlke/pythonlibs/}; y para Linux, dependiendo de la versión, hay que instalarlos de maneras diferentes.}
-    \item{Con PIP, un programa escrito en Python que permite bajar las librerías, en esta dirección \url{http://www.pip-installer.org}.}
+    \item{Con PIP, un programa escrito en Python que permite bajar las bibliotecas, en esta dirección \url{http://www.pip-installer.org}.}
     \item{Instalar un Python ''especial'', como Anaconda (\url{https://store.continuum.io/cshop/anaconda/}), que tiene un método especial para instalar los paquetes.}
     \end{enumerate}
 
@@ -75,7 +74,7 @@
 
 \begin{frame}
     \frametitle{Usando Python}
-    Para este taller, vamos a usar el IDLE, un programa que nos ejecuta la consola de Python y nos permite escribir archivos .py desde el mismo lugar, con coloreado de palabras especiales y otros chiches. 
+    Para este taller, vamos a usar el IDLE (Interactive Development Environment) llamado Spyder, un programa que nos ejecuta la consola de Python y nos permite escribir archivos .py desde el mismo lugar, con coloreado de palabras especiales y otros chiches. 
     
     La elección de este programa \emph{no} es única, y nosotros recomendamos usar el IPython, un paquete que agrega una consola interactiva muy parecida al Matlab/Octave/Mathematica. Además esta consola puede activar los paquetes de computación científica automáticamente. 
     
@@ -91,7 +90,7 @@
 \subsection{¿Pero qué es hablar con la computadora?}
 \begin{frame}
     \frametitle{¿Pero qué es hablar con la computadora?}
-    La computadora ejecuta programas, que no son más que recetas
+    La computadora ejecuta programas, que no son más que recetas:
     \begin{enumerate}
         \item Moje el cabello,
         \item Coloque champú,
@@ -103,7 +102,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    Podemos ver que los pasos de toda receta sólo pueden hacer dos cosas
+    Podemos ver que los pasos de toda receta sólo pueden hacer dos cosas:
 
     \begin{itemize}
         \item\uncover<1>{{\color{red} Transforman datos (o estados)}}
@@ -175,7 +174,7 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     Ahora necesitamos las \emph{variables}. Escriban esto en la consola de Python
     \begin{verbatim}
         >>> a = 5
-        >>>type(a)
+        >>> type(a)
         <class 'int'>
     \end{verbatim}
     Hicimos un entero, prueben con \texttt{True}, '5', 1.2 y [2, 3, 4]. \\Por ejemplo:
@@ -213,8 +212,9 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     \frametitle{El entorno $for$}
     ¿Cómo puede saber la computadora eso? Para eso existen bucles (loops en inglés). 
     \begin{verbatim}
-    >>>for i in range(10):
-    .......print('Hola mundo')
+    >>> for i in range(10):
+    ...     print('Hola mundo')
+    ...
     Hola mundo
     Hola mundo
     ...
@@ -223,7 +223,7 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     Ahora veamos qué es cada cosa\ldots
     
     \vspace{5mm}
-    \tiny{Nota: Acuerdensé de revisar sintaxis e indentación}
+    \tiny{Nota: \textbf{Acuérdense de revisar sintaxis y tabulado}}
 \end{frame}
     
 %\begin{frame}[fragile]
@@ -235,7 +235,7 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
 \frametitle{El entorno $for$}
     \begin{onlyenv}<1>
         \begin{verbatim}
-            >>>range(10)
+            >>> range(10)
             [0,1,2,3,4,5,6,7,8,9]
         \end{verbatim}
         Genera una lista del 0 a 9 (uno menos que el valor que ingresamos). \textbf{Tiene 10 elementos}.
@@ -248,8 +248,9 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     \begin{onlyenv}<2-3>
     Entonces con 
     \begin{verbatim}
-        >>>for i in range(10):
-        ..... print('Hola mundo')
+        >>> for i in range(10):
+        ...    print('Hola mundo')
+        ...
     \end{verbatim}
     la computadora sabe \emph{literalmente} lo que dice, en inglés: por cada elemento \texttt{i} de la lista \texttt{range(10)}, haz \texttt{print('Hola mundo')}.
 
@@ -259,8 +260,9 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
         \vskip11pt
         Otro ejemplo, más ilustrativo de ''recorrer una lista''
         \begin{verbatim}
-            >>>for i in range(10):
-                print(i)
+            >>> for i in range(10):
+            ...     print(i)
+            ...
             0
             1
             2
@@ -277,11 +279,12 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     Además del \texttt{for}, existe otra estructura de bucle
     \begin{small}
     \begin{verbatim}
-        >>>i = 0
-        >>>while i < 10:
-                print(i)
-                i = i+1      -->  también pueden escribir
-        0                         i += 1 que es lo mismo     
+        >>> i = 0
+        >>> while i < 10:
+        ...     print(i)
+        ...     i = i+1      -->  también pueden escribir
+        ...                       i += 1 que es lo mismo
+        0                         
         1
         ...
         9
@@ -296,49 +299,52 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
 
 \begin{frame}[fragile]
     \frametitle{Pongamos condiciones a este programa}
-    Que pasa si tengo esto
+    ¿Qué pasa si tengo esto:
     \begin{verbatim}
-        for i in range(10):
-            print(i)
+        >>> for i in range(10):
+        ...     print(i)
+        ...
         0
         1
         2
         ...
         9
     \end{verbatim}
-    Pero quiero que imprima solamente los números pares entre 3 y 8 (inclusive), sin cambiar la lista que se ''recorre'' \footnotesize{(en general, no vas a poder hacer esto o no querés)}.
+    pero quiero que imprima solamente los números pares entre 3 y 8 (inclusive), sin cambiar la lista que se ''recorre''? \footnotesize{(en general, no vas a poder hacer esto o no querés)}.
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{El entorno $if$}
     \begin{onlyenv}<+>
-    Para lo anterior tengo la siguiente estructura
+    Para lo anterior tengo la siguiente estructura:
     \begin{verbatim}
-        if i <= 8 and i >= 3:
-            if i % 2 == 0:
-                print(i)
+    >>> for i in range(10):
+    ...     if i <= 8 and i >= 3:
+    ...         if i % 2 == 0:
+    ...             print(i)
+    ...
     \end{verbatim}
     El comando \texttt{if} ejecuta lo que viene a continuación sólo si la condición es verdadera (en este caso que \texttt{i} sea mayor que 3 y menor que 8). Las condiciones verdaderas dan valores booleanos \texttt{True}. 
     
-    Vean que puedo tener \texttt{if} dentro de \texttt{if}, lo que se llama anidar. 
+    Vean que puedo tener \texttt{if} dentro de \texttt{if}, lo que se llama \textit{anidar}. 
     
     \vspace{5mm}
-    \tiny{Nota: El comando \%, llamado módulo, da el resto de la división de \texttt{i} en 2, que es 0 si \texttt{i} es par.}
+    \tiny{Nota: El comando \%, llamado \textit{módulo}, da el resto de la división de \texttt{i} en 2, que es 0 si \texttt{i} es par.}
     \end{onlyenv}
     
     
     \begin{onlyenv}<+>
         Prueben usar
         \begin{verbatim}
-        >>>i = 5
-        >>>i < 8
+        >>> i = 3
+        >>> i < 8
         True
-        >>>i > 3
+        >>> i > 3
         False
-        >>>i % 2 == 0
+        >>> i % 2 == 0
         False
         \end{verbatim}
-        %Para igualar expresiones usamos \texttt{==} y \texttt{\%} da el resto de la división entera entre el primer número y el segundo (llamado \emph{modulo}).
+        Para igualar expresiones en el sentido matemático usamos \texttt{==}.
     \end{onlyenv}
 \end{frame}
 
@@ -347,31 +353,33 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     \begin{onlyenv}<1-2>
     Resumiendo, el \texttt{if}
     \begin{verbatim}
-        if CONDICION:
-            ejecuto si es verdadero
+    >>> if CONDICION:
+    ...     ejecuto si es verdadero
     \end{verbatim}
     \end{onlyenv}
     \only<2>{¿Que pasa si quiero ejecutar algo si es falsa la condición?}
     \begin{onlyenv}<3>
         Agrego un \texttt{else}
         \begin{verbatim}
-        >>>a = 3
-        >>>if a < 5:
-                print(True)
-           else:
-                print(False)
+        >>> a = 3
+        >>> if a < 5:
+        ...     print(True)
+        ... else:
+        ...     print(False)
+        ...
     \end{verbatim}
     \end{onlyenv}
     \begin{onlyenv}<4>
         Si no es verdadera la condición inicial, podemos preguntarnos si hay una condición que si sea verdadera, como en el caso anterior
         \begin{verbatim}
-        >>>a = 3
-        >>>if a < 5:
-                print(True)
-           elif a == 5:
-                print('Iguales')
-           else:
-                print(False)
+        >>> a = 3
+        >>> if a < 5:
+        ...     print(True)
+        ... elif a == 5:
+        ...     print('Iguales')
+        ... else:
+        ...     print(False)
+        ...
     \end{verbatim}
     Primero verifica la primera, después verifica la segunda condición y si ninguna es verdadera ejecuta lo que está dentro de \texttt{else}.
     \end{onlyenv}
@@ -384,11 +392,11 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     \frametitle{Reutilizando la receta}
     Imaginate que tenés que ejecutar una operación de forma seguida pero no de forma regular, como por ejemplo
     \begin{verbatim}
-        >>>a = 2
-        >>>b = 5
-        >>>c = 3
-        >>>d = a + b + c
-        >>>d
+        >>> a = 2
+        >>> b = 5
+        >>> c = 3
+        >>> d = a + b + c
+        >>> d
         10
     \end{verbatim}
     
@@ -406,10 +414,10 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
 \begin{frame}[fragile]
 \frametitle{Funciones}
     \begin{verbatim}
-        >>>def Suma(a,b,c):
-            d = a + b + c
-            return d
-        >>>Suma(2,5,3)
+        >>> def Suma(a,b,c):
+        ...     d = a + b + c
+        ...     return d
+        >>> Suma(2,5,3)
         10
     \end{verbatim}
     Prueben transformar en funciones todo lo que escribieron hasta ahora.
@@ -420,7 +428,7 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
 
 \begin{frame}[fragile]
     \frametitle{Funciones que nos resuelven todo}
-    Se acuerdan de \texttt{range(10)}? Bueno, es una función de una biblioteca o \emph{librería} básica de Python.
+    ¿Se acuerdan de \texttt{range(10)}? Bueno, es una función de una biblioteca o \emph{biblioteca} básica de Python.
     
     Las funciones básicas más usadas
     {\small
@@ -434,7 +442,7 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     \end{verbatim}
     \end{center}
     }
-    De las funciones básicas, la más importante para el recién empezado es la función \texttt{help()} a la cual le podemos pasar el nombre de cualquier función e imprimirá la ayuda escrita previamente. Por ejemplo, escriban \texttt{help(list)}.
+    De las funciones básicas, la más importante para el recién empezado es la función \texttt{help()} a la cual le podemos pasar el nombre de cualquier función e imprimirá la ayuda escrita previamente. Por ejemplo, escriban \texttt{help(list)} (pueden salir presionando \emph{q})
 
 \end{frame}
 
@@ -442,23 +450,23 @@ Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
     \frametitle{Más funciones que nos resuelven todo}
     En caso de querer usar funciones matemáticas necesitamos usar
     \begin{verbatim}
-    >>>import math
-    >>>math.sin(math.pi)
+    >>> import math
+    >>> math.sin(math.pi)
     -1
     \end{verbatim}
-    Con \texttt{import} le decimos al interprete de Python que traiga el paquete math y ahí vos lo podés usar.\\ Como ya vimos antes, los \emph{paquete} son programas y utilidades organizadas para el uso posterior, en particular los programas están organizados en funciones ya que son \emph{el método} usado para reutilizar programas.
+    Con \texttt{import} le decimos al intérprete de Python que traiga el paquete math y ahí vos lo podés usar.\\ Como ya vimos antes, los \emph{paquetes} son programas y utilidades organizadas para el uso posterior, en particular los programas están organizados en funciones ya que son \emph{el método} usado para reutilizar programas.
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Más funciones que nos resuelven todo}
     Otro ejemplo puede ser el paquete \texttt{os}, que son funciones de sistema operativo
     \begin{verbatim}
-    >>>import os
-    >>>os.urandom(10)
+    >>> import os
+    >>> os.urandom(10)
     \end{verbatim}
     que nos da una cadena aleatoria de 10 bytes.
 
-    Hasta ahora hablamos de paquetes básicos de la instalación. En próximos encuentros hablaremos profundamente de las librerías científicas \textsc{numpy}, \textsc{scipy} y \textsc{matplotlib}, que pueden ir bajando e instalado.
+    Hasta ahora hablamos de paquetes básicos de la instalación. En próximos encuentros hablaremos profundamente de las bibliotecas científicas \textsc{numpy}, \textsc{scipy} y \textsc{matplotlib}, que pueden ir bajando e instalado.
 \end{frame}
 
 
@@ -479,11 +487,11 @@ Probaremos graficar una función elemental.
 Inventemos un dominio y una función imagen. Son supuestas mediciones así que aportemos ruido.
 
 \begin{verbatim}
->>>x = np.linspace(-5, 5)
->>>y = x**2 -3
+>>> x = np.linspace(-5, 5)
+>>> y = x**2 -3
 
->>>ruido = np.random.rand(len(y))*0.8
->>>y = y+ruido
+>>> ruido = np.random.rand(len(y))*0.8
+>>> y = y+ruido
 \end{verbatim}
 \end{frame}
 
@@ -492,12 +500,12 @@ Inventemos un dominio y una función imagen. Son supuestas mediciones así que a
 Ahora pidamos que grafique.
 
 \begin{verbatim}
->>>plt.scatter(x, y)
->>>plt.xlabel('Variable independiente')
->>>plt.ylabel('x^2')
->>>plt.grid()
+>>> plt.scatter(x, y)
+>>> plt.xlabel('Variable independiente')
+>>> plt.ylabel('x^2')
+>>> plt.grid()
 
->>>plt.show()\# que nos muestre el gráfico
+>>> plt.show() #(que nos muestre el gráfico)
 \end{verbatim}
 \end{frame}
 
