@@ -14,13 +14,13 @@ markdown: kramdown
 
 
 ### content configuration ###
-title:       "SinglePaged - Simple Jekyll template"
-keywords:    "SinglePaged, jekyll, template, github, blog, single page"
-description: "A single-page template for Jekyll based blogs (like what you'd use on github pages!)"
-source_link: "https://github.com/t413/SinglePaged"
-favicon:     "img/favicon.ico"
-touch_icon:  "img/apple-touch-icon.png"
-google_analytics_key: UA-49607422-1 ## put YOUR key here to enable tracking! (blank to disable)
+title:       "Talleres FIFA BsAs"
+keywords:    "Talleres, LaTeX, Python, FIFA, BsAs, Física"
+description: "Talleres impartidos por la FIFA Regional BsAs"
+source_link: "https://github.com/fifabsas/talleresfifabsas"
+favicon:     "img/favicon.png"
+touch_icon:  "img/touch-icon.png"
+google_analytics_key:  ## put YOUR key here to enable tracking! (blank to disable)
 
 
 ### template colors, used site-wide via css ###
