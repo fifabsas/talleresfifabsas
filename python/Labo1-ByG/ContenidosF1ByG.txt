@@ -1,0 +1,15 @@
+Propuesta taller de Biólogos y Geólogos
+
+Introducción a programar/programa/Python (10mins) Esto nos deja en Spyder
+
+Variables int, float y string (1/2 ejercicio/2 con una/s cuenta/s) (20 minutos)
+
+Definir funciones def y lambda (ejercicio de función promedio) (15 minutos)
+
+Importar bibliotecas y help: numpy y ndarray. Propiedades del array. (ejercicio de suma de vectores) (20 mins)
+
+Linspace. Plot con ejemplo de un seno (ejercicio de tiro oblicuo con función dada) (20 minutos)
+
+Openoffice Calc, exportar a .csv, importar con Python y hacer un histograma (ejercicio donde abren un excel nuestro y de ahí exportan y histogramean) (20 minutos)
+
+Ajuste (ejercicio otro excel con datos y errores para exportar a csv, importar en Python y ajustar) (30 mins)
