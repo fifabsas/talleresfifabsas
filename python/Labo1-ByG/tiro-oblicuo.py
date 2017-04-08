@@ -1,36 +1,33 @@
 import numpy as np
 import matplotlib.pyplot as plt
 """
-Este es un script para visualizar:
-1) Alcance de un proyectil lanzado con velocidad inicial v0 vs. ángulo de disparo.
-2) Distintas trayectorias del proyectil.
+Este es un script para visualizar la trayectoria de un proyectil
 """
-# Algunas constantes y variables
+# Defino las constantes del problema
 g = 9.8
 v0 = 25
+angulo = np.pi/4
 
-# Alcance como función del ángulo inicial de disparo (fórmula calculada a mano)
-def alcance(th,v0):
-    return v0**2/g*np.sin(2*th)
-theta = np.linspace(0,np.pi/2,500)
-plt.figure(1)
-plt.plot(theta/2/np.pi*360,alcance(theta,v0))
-plt.xlabel("Ángulo inicial de disparo [°]")
-plt.ylabel("Alcance [m]")
-plt.grid()
-
-# Trayectoria (fórmula calculada a mano)
+# Creo la función que define la trayectoria y(x) (fórmula calculada a mano)
 def tray(x,th,v0):
     return np.tan(th)*x-g*x**2/(2*v0**2*np.cos(th)**2)
 
-plt.figure(2)
-for angulo in np.linspace(0,np.pi/2,9)[1:-1]:
-    x = np.linspace(0,v0**2/g*np.sin(2*angulo),500)
-    plt.plot(x,tray(x,angulo,v0),'-',label="$\Theta$ = "+str(int(angulo/2/np.pi*360))+"°")
-plt.legend(loc=0)
+# Abro una nueva figura
+plt.figure()
+# Defino el dominio que tiene 500 puntos entre 0 y 63.76 (¿por qué usamos este número? ¡Prueben otros!)
+x = np.linspace(0,63.76,500)
+# Defino la imagen
+y = tray(x,angulo,v0)
+# Grafico tray(x) con la velocidad inicial y ángulo antes definidos
+plt.plot(x,y)
+
+### De ahora en más decoramos un poco la ventana
+# Agrego un poco de descripción a la ventana
+plt.title("Tiro oblicuo")
 plt.xlabel("Distancia [m]")
 plt.ylabel("Altitud [m]")
+# Agrego la grilla
 plt.grid()
-plt.title("Tiro oblicuo para distintos ángulos")
 
+# Muestro la ventana de gráfico
 plt.show()
