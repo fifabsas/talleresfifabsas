@@ -11,6 +11,14 @@
  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf)
  - Cuaderno del taller numérico: EN PROGRESO
 
+#### Usuarios y contraseñas de los Laboratorios del DC
+**clinux**
+- Usuario: clinux01, clinux02, ...
+- Password: clinux01, clinux02, ...
+**taller latex**
+- Usuario: tallerlatex-01, tallerlatex-02, ...
+- Password: latex1409
+
 ### Scripts simples (o no tanto)
  - [Propagación de errores](http://pastebin.com/WaB8qsQd)
 
