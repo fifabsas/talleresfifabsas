@@ -1,6 +1,6 @@
 # Taller de Python
 
-![talleres de python fifa](https://raw.githubusercontent.com/fifabsas/talleresfifabsas/master/python/difusion/logos_python_fifa.png)
+![talleres de python fifa](https://raw.githubusercontent.com/fifabsas/talleresfifabsas/master/python/Publicidad/logos_python_fifa.png)
 
 ## Recursos
 
@@ -13,10 +13,10 @@
 
 #### Usuarios y contraseñas de los Laboratorios del DC
 **clinux**
-- Usuario: clinux01, clinux02, ...
-- Password: clinux01, clinux02, ...
+- Usuario: clinux01, clinux02, ...  
+- Password: clinux01, clinux02, ...  
 **taller latex**
-- Usuario: tallerlatex-01, tallerlatex-02, ...
+- Usuario: tallerlatex-01, tallerlatex-02, ...  
 - Password: latex1409
 
 ### Scripts simples (o no tanto)
@@ -29,13 +29,13 @@
 ### Interpretes y distribuciones
 Bajarse la v3.x si es posible; el desarrollo de la v2.x está congelado y no va a mejorar como lenguaje
 - [Python](https://www.python.org/downloads/).
-- [Anaconda](http://continuum.io/downloads) y [Miniconda](http://conda.pydata.org/miniconda.html). 
+- [Anaconda](http://continuum.io/downloads) y [Miniconda](http://conda.pydata.org/miniconda.html).
 
 ### Documentación oficial
 - [docs.python.org](http://docs.python.org)
 
 ### Tutoriales online
-- [Codeacademy](http://www.codecademy.com/tracks/python) 
+- [Codeacademy](http://www.codecademy.com/tracks/python)
 - [Learn Python](http://www.learnpython.org/)
 
 ### Libros
