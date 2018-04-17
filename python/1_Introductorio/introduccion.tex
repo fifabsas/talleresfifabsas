@@ -1,929 +1,619 @@
+\documentclass{beamer}
 
-% Default to the notebook output style
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{url}
 
-    
+% Más temas en
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%\usetheme{Berlin}
+%\usetheme{Copenhagen}
+\usetheme{Warsaw}
+%\usetheme{Darmstadt}
 
+\setbeamercovered{transparent} %Items ocultos transparentes
 
-% Inherit from the specified cell style.
+\setbeamertemplate{background}{
+  \rule{0pt}{.95\paperheight}%
+  \hspace*{.98\paperwidth}%
+  \makebox[0pt][r]{\includegraphics[width=1.5cm]{fig/logo_fifa}}}
 
-
-
-
-    
-\documentclass{article}
-
-    
-    
-    \usepackage{graphicx} % Used to insert images
-    \usepackage{adjustbox} % Used to constrain images to a maximum size 
-    \usepackage{color} % Allow colors to be defined
-    \usepackage{enumerate} % Needed for markdown enumerations to work
-    \usepackage{geometry} % Used to adjust the document margins
-    \usepackage{amsmath} % Equations
-    \usepackage{amssymb} % Equations
-    \usepackage{eurosym} % defines \euro
-    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
-    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
-    \usepackage{fancyvrb} % verbatim replacement that allows latex
-    \usepackage{grffile} % extends the file name processing of package graphics 
-                         % to support a larger range 
-    % The hyperref package gives us a pdf with properly built
-    % internal navigation ('pdf bookmarks' for the table of contents,
-    % internal cross-reference links, web links for URLs, etc.)
-    \usepackage{hyperref}
-    \usepackage{longtable} % longtable support required by pandoc >1.10
-    \usepackage{booktabs}  % table support for pandoc > 1.12.2
-    \usepackage{ulem} % ulem is needed to support strikethroughs (\sout)
-    
-
-    
-    
-    \definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
-    \definecolor{darkorange}{rgb}{.71,0.21,0.01}
-    \definecolor{darkgreen}{rgb}{.12,.54,.11}
-    \definecolor{myteal}{rgb}{.26, .44, .56}
-    \definecolor{gray}{gray}{0.45}
-    \definecolor{lightgray}{gray}{.95}
-    \definecolor{mediumgray}{gray}{.8}
-    \definecolor{inputbackground}{rgb}{.95, .95, .85}
-    \definecolor{outputbackground}{rgb}{.95, .95, .95}
-    \definecolor{traceback}{rgb}{1, .95, .95}
-    % ansi colors
-    \definecolor{red}{rgb}{.6,0,0}
-    \definecolor{green}{rgb}{0,.65,0}
-    \definecolor{brown}{rgb}{0.6,0.6,0}
-    \definecolor{blue}{rgb}{0,.145,.698}
-    \definecolor{purple}{rgb}{.698,.145,.698}
-    \definecolor{cyan}{rgb}{0,.698,.698}
-    \definecolor{lightgray}{gray}{0.5}
-    
-    % bright ansi colors
-    \definecolor{darkgray}{gray}{0.25}
-    \definecolor{lightred}{rgb}{1.0,0.39,0.28}
-    \definecolor{lightgreen}{rgb}{0.48,0.99,0.0}
-    \definecolor{lightblue}{rgb}{0.53,0.81,0.92}
-    \definecolor{lightpurple}{rgb}{0.87,0.63,0.87}
-    \definecolor{lightcyan}{rgb}{0.5,1.0,0.83}
-    
-    % commands and environments needed by pandoc snippets
-    % extracted from the output of `pandoc -s`
-    \providecommand{\tightlist}{%
-      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-    % Add ',fontsize=\small' for more characters per line
-    \newenvironment{Shaded}{}{}
-    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
-    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
-    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
-    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
-    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
-    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
-    \newcommand{\RegionMarkerTok}[1]{{#1}}
-    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
-    \newcommand{\NormalTok}[1]{{#1}}
-    
-    % Additional commands for more recent versions of Pandoc
-    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
-    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
-    \newcommand{\ImportTok}[1]{{#1}}
-    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
-    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
-    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
-    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
-    \newcommand{\BuiltInTok}[1]{{#1}}
-    \newcommand{\ExtensionTok}[1]{{#1}}
-    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
-    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
-    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-    
-    
-    % Define a nice break command that doesn't care if a line doesn't already
-    % exist.
-    \def\br{\hspace*{\fill} \\* }
-    % Math Jax compatability definitions
-    \def\gt{>}
-    \def\lt{<}
-    % Document parameters
-    \title{introduccion}
-    
-    
-    
-
-    % Pygments definitions
-    
-\makeatletter
-\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
-    \let\PY@ul=\relax \let\PY@tc=\relax%
-    \let\PY@bc=\relax \let\PY@ff=\relax}
-\def\PY@tok#1{\csname PY@tok@#1\endcsname}
-\def\PY@toks#1+{\ifx\relax#1\empty\else%
-    \PY@tok{#1}\expandafter\PY@toks\fi}
-\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
-    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
-\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
-
-\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
-\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
-\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
-\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
-\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
-\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
-\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
-\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
-\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
-\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-
-\def\PYZbs{\char`\\}
-\def\PYZus{\char`\_}
-\def\PYZob{\char`\{}
-\def\PYZcb{\char`\}}
-\def\PYZca{\char`\^}
-\def\PYZam{\char`\&}
-\def\PYZlt{\char`\<}
-\def\PYZgt{\char`\>}
-\def\PYZsh{\char`\#}
-\def\PYZpc{\char`\%}
-\def\PYZdl{\char`\$}
-\def\PYZhy{\char`\-}
-\def\PYZsq{\char`\'}
-\def\PYZdq{\char`\"}
-\def\PYZti{\char`\~}
-% for compatibility with earlier versions
-\def\PYZat{@}
-\def\PYZlb{[}
-\def\PYZrb{]}
-\makeatother
-
-
-    % Exact colors from NB
-    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
-    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+\title{Taller de Python}
+\subtitle{Primer encuentro: Lo básico}
+\author{FIFA}
+\institute[FIFA]{Federación Interestudiantil de Física Argentina}
+\date{17 de abril de 2018}
 
 
 
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+% Let's get started
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{fig/python-logo.png}
+    \end{figure}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------
+
+\section{¿Qué es Python?}
+
+\subsection{¿Qué es Python?}
+\begin{frame}
+    \frametitle{¿Qué es eso de Python? ¿Con qué se come?}
+    Python es un \emph{lenguaje de programación}: una forma versátil de darle instrucciones a la computadora para que ella haga las cosas que nosotros queremos.
+\end{frame}
+
+\subsection{Instalación}
+\begin{frame}
+    \frametitle{Instalación de Python}
+    \begin{itemize}
+        \item Si tenés Linux, ya tenés instalado Python ;)\\Pero posiblemente quieras instalar el paquete de Anaconda que viene con muchos chiches.
+        \item Si tenés Windows, no tenés Python por defecto pero lo podés descargar de \url{https://www.anaconda.com/download/}
+    \end{itemize}
     
-    % Prevent overflowing lines due to hard-to-break entities
-    \sloppy 
-    % Setup hyperref package
-    \hypersetup{
-      breaklinks=true,  % so long urls are correctly broken across lines
-      colorlinks=true,
-      urlcolor=blue,
-      linkcolor=darkorange,
-      citecolor=darkgreen,
-      }
-    % Slightly bigger margins than the latex defaults
+\end{frame}
+
+
+
+%\begin{frame}
+%    \frametitle{Agregándole cosas a Python}
+%    A veces queremos hacer cosas que Python no sabe hacer, menos nosotros. Para eso otras personas en el mundo crearon \emph{paquetes}, que son programas organizados para fácil reutilización.
+%    
+%    Para instalar los paquetes, tenemos algunas opciones
+%    \begin{enumerate}
+%    \item{Instaladores, para Windows en \url{http://www.lfd.uci.edu/~gohlke/pythonlibs/}; y para Linux, dependiendo de la %versión, hay que instalarlos de maneras diferentes.}
+%    \item{Con PIP, un programa escrito en Python que permite bajar las bibliotecas, en esta dirección %\url{http://www.pip-installer.org}.}
+%    \item{Instalar un Python ''especial'', como Anaconda (\url{https://store.continuum.io/cshop/anaconda/}), que tiene un %método especial para instalar los paquetes.}
+%    \end{enumerate}
+%\end{frame}
+
+\begin{frame}
+    \frametitle{Usando Python}
+    Para este taller, vamos a usar el IDE (Interactive Development Environment) llamado Spyder, un programa que nos ejecuta la consola de Python y nos permite escribir archivos .py desde el mismo lugar, con coloreado de palabras especiales y otros chiches. \\
     
-    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    Para los que lo conocen, es parecido al entorno de MATLAB.
     
+    %La elección de este programa \emph{no} es única, y nosotros recomendamos usar el IPython, un paquete que agrega una consola interactiva muy parecida al Matlab/Octave/Mathematica. Además esta consola puede activar los paquetes de computación científica automáticamente. 
+    
+    %Sin embargo el programa IDE se instala \emph{por defecto} con Python
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------
+
+
+\section{Nociones básicas de programación}
+
+\subsection{¿Pero qué es hablar con la computadora?}
+\begin{frame}
+    \frametitle{¿Pero qué es hablar con la computadora?}
+    La computadora ejecuta programas, que no son más que recetas:
+    \begin{enumerate}
+        \item Moje el cabello,
+        \item Coloque champú,
+        \item Masajee suavemente y deje actuar por 2 min.,
+        \item Enjuague, y
+        \item Repita el procedimiento (desde 1.-).
+    \end{enumerate}
+    
+\end{frame}
+
+\begin{frame}[fragile]
+    Podemos ver que los pasos de toda receta sólo pueden hacer dos cosas:
+
+    \begin{itemize}
+        \item\uncover<1>{{\color{red} Transforman datos (o estados)}}
+        \item\uncover<2>{{\color{blue} Cambian el flujo de las operaciones}}
+    \end{itemize}
+    \vskip 20pt
+    \begin{enumerate}
+        \item \uncover<1>{{\color{red}Moje el cabello}}.
+        \item \uncover<1>{{\color{red}Coloque champú}},
+        \item \uncover<1>{{\color{red}Masajee suavemente}} y \uncover<2>{{\color{blue}deje actuar por 2 min.}},
+        \item \uncover<1>{{\color{red}Enjuague}}, y
+        \item \uncover<2>{{\color{blue} Repita el procedimiento (desde 1.-)}}.
+    \end{enumerate}
+    
+    
+\end{frame}
+
+\subsection{Nuestras herramientas hoy}
+\begin{frame}[fragile]{Nuestras herramientas}
+
+Utilizaremos Spyder como entorno para trabajar en Python. En las compus del laboratorio está disponible. Si trajiste tu compu, andá instalándotelo si no lo tenés.
+
+\vskip11pt
+
+Como guía de trabajo, utilizaremos la disponible en \emph{http://goo.gl/B2q73R}
+
+\end{frame}
+
+
+
+\subsection{¡Ahora sí! Empecemos con lo básico}
+\begin{frame}[fragile]
+  \frametitle{Empecemos con lo básico: las palabras}
+  Como todo lenguaje, Python tiene un vocabulario de 31 palabras \emph{claves}
+  \begin{verbatim}
+    and       del       from      not       while
+    as        elif      global    or        with
+    assert    else      if        pass      yield
+    break     except    import    print
+    class     exec      in        raise
+    continue  finally   is        return 
+    def       for       lambda    try
+  \end{verbatim}
+  Con esto se puede hablar y escribir Python
+\end{frame}
+
+\subsection{¿Qué es un dato?}
+\begin{frame}
+    \frametitle{¿Qué es realmente un dato?}
+    Los datos representan valores o cantidades de la vida real, como ser cantidad de manzanas que llevo en un canasto, o cantidad de monedas que puedo gastar al comprar un caramelo.
+    \vskip11pt
+    Un dato tiene un \emph{valor} numérico (binario), ya que la computadora debe guardarlo de alguna forma, pero si le defino un \emph{tipo} también se que es realmente y que representa de la vida real (un número, una palabra, etc).
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{¿Y qué tipo de datos puedo usar?}
+    Los tipos de datos básicos son
+    \begin{itemize}[<+->]
+    \item Valores lógicos de verdad o valores \emph{booleanos} (\texttt{False} y \texttt{True})
+    \item Enteros (1, 2, 5443, etc)
+    \item Reales con punto decimal flotante (o coma flotante) (1.2, 5.61$\times 10^2$, etc)
+    \item Cadenas (o \emph{strings}) de caracteres de texto (u'Hola Mundo',u"Ñoño'",u'\# Números' etc). Son un tipo especial de \emph{lista}, con métodos especiales.
+    \item Listas de todos los anteriores sin necesidad de ser homogéneos ([1,2,3], ['H','o','l','a'], [True,False,0,1])
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    Ahora necesitamos las \emph{variables}. Escriban esto en la consola de Python
+    \begin{verbatim}
+        >>> a = 5
+        >>> type(a)
+        <class 'int'>
+    \end{verbatim}
+    Hicimos un entero, prueben con \texttt{True}, '5', 1.2 y [2, 3, 4]. \\Por ejemplo:
+    \begin{verbatim}
+        >>> a = '5'
+        >>> type(a)
+    \end{verbatim}
+    %Nota: si vuelve a ejecutar \texttt{type(a)} sigue dando el último valor ingresado con \texttt{a = ALGO}. La operación \texttt{=} corresponde a \emph{asignar valores}, no igualdad.
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------
+
+\section{Estructuras del lenguaje}
+\subsection{Control de flujo}
+\begin{frame}[fragile]
+    \frametitle{Ahora un poco de control al asunto}
+    Ejecuten el siguiente comando
+    \begin{verbatim}
+        >> print('Hola mundo')
+        Hola mundo
+    \end{verbatim}
+    y ahora quiero repetirlo \textbf{10} veces. ¿Cómo lo hago?
+    \begin{itemize}
+    \item<+> Método mecánico \begin{verbatim}
+     print('Hola mundo')
+     print('Hola mundo')
+     ...
+     print('Hola mundo')
+    \end{verbatim}
+    \item<+> Que la computadora sepa que tiene que repetir 10 veces
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{El entorno $for$}
+    ¿Cómo puede saber la computadora eso? Para eso existen bucles (loops en inglés). 
+    \begin{verbatim}
+    >>> for i in range(10):
+    ...     print('Hola mundo')
+    ...
+    Hola mundo
+    Hola mundo
+    ...
+    Hola mundo
+    \end{verbatim}
+    Ahora veamos qué es cada cosa\ldots
+    
+    \vspace{5mm}
+    \tiny{Nota: \textbf{Acuérdense de revisar sintaxis y tabulado}}
+\end{frame}
+    
+%\begin{frame}[fragile]
     
 
-    \begin{document}
-    
-    
-    \maketitle
-    
-    
+%\end{frame}
 
+\begin{frame}[fragile]
+\frametitle{El entorno $for$}
+    \begin{onlyenv}<1>
+        \begin{verbatim}
+            >>> range(10)
+            [0,1,2,3,4,5,6,7,8,9]
+        \end{verbatim}
+        Genera una lista del 0 a 9 (uno menos que el valor que ingresamos). \textbf{Tiene 10 elementos}.
+        
+        \vspace{2cm}
+        \tiny{Nota: Prestar atención a que el primer elemento de las listas es el 0.
+        Las listas tienen \textit{desde 0 hasta n-1 elementos}.
+    \end{onlyenv}
     
-    \begin{figure}[htbp]
+    \begin{onlyenv}<2-3>
+    Entonces con 
+    \begin{verbatim}
+        >>> for i in range(10):
+        ...    print('Hola mundo')
+        ...
+    \end{verbatim}
+    la computadora sabe \emph{literalmente} lo que dice, en inglés: por cada elemento \texttt{i} de la lista \texttt{range(10)}, haz \texttt{print('Hola mundo')}.
+
+    \end{onlyenv}
+    \only<3>{\center \alert{Es \emph{exactamente} lo que queríamos que la computadora hiciese}}
+    \begin{onlyenv}<4>
+        \vskip11pt
+        Otro ejemplo, más ilustrativo de ''recorrer una lista''
+        \begin{verbatim}
+            >>> for i in range(10):
+            ...     print(i)
+            ...
+            0
+            1
+            2
+            ...
+            9
+        \end{verbatim}
+    \end{onlyenv}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{El entorno $for$}
+    \frametitle{El entorno $while$}
+    Además del \texttt{for}, existe otra estructura de bucle
+    \begin{small}
+    \begin{verbatim}
+        >>> i = 0
+        >>> while i < 10:
+        ...     print(i)
+        ...     i = i+1      -->  también pueden escribir
+        ...                       i += 1 que es lo mismo
+        0                         
+        1
+        ...
+        9
+    \end{verbatim}
+    \end{small}
+    El bucle al entrar verifica que \verb|i < 10| sea verdadero y luego ejecuta lo que viene abajo. Si no existiese el último comando \texttt{i = i+1}, nunca cambiaría el contador y nunca terminaría. Un bucle \emph{infinito}.
+\end{frame}
+
+
+
+\subsection{Condiciones en los programas}
+
+\begin{frame}[fragile]
+    \frametitle{Pongamos condiciones a este programa}
+    ¿Qué pasa si tengo esto:
+    \begin{verbatim}
+        >>> for i in range(10):
+        ...     print(i)
+        ...
+        0
+        1
+        2
+        ...
+        9
+    \end{verbatim}
+    pero quiero que imprima solamente los números pares entre 3 y 8 (inclusive), sin cambiar la lista que se ''recorre''? \footnotesize{(en general, no vas a poder hacer esto o no querés)}.
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{El entorno $if$}
+    \begin{onlyenv}<+>
+    Para lo anterior tengo la siguiente estructura:
+    \begin{verbatim}
+    >>> for i in range(10):
+    ...     if i <= 8 and i >= 3:
+    ...         if i % 2 == 0:
+    ...             print(i)
+    ...
+    \end{verbatim}
+    El comando \texttt{if} ejecuta lo que viene a continuación sólo si la condición es verdadera (en este caso que \texttt{i} sea mayor que 3 y menor que 8). Las condiciones verdaderas dan valores booleanos \texttt{True}. 
+    
+    Vean que puedo tener \texttt{if} dentro de \texttt{if}, lo que se llama \textit{anidar}. 
+    
+    \vspace{5mm}
+    \tiny{Nota: El comando \%, llamado \textit{módulo}, da el resto de la división de \texttt{i} en 2, que es 0 si \texttt{i} es par.}
+    \end{onlyenv}
+    
+    
+    \begin{onlyenv}<+>
+        Prueben usar
+        \begin{verbatim}
+        >>> i = 3
+        >>> i < 8
+        True
+        >>> i > 3
+        False
+        >>> i % 2 == 0
+        False
+        \end{verbatim}
+        Para igualar expresiones en el sentido matemático usamos \texttt{==}.
+    \end{onlyenv}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{El entorno $if$}
+    \begin{onlyenv}<1-2>
+    Resumiendo, el \texttt{if}
+    \begin{verbatim}
+    >>> if CONDICION:
+    ...     ejecuto si es verdadero
+    \end{verbatim}
+    \end{onlyenv}
+    \only<2>{¿Que pasa si quiero ejecutar algo si es falsa la condición?}
+    \begin{onlyenv}<3>
+        Agrego un \texttt{else}
+        \begin{verbatim}
+        >>> a = 3
+        >>> if a < 5:
+        ...     print(True)
+        ... else:
+        ...     print(False)
+        ...
+    \end{verbatim}
+    \end{onlyenv}
+    \begin{onlyenv}<4>
+        Si no es verdadera la condición inicial, podemos preguntarnos si hay una condición que si sea verdadera, como en el caso anterior
+        \begin{verbatim}
+        >>> a = 3
+        >>> if a < 5:
+        ...     print(True)
+        ... elif a == 5:
+        ...     print('Iguales')
+        ... else:
+        ...     print(False)
+        ...
+    \end{verbatim}
+    Primero verifica la primera, después verifica la segunda condición y si ninguna es verdadera ejecuta lo que está dentro de \texttt{else}.
+    \end{onlyenv}
+\end{frame}
+
+\subsection{Funciones}
+
+\begin{frame}[fragile]
+    \frametitle{El entorno $if$}
+    \frametitle{Reutilizando la receta}
+    Imaginate que tenés que ejecutar una operación de forma seguida pero no de forma regular, como por ejemplo
+    \begin{verbatim}
+        >>> a = 2
+        >>> b = 5
+        >>> c = 3
+        >>> d = a + b + c
+        >>> d
+        10
+    \end{verbatim}
+    
+    
+\end{frame}
+
+\begin{frame}
+\frametitle{Reutilizando la receta}
+    Algo tan simple como eso lo queremos hacer modular, queremos una estructura que nos de posibilidad de sumar 3 números en cualquier lugar.\\
+    \only<2->{\begin{center}¿Cómo lo hacemos?\end{center}}
+    \only<3>{\huge\center Funciones}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funciones}
+    \begin{verbatim}
+        >>> def Suma(a,b,c):
+        ...     d = a + b + c
+        ...     return d
+        >>> Suma(2,5,3)
+        10
+    \end{verbatim}
+    Prueben transformar en funciones todo lo que escribieron hasta ahora.
+    
+    \texttt{a,b,c} son \emph{argumentos} de la función Suma y con \texttt{return} la función devuelve un resultado, como una función matemática.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Funciones que nos resuelven todo}
+    ¿Se acuerdan de \texttt{range(10)}? Bueno, es una función de una biblioteca o \emph{biblioteca} básica de Python.
+    
+    Las funciones básicas más usadas
+    {\small
+    \begin{center}
+    \begin{verbatim}
+    abs()     bin()   bool()   chr()   
+    divmod()  float() format() help()  
+    input()   open()  print()  len()
+    list()    map()   max()    min()   
+    range()   type()     
+    \end{verbatim}
+    \end{center}
+    }
+    De las funciones básicas, la más importante para el recién empezado es la función \texttt{help()} a la cual le podemos pasar el nombre de cualquier función e imprimirá la ayuda escrita previamente. Por ejemplo, escriban \texttt{help(list)} (pueden salir presionando \emph{q})
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Más funciones que nos resuelven todo}
+    En caso de querer usar funciones matemáticas necesitamos usar
+    \begin{verbatim}
+    >>> import math
+    >>> math.sin(math.pi)
+    -1
+    \end{verbatim}
+    Con \texttt{import} le decimos al intérprete de Python que traiga el paquete math y ahí vos lo podés usar.\\ Como ya vimos antes, los \emph{paquetes} son programas y utilidades organizadas para el uso posterior, en particular los programas están organizados en funciones ya que son \emph{el método} usado para reutilizar programas.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Más funciones que nos resuelven todo}
+    Otro ejemplo puede ser el paquete \texttt{os}, que son funciones de sistema operativo
+    \begin{verbatim}
+    >>> import os
+    >>> os.urandom(10)
+    \end{verbatim}
+    que nos da una cadena aleatoria de 10 bytes.
+
+    Hasta ahora hablamos de paquetes básicos de la instalación. En próximos encuentros hablaremos profundamente de las bibliotecas científicas \textsc{numpy}, \textsc{scipy} y \textsc{matplotlib}, que pueden ir bajando e instalado.
+\end{frame}
+
+
+\begin{frame}[fragile]{Gráficos}
+
+Trabajaremos con una de estas para graficar (\textsc{matplotlib})
+y con otra para trabajar numéricamente (\textsc{numpy})
+\begin{verbatim}
+>>> from matplotlib import pyplot as plt
+>>> import numpy as np
+\end{verbatim}
+
+Probaremos graficar una función elemental.
+\end{frame}
+
+\begin{frame}[fragile]
+
+Inventemos un dominio y una función imagen. Son supuestas mediciones así que aportemos ruido.
+
+\begin{verbatim}
+>>> x = np.linspace(-5, 5)
+>>> y = x**2 -3
+
+>>> ruido = np.random.rand(len(y))*0.8
+>>> y = y+ruido
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+
+Ahora pidamos que grafique.
+
+\begin{verbatim}
+>>> plt.scatter(x, y)
+>>> plt.xlabel('Variable independiente')
+>>> plt.ylabel('x^2')
+>>> plt.grid()
+
+>>> plt.show() #(que nos muestre el gráfico)
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+\begin{figure}
 \centering
-\includegraphics{logos_python_fifa.png}
-\caption{taller\_python}
+\includegraphics[width=0.8\textwidth]{fig/Grafico.png}
+\caption{Gráfico de $f(x) = x^2-3$}
+\label{fig:my_label}
 \end{figure}
 
-    \section{Programar ¿con qué se
-come?}\label{programar-con-quuxe9-se-come}
-
-    La computadora es una gran gran calculadora que permite hacer cualquier
-tipo de cuenta de las que necesitemos dentro de la Física (y de la vida
-también) mientras sepamos cómo decirle a la máquina qué cómputos hacer.
-
-La computadora para hacer cuentas tiene que almacenar los números que
-necesitemos y luego hacer operaciones con ellos. Nuestros valores
-numéricos se guardan en espacios de memoria, y esos espacios tienen un
-nombre, un rótulo con el cual los podremos llamar y pedirle a la
-computadora que los utilice para operar con ellos, los modifique, etc.
-Ese nombre a cada espacio de memoria se asigna, al menos en Python, con
-el símbolo = que significa de ahora en más: ``asignación''.
-
-Pero no sólamente guardaremos valores numéricos. Además de haber
-distintos tipos de valores numéricos, como veremos ahora, podemos
-guardar otros tipos de datos, como texto (strings) y listas (lists)
-entre muchos otros. Todos los tipos de valores que podremos almacenar
-difieren entre si el espacio en memoria que ocupan y las operaciones que
-podremos hacer con ellos.
-
-Veamos un par de ejemplos
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{5}
-        \PY{n}{y} \PY{o}{=} \PY{l+s}{\PYZsq{}}\PY{l+s}{Hola mundo!}\PY{l+s}{\PYZsq{}}
-        \PY{n}{z} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}
-\end{Verbatim}
-
-    Aquí hemos guardado en un espacio de memoria llamado por nosotros ``x''
-la información de un valor de tipo entero, 5, en otro espacio de
-memoria, que nosotros llamamos ``y'' guardamos el texto ``Hola mundo!''.
-En Python, las comillas indican que lo que encerramos con ellas es un
-texto. x no es un texto, así que Python lo tratará como variable para
-manipular. ``z'' es el nombre del espacio de memoria donde se almacena
-una lista con 3 elementos enteros.
-
-Podemos hacer cosas con esta información. Python es un lenguaje
-interpretado (a diferencia de otros como Java o C++), eso significa que
-ni bien nosotros le pedimos algo a Python, éste lo ejecuta. Así es que
-podremos pedirle por ejemplo que imprima en pantalla el contenido en y,
-el tipo de valor que es x (entero) entre otras cosas.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{print} \PY{n}{y}
-        \PY{k}{print} \PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}
-        \PY{k}{print} \PY{n+nb}{type}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{z}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-Hola mundo!
-<type 'int'>
-<type 'str'> <type 'list'> 3
-    \end{Verbatim}
-
-    Vamos a utilizar mucho la función \emph{type()} para entender con qué
-tipo de variables estamos trabajando. \emph{type()} es una función
-predeterminada por Python, y lo que hace es pedir como argumento (lo que
-va entre los paréntesis) una variable y devuelve inmediatamente el tipo
-de variable que es.
-
-    \subsubsection{Ejercicio 1}\label{ejercicio-1}
-
-En el siguiente bloque cree las variables ``dato1'' y ``dato2'' y guarde
-en ellas los textos ``estoy programando'' y ``que emocion!''. Con la
-función \emph{type()} averigue qué tipo de datos se almacena en esas
-variables.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{c}{\PYZsh{} Realice el ejercicio 1}
-\end{Verbatim}
-
-    Para las variables \emph{integers}(enteros) y \emph{floats} (flotantes)
-podemos hacer las operaciones matemáticas usuales y esperables. Veamos
-un poco las compatibilidades entre estos tipos de variables.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{5}
-        \PY{n}{b} \PY{o}{=} \PY{l+m+mi}{7}
-        \PY{n}{c} \PY{o}{=} \PY{l+m+mf}{5.0}
-        \PY{n}{d} \PY{o}{=} \PY{l+m+mf}{7.0}
-        \PY{k}{print} \PY{n}{a}\PY{o}{+}\PY{n}{b}\PY{p}{,} \PY{n}{b}\PY{o}{+}\PY{n}{c}\PY{p}{,} \PY{n}{a}\PY{o}{*}\PY{n}{d}\PY{p}{,} \PY{n}{a}\PY{o}{/}\PY{n}{b}\PY{p}{,} \PY{n}{a}\PY{o}{/}\PY{n}{d}\PY{p}{,} \PY{n}{c}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-12 12.0 35.0 0 0.714285714286 25.0
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 2}\label{ejercicio-2}
-
-Calcule el resultado de \[ \frac{(2+7.9)^2}{4^{7.4-3.14*9.81}-1} \] y
-guárdelo en una variable
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{c}{\PYZsh{} Realice el ejercicio 2. El resultado esperado es \PYZhy{}98.01}
-\end{Verbatim}
-
-    \subsection{Listas}\label{listas}
-
-    Las listas son cadenas de datos de cualquier tipo, unidos por estar en
-una misma variable, con posiciones dentro de esa lista, con las cuales
-nosotros podemos llamarlas. En Python, las listas se enumeran desde el 0
-en adelante.
-
-Estas listas también tienen algunas operaciones que le son válidas.
-
-Distintas son las tuplas. Las listas son editables, pero las tuplas no.
-Esto es importante cuando, a lo largo del desarrollo de un código donde
-necesitamos que ciertas cosas no cambien, no editemos por error valores
-fundamentales de nuestro problema a resolver.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{lista1} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{saraza}\PY{l+s}{\PYZsq{}}\PY{p}{]}
-        \PY{k}{print} \PY{n}{lista1}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{lista1}\PY{p}{)}
-        \PY{k}{print} \PY{n}{lista1}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{lista1}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-        \PY{k}{print} \PY{n}{lista1}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{lista1}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
-        \PY{k}{print} \PY{n}{lista1}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-[1, 2, 'saraza'] <type 'list'>
-2 <type 'int'>
-saraza <type 'str'>
-saraza
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{lista2} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}
-        \PY{n}{lista3} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{]}
-        \PY{k}{print} \PY{n}{lista2}\PY{o}{+}\PY{n}{lista3}
-        \PY{k}{print} \PY{n}{lista2}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{+}\PY{n}{lista3}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-[2, 3, 4, 5, 6, 7]
-9
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{tupla1} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
-        \PY{n}{lista4} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}
-        \PY{n}{lista4}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}
-        \PY{k}{print} \PY{n}{lista4}
-        \PY{c}{\PYZsh{}tupla1[0] = 0}
-        \PY{k}{print} \PY{n}{tupla1}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-[1, 2, 0]
-(1, 2, 3)
-    \end{Verbatim}
-
-    Hay formas muy cómodas de hacer listas. Presentamos una que utilizaremos
-mucho, que es usando la función \emph{range}.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{listilla} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
-        \PY{k}{print} \PY{n}{listilla}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{listilla}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <type 'list'>
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 3}\label{ejercicio-3}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Haga una lista con los resultados de los últimos dos ejercicios y que
-  la imprima en pantalla
-\end{enumerate}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Sobreescriba en la misma variable la misma lista pero con sus
-  elementos permutados e imprima nuevamente la lista
-\end{itemize}
-
-Ejemplo de lo que debería mostrarse en pantalla
-
-\emph{{[}`estoy programando', `que emocion!', -98.01{]}}
-
-\emph{{[}`estoy programando', -98.01, `que emocion!'{]}}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}9}]:} \PY{c}{\PYZsh{} Realice el ejercicio 3}
-\end{Verbatim}
-
-    \subsubsection{Ejercicio 4}\label{ejercicio-4}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Haga una lista con la función \emph{range} de 15 elementos y sume los
-  elementos 5, 10 y 12
-\end{enumerate}
-
-\begin{itemize}
-\item
-  Con la misma lista, haga el producto de los primeros 4 elementos de
-  esa lista
-\item
-  Con la misma lista, reste el último valor con el primero
-\end{itemize}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c}{\PYZsh{} Realice el ejercicio 4}
-\end{Verbatim}
-
-    \subsection{Booleans}\label{booleans}
-
-    Este tipo de variable tiene sólo dos valores posibles: 1 y 0, o
-\emph{True} y \emph{False}. Las utilizaremos escencialmente para que
-Python reconozca relaciones entre números.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}10}]:} \PY{k}{print} \PY{l+m+mi}{5}\PY{o}{\PYZgt{}}\PY{l+m+mi}{4}
-         \PY{k}{print} \PY{l+m+mi}{4}\PY{o}{\PYZgt{}}\PY{l+m+mi}{5}
-         \PY{k}{print} \PY{l+m+mi}{4}\PY{o}{==}\PY{l+m+mi}{5} \PY{c}{\PYZsh{}La igualdad matemática se escribe con doble ==}
-         \PY{k}{print} \PY{l+m+mi}{4}\PY{o}{!=}\PY{l+m+mi}{5} \PY{c}{\PYZsh{}La desigualdad matemática se escribe con !=}
-         \PY{k}{print} \PY{n+nb}{type}\PY{p}{(}\PY{l+m+mi}{4}\PY{o}{\PYZgt{}}\PY{l+m+mi}{5}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-True
-False
-False
-True
-<type 'bool'>
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 5}\label{ejercicio-5}
-
-Averigue el resultado de \emph{4!=5==1}. ¿Dónde pondría paréntesis para
-que el resultado fuera distinto?
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{c}{\PYZsh{} Realice el ejercicio 5}
-\end{Verbatim}
-
-    \subsection{Control de flujo: condicionales e iteraciones (if y for para
-los
-amigos)}\label{control-de-flujo-condicionales-e-iteraciones-if-y-for-para-los-amigos}
-
-    Si en el fondo un programa es una serie de algoritmos que la computadora
-debe seguir, un conocimiento fundamental para programar es saber cómo
-pedirle a una computadora que haga operaciones si se cumple una
-condición y que haga otras si no se cumple. Nos va a permitir hacer
-programas mucho más complejos. Veamos entonces como aplicar un
-\emph{if}.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{parametro} \PY{o}{=} \PY{l+m+mi}{5}
-         \PY{k}{if} \PY{n}{parametro} \PY{o}{\PYZgt{}} \PY{l+m+mi}{0}\PY{p}{:} \PY{c}{\PYZsh{} un if inaugura un nuevo bloque indentado}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Tu parametro es}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{parametro}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{y es mayor que cero}\PY{l+s}{\PYZsq{}}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Gracias}\PY{l+s}{\PYZsq{}}
-         \PY{k}{else}\PY{p}{:}            \PY{c}{\PYZsh{} el else inaugura otro bloque indentado}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Tu parametro es}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{parametro}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{y es menor o igual que cero}\PY{l+s}{\PYZsq{}}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Gracias}\PY{l+s}{\PYZsq{}}
-         \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Vuelva pronto}\PY{l+s}{\PYZsq{}}
-         \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{ }\PY{l+s}{\PYZsq{}}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-Tu parametro es 5 y es mayor que cero
-Gracias
-Vuelva pronto
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{parametro} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}
-         \PY{k}{if} \PY{n}{parametro} \PY{o}{\PYZgt{}} \PY{l+m+mi}{0}\PY{p}{:} \PY{c}{\PYZsh{} un if inaugura un nuevo bloque indentado}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Tu parametro es}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{parametro}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{y es mayor que cero}\PY{l+s}{\PYZsq{}}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Gracias}\PY{l+s}{\PYZsq{}}
-         \PY{k}{else}\PY{p}{:}            \PY{c}{\PYZsh{} el else inaugura otro bloque indentado}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Tu parametro es}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{parametro}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{y es menor o igual que cero}\PY{l+s}{\PYZsq{}}
-             \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Gracias}\PY{l+s}{\PYZsq{}}
-         \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{Vuelva pronto}\PY{l+s}{\PYZsq{}}
-         \PY{k}{print} \PY{l+s}{\PYZsq{}}\PY{l+s}{ }\PY{l+s}{\PYZsq{}}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-Tu parametro es -5 y es menor o igual que cero
-Gracias
-Vuelva pronto
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 6}\label{ejercicio-6}
-
-Haga un programa con un \emph{if} que imprima la suma de dos números si
-un tercero es positivo, y que imprima la resta si el tercero es
-negativo.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c}{\PYZsh{} Realice el ejercicio 6}
-\end{Verbatim}
-
-    Para que Python repita una misma acción \emph{n} cantidad de veces,
-utilizaremos la estructura \emph{for}. En cada paso, nosotros podemos
-aprovechar el ``número de iteración'' como una variable. Eso nos servirá
-en la mayoría de los casos.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{nueva\PYZus{}lista} \PY{o}{=} \PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{nada}\PY{l+s}{\PYZsq{}}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{tres}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{cuatro}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{7}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{7}\PY{o}{/}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{3}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{]}
-         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}       \PY{c}{\PYZsh{} i es una variable que inventamos en el for, y que tomará los valores de la }
-             \PY{k}{print} \PY{n}{nueva\PYZus{}lista}\PY{p}{[}\PY{n}{i}\PY{p}{]}   \PY{c}{\PYZsh{}lista que se genere con range(10)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-nada
-1
-2
-tres
-cuatro
-5
-6
-7
-8
-9
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 7}\label{ejercicio-7}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Haga otra lista con 16 elementos, y haga un programa que con un
-  \emph{for} imprima solo los primeros 7
-\end{enumerate}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Modifique el \emph{for} anterior y haga que imprima solo los elementos
-  pares de su lista
-\end{itemize}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c}{\PYZsh{} Realice el ejercicio 7}
-\end{Verbatim}
-
-    La estructura \emph{while} es poco recomendada en Python pero es
-importante saber que existe: consiste en repetir un paso mientras se
-cumpla una condición. Es como un \emph{for} mezclado con un \emph{if}.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}
-         \PY{k}{while} \PY{n}{i} \PY{o}{\PYZlt{}} \PY{l+m+mi}{10}\PY{p}{:} \PY{c}{\PYZsh{} tener cuidado con los while que se cumplen siempre. Eso daría lugar a los loops infinitos.}
-             \PY{n}{i} \PY{o}{=} \PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}
-             \PY{k}{print} \PY{n}{i}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-2
-3
-4
-5
-6
-7
-8
-9
-10
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 8}\label{ejercicio-8}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Hacer una función que calcule el factorial de N, siendo N la única
-  variable que recibe la función (Se puede pensar usando \emph{for} o
-  usando \emph{while}).
-\end{enumerate}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Hacer una función que calcule la sumatoria de los elementos de una
-  lista.
-\end{itemize}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c}{\PYZsh{} Realice el ejercicio 8}
-\end{Verbatim}
-
-    \subsection{Funciones}\label{funciones}
-
-    Pero si queremos definir nuestra propia manera de calcular algo, o si
-queremos agrupar una serie de órdenes bajo un mismo nombre, podemos
-definirnos nuestras propias funciones, pidiendo la cantidad de
-argumentos que querramos.
-
-Vamos a usar las funciones \emph{lambda} más que nada para funciones
-matemáticas, aunque también tenga otros usos. Definamos el polinomio
-$f(x) = x^2 - 5x + 6$ que tiene como raíces $x = 3$ y $x = 2$.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{f} \PY{o}{=} \PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{\PYZhy{}} \PY{l+m+mi}{5}\PY{o}{*}\PY{n}{x} \PY{o}{+} \PY{l+m+mi}{6}
-         \PY{k}{print} \PY{n}{f}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{,} \PY{n}{f}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{n}{f}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-0 0 6
-    \end{Verbatim}
-
-    Las otras funciones, las más generales, se las llama funciones
-\emph{def}, y tienen la siguiente forma.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}17}]:} \PY{k}{def} \PY{n+nf}{promedio}\PY{p}{(}\PY{n}{a}\PY{p}{,}\PY{n}{b}\PY{p}{,}\PY{n}{c}\PY{p}{)}\PY{p}{:}
-             \PY{n}{N} \PY{o}{=} \PY{n}{a} \PY{o}{+} \PY{n}{b} \PY{o}{+} \PY{n}{c} \PY{c}{\PYZsh{} Es importante que toda la función tenga su contenido indentado}
-             \PY{n}{N} \PY{o}{=} \PY{n}{N}\PY{o}{/}\PY{l+m+mf}{3.0}
-             \PY{k}{return} \PY{n}{N}
-         \PY{n}{mipromedio} \PY{o}{=} \PY{n}{promedio}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)} \PY{c}{\PYZsh{} Aquí rompimos la indentación}
-         \PY{k}{print} \PY{n}{mipromedio}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-5.66666666667
-    \end{Verbatim}
-
-    \subsubsection{Ejercicio 9}\label{ejercicio-9}
-
-Hacer una función que calcule el promedio de $n$ elementos dados en una
-lista.
-
-\textbf{Sugerencia}: utilizar las funciones \emph{len()} y \emph{sum()}
-como auxiliares.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}18}]:} \PY{c}{\PYZsh{} Realice el ejercicio 9}
-\end{Verbatim}
-
-    \subsubsection{Ejercicio 10}\label{ejercicio-10}
-
-Usando lo que ya sabemos de funciones matemáticas y las bifurcaciones
-que puede generar un \emph{if}, hacer una función que reciba los
-coeficientes $a, b, c$ de la parábola $f(x) = ax^2 + bx + c$ y calcule
-las raíces \emph{si} son reales (es decir, usando el discriminante
-$\Delta = b^2 - 4ac$ como criterio), y sino que imprima en pantalla una
-advertencia de que el cálculo no se puede hacer en $\mathbb{R}$.
-
-\subsubsection{Bonus track 1}\label{bonus-track-1}
-
-Modificar la función anterior para que calcule las raíces de todos
-modos, aunque sean complejas.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}24}]:} \PY{c}{\PYZsh{} Realice el ejercicio 10}
-\end{Verbatim}
-
-    \subsubsection{Ejercicio 11}\label{ejercicio-11}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Hacer una función que calcule el factorial de N, siendo N la única
-  variable que recibe la función (Se puede pensar usando \emph{for} o
-  usando \emph{while}).
-\end{enumerate}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Hacer una función que calcule la sumatoria de los elementos de una
-  lista.
-\end{itemize}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c}{\PYZsh{} Realice el ejercicio 11}
-\end{Verbatim}
-
-    \subsection{Bibliotecas}\label{bibliotecas}
-
-    Pero las operaciones básicas de suma, resta, multiplicación y división
-son todo lo que un lenguaje como Python puede hacer ``nativamente''. Una
-potencia o un seno es álgebra no lineal, y para hacerlo, habría que
-inventarse un algoritmo (una serie de pasos) para calcular por ejemplo
-\emph{sen($\pi$)}. Pero alguien ya lo hizo, ya lo pensó, ya lo escribió
-en lenguaje Python y ahora todos podemos usar ese algoritmo sin pensar
-en él. Solamente hay que decirle a nuestro intérprete de Python dónde
-está guardado ese algoritmo. \textbf{Esta posibilidad de usar algoritmos
-de otros es fundamental en la programación, porque es lo que permite que
-nuestro problema se limite solamente a entender cómo llamar a estos
-algoritmos ya pensados y no tener que pensarlos cada vez}.
-
-Vamos entonces a llamar a una \emph{biblioteca} llamada \emph{math} que
-nos va a extender nuestras posibilididades matemáticas.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} \PY{k+kn}{import} \PY{n+nn}{math} \PY{c}{\PYZsh{} Llamamos a una biblioteca}
-         \PY{c}{\PYZsh{}Es usual usar math, en vez de m}
-         \PY{n}{r1} \PY{o}{=} \PY{n}{math}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
-         \PY{n}{r2} \PY{o}{=} \PY{n}{math}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{pi}\PY{p}{)}
-         \PY{n}{r3} \PY{o}{=} \PY{n}{math}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}
-         \PY{n}{r4} \PY{o}{=} \PY{n}{math}\PY{o}{.}\PY{n}{log}\PY{p}{(}\PY{n}{m}\PY{o}{.}\PY{n}{e}\PY{p}{)}
-         \PY{k}{print} \PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{,} \PY{n}{r3}\PY{p}{,} \PY{n}{r4}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-16.0 -1.0 2.0 1.0
-    \end{Verbatim}
-
-    Para entender cómo funcionan estas funciones, es importante recurrir a
-su \emph{documentation}. La de esta biblioteca en particular se
-encuentra en
-
-https://docs.python.org/2/library/math.html
-
-    \subsubsection{Ejercicio 12}\label{ejercicio-12}
-
-Use Python como calculadora y halle los resultados de
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  $\log(\cos(2\pi))$
-\end{enumerate}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  $\text{atanh}(2^{\cos(e)} -1) $
-\item
-  $\sqrt{x^2+2x+1}$ con $x = 125$
-\end{itemize}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{c}{\PYZsh{} Realice el ejercicio 12}
-\end{Verbatim}
-
-    \subsubsection{Bonus track 2}\label{bonus-track-2}
-
-Ahora que nos animamos a buscar nuevas bibliotecas y definir funciones,
-buscar la función \emph{newton()} de la biblioteca
-\textbf{scipy.optimize} para hallar $x$ tal que se cumpla la siguiente
-ecuación no lineal \[\frac{1}{x} = ln(x)\]
-
-    \subsection{Gráficos}\label{gruxe1ficos}
-
-    Lo siguiente que Python tiene de interesante para usar son sus
-facilidades para hacer gráficos. La biblioteca \textbf{matplotlib} nos
-ayudará en este caso. También utilizaremos una biblioteca llamada
-\textbf{numpy} por sus enormes ventajas para el cálculo numérico, motivo
-de nuestro próximo taller. Primero, definimos un vector que nos hace de
-dominio, luego, un vector imagen de alguna función, y luego haremos el
-gráfico. Se muestran aquí algunas de las opciones que tiene matplotlib
-para presentar un gráfico, pero yendo a la documentación podrán
-encontrar infinidad de herramientas para hacer esto.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}25}]:} \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k+kn}{import} \PY{n}{pyplot} \PY{k}{as} \PY{n}{plt}
-         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
-         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} pyplot
-         
-         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{200}\PY{p}{)} \PY{c}{\PYZsh{} con la función linspace generaremos un vector con componentes equidistantes.}
-         \PY{n}{y} \PY{o}{=} \PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{c}{\PYZsh{} el vector imagen será igual de largo que x}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZsq{}}\PY{l+s}{red}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZsq{}}\PY{l+s}{Curva x**2}\PY{l+s}{\PYZsq{}}\PY{p}{)} \PY{c}{\PYZsh{} ver qué pasa con \PYZsq{}r\PYZsq{}, \PYZsq{}g\PYZsq{}, \PYZsq{}*\PYZsq{} entre otros}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Mi primer ploteo}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Eje de las x}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Eje de las y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-         \PY{c}{\PYZsh{}plt.xlim(\PYZhy{}5,5)}
-         \PY{c}{\PYZsh{}plt.ylim(0,4)}
-         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s}{\PYZsq{}}\PY{l+s}{best}\PY{l+s}{\PYZsq{}}\PY{p}{)}
-         \PY{n}{grid}\PY{p}{(}\PY{n+nb+bp}{True}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{introduccion_files/introduccion_63_0.png}
-    \end{center}
-    { \hspace*{\fill} \\}
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------
+
+\section{Para la próxima\ldots}
+
+\subsection{Para seguir profundizando}
+\begin{frame}
+    \frametitle{Para seguir profundizando}
+    Con esto vimos lo básico de programación en Python.\\
+    Para seguir buscando tenemos\\
+    \url{http://python.org.ar/}\\
+    que tiene muchas páginas y libros para buscar. También recomendamos el tutorial en\\
+    \url{http://www.learnpython.org}
+    y el libro, con muchos ejemplos y exigiendo nada al lector:\\
+    Lutz, M (2008). \emph{Learning Python}. 3era Ed. O'Really
+\end{frame}
+
+
+\subsection{En el próximo capítulo del Taller de Programación para laboratorio\ldots}
+\begin{frame}
+    \frametitle{Para la próxima}
+   \begin{itemize}
+   \item Ajustes lineales
+   \item Interpolaciones
+   \item Derivación numérica
+   \item Integración numérica
+   \item Estadística básica
+   \end{itemize}
+\end{frame}
+
+
+
+
+%\begin{frame}{Blocks}
+%\begin{block}{Block Title}
+%You can also highlight sections of your presentation in a block, with it's own title
+%\end{block}
+%\begin{theorem}
+%There are separate environments for theorems, examples, definitions and proofs.
+%\end{theorem}
+%\begin{example}
+%Here is an example of an example block.
+%\end{example}
+%\end{frame}
+
+% Placing a * after \section means it will not show in the
+% outline or table of contents.
+%\section*{Summary}
+
+\begin{frame}
+  
+  \begin{center}\begin{Huge} ¡Gracias por venir! \end{Huge}\end{center}
+\end{frame}
+
+
+
+% All of the following is optional and typically not needed. 
+%\appendix
+%\section<presentation>*{\appendixname}
+%\subsection<presentation>*{For Further Reading}
+
+%\begin{frame}[allowframebreaks]
+%  \frametitle<presentation>{For Further Reading}
     
-    \subsubsection{Ejercicio 13}\label{ejercicio-13}
-
-Hallar de manera gráfica la $x$ que resuelve la ecuación del primer
-bonus track. Recordamos la ecuación. \[ \frac{1}{x}=ln(x)\]
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}26}]:} \PY{c}{\PYZsh{} Bloque para el ejercicio 13}
-\end{Verbatim}
-
-    \section{La importancia de las
-referencias}\label{la-importancia-de-las-referencias}
-
-    Para más referencias pueden googlear. Dejamos algunas de referencia:
-
-http://pybonacci.org/2012/06/07/algebra-lineal-en-python-con-numpy-i-operaciones-basicas/
-
-http://relopezbriega.github.io/blog/2015/06/14/algebra-lineal-con-python/
-
-http://pendientedemigracion.ucm.es/info/aocg/python/modulos\_cientificos/numpy/index.html
-
-Pero es importantísimo manejarse con la documentación de las bibliotecas
-que se utilizan
-
-https://docs.python.org/2/library/math.html
-
-http://docs.scipy.org/doc/numpy/reference/routines.linalg.html
-
-http://matplotlib.org/api/pyplot\_api.html
-
-    \section{Recursos}\label{recursos}
-
-Para seguir profundizando con la programación en Python, ofrecemos
-distintos recursos
-
-Un tutorial: http://www.learnpython.org/
-
-\emph{How to think like a computer scientist} (aprendizaje interactivo):
-http://interactivepython.org/runestone/static/thinkcspy/index.html
-
-Otro tutorial, en inglés, pero muy completo:
-http://learnpythonthehardway.org/book
-
-Coursera, que nunca está de más:
-https://www.coursera.org/learn/interactive-python-1
-
-Otro más: https://es.coursera.org/learn/python
-
-Y por fuera del taller, seguimos en contacto. Tenemos un grupo de
-Facebook donde pueden hacerse consultas y otros chicos que fueron al
-taller antes o aprendieron por sus medios podrán responderles. El grupo
-es https://www.facebook.com/groups/303815376436624/?fref=ts
-
-    \section{Y para seguir manijeando}\label{y-para-seguir-manijeando}
-
-Tenemos otro taller dentro de una semana donde profundizaremos el uso de
-algunas herramientas clave para el análisis de datos de Laboratorio. ¡No
-te lo podés perder!
-
-A parte, en nuestro Github
-(https://github.com/fifabsas/talleresfifabsas) iremos colgando nuevo
-material para ejemplificar, con problemas de las materias de Física
-resueltos numéricamente, herramientas de Labo y mucho más.
-
-    \section{Agradecimientos}\label{agradecimientos}
-
-Todo esto es posible gracias al aporte de mucha gente.
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Gente muy copada del DF como Hernán Grecco, Guillermo Frank, Osvaldo
-  Santillán , Martín Elías Costa y Agustín Corbat por hacer aportes a
-  estos talleres de diferentes maneras, desde poner su apellido para que
-  nos presten un labo hasta venir como invitado a un taller.
-\item
-  El Departamento de Computación que cuatrimestre a cuatrimestre nos
-  presta los labos desinteresadamente.
-\item
-  Los estudiantes del CODEP de Física, el CECEN y mucha gente que ayuda
-  con la difusión.
-\item
-  Pibes de la FIFA que prestan su tiempo a organizar el material y
-  llevan a cabo el taller.
-\item
-  Todos los que se acercan y piden que estos talleres se sigan dando y
-  nos siguen llenando los Labos. Sí ¡Gracias a todos ustedes!
-\end{itemize}
-
-
-    % Add a bibliography block to the postdoc
+%  \begin{thebibliography}{10}
     
+%  \beamertemplatebookbibitems
+  % Start with overview books.
+
+%  \bibitem{Author1990}
+%    A.~Author.
+%    \newblock {\em Handbook of Everything}.
+%    \newblock Some Press, 1990.
+ 
     
-    
-    \end{document}
+%  \beamertemplatearticlebibitems
+  % Followed by interesting articles. Keep the list short. 
+
+%  \bibitem{Someone2000}
+%    S.~Someone.
+%    \newblock On this and that.
+%    \newblock {\em Journal of This and That}, 2(1):50--100,
+%    2000.
+%  \end{thebibliography}
+%\end{frame}
+
+\end{document}
