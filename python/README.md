@@ -4,10 +4,19 @@
 
 ## Recursos
 
-### Elementos del taller
- - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf)
- - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.ipynb)
+### Instalación de Anaconda
+Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a mejorar como lenguaje.
+- [Instalación](http://continuum.io/downloads)
+- [Comandos útiles para usar la consola de Anaconda](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
+
+### Elementos del taller introductorio
+ - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/presentacion.pdf)
+ - [Diapositivas del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf)
  - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/ejercicios.pdf)
+ ... y para el hogar (para usar con Jupyter Notebook de Anaconda):
+ - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.ipynb)
+ 
+ ### Elementos del taller de cálculo numérico
  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf)
  - Cuaderno del taller numérico: EN PROGRESO
 
@@ -26,8 +35,7 @@
 - [python.org](http://www.python.org)
 - Argentina: [PyAr](http://python.org.ar/)
 
-### Interpretes y distribuciones
-Bajarse la v3.x si es posible; el desarrollo de la v2.x está congelado y no va a mejorar como lenguaje
+### Intérpretes y distribuciones
 - [Python](https://www.python.org/downloads/).
 - [Anaconda](http://continuum.io/downloads) y [Miniconda](http://conda.pydata.org/miniconda.html).
 
