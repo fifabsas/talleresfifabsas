@@ -5,9 +5,9 @@
 ## Recursos
 
 ### Elementos del taller
- - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/presentacion.pdf)
- - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/introduccion.ipynb)
- - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/ejercicios.pdf)
+ - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf)
+ - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.ipynb)
+ - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/ejercicios.pdf)
  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf)
  - Cuaderno del taller numérico: EN PROGRESO
 
