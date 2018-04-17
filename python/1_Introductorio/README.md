@@ -2,7 +2,7 @@
 
 ## Lista de temas: 
 
-- Print y raw_input
+- Print e input
 
 - Variables y operaciones:
 
@@ -10,6 +10,8 @@
     * Floats
     * Booleans
     * List and tuples
+
+- Uso del help()
 
 - Condicionales y ciclos: if, for and while
 
