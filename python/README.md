@@ -13,6 +13,7 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
  - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/presentacion.pdf)
  - [Diapositivas del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf)
  - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/ejercicios.pdf)
+ 
  ... y para el hogar (para usar con Jupyter Notebook de Anaconda):
  - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.ipynb)
  
