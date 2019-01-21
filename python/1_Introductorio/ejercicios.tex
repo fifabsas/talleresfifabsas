@@ -49,7 +49,7 @@
 
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
-\fancyhead[L]{Taller de Programación para laboratorio} % Custom header text
+\fancyhead[L]{Taller de Programación para ciencias exactas} % Custom header text
 \fancyhead[R]{{\small Departamento de Física, FCEN, UBA}}% Custom header text
 \fancyfoot[RO,LE]{\thepage} % Custom footer text
 \fancyfoot[LO,RE]{FIFA}
@@ -77,15 +77,15 @@
 \centerline{{\small \textit{Universidad de Buenos Aires}}}
 \vskip 1cm
 
-\centerline{{\bf\large {\sc Programación para laboratorio}}}
+\centerline{{\bf\large {\sc Programación para ciencias exactas}}}
 
-\centerline{{\bf\large {\sc $1^{er}$ cuatrimestre 2015}}}
+\centerline{{\bf\large {\sc $1^{er}$ cuatrimestre 2018}}}
 
-\centerline{{\ttfamily Talleres FIFA}}
+\centerline{{\ttfamily Talleres FIFA (Federación Interestudiantil de Físicos de Argentina)}}
 
 \begin{figure}[H]
  \centering
-   \includegraphics[width=0.3\textwidth]{../difusion/logos_python_fifa.png}
+   \includegraphics[width=0.3\textwidth]{logos_python_fifa.png}
  \label{FIFA}
  \end{figure}
 
@@ -98,7 +98,9 @@ Por favor, inscribite al curso, toma 3 segundos (cronometrados)
 
 \url{http://goo.gl/EfXGFB}
 
-Luego, para comenzar, en caso de que el IDE de las pc no funcionen, se puede probar programar online en la web: \url{https://cloud.sagemath.com/#settings}
+Luego, para comenzar, en caso de que el IDE de las PC no funcione, se puede probar programar online en la web: \url{https://www.python.org/shell/}
+%https://cloud.sagemath.com/#settings
+%https://www.pythonanywhere.com
 
 Ahora sí.
 
@@ -114,18 +116,18 @@ Las variables son formas de almacenar información. La diversidad de esta inform
 
 \begin{itemize}
 
-\item Comando \textit{print} y \textit{raw\_input}
+\item Comandos \textit{print} e \textit{input}
 
 Haga que Python realice las siguientes tareas:
 
 \begin{enumerate}
  \item Escriba el texto 'Hola mundo'.
- \item A continuación deje un espacio de tabulación (pruebe con $\backslash t$).
+ \item Deje un espacio de tabulación o un salto de línea entre \textit{hola} y \textit{mundo} (pruebe con $\backslash t$ y $\backslash n$).
 
  \item Guarde en una variable el texto 'Me tiemblan los dedos de la emoción de saber que estoy programando'.
  \item Guarde en dos variables dos textos, y que imprima ambas variables separadas por un espacio de tabulación. (¿Se puede usar el + para eso?)
- \item Pruebe escribir a=int(raw\_input('Dale un valor a \textit{a}: ')) ¿Qué tipo de variable es $a$? ¿Por qué sería necesario el comando \textit{int}?
- \item Aplique el comando \textit{len(variable)} sobre una de las variables con texto.
+ \item Pruebe escribir a=int(input('Dale un valor a \textit{a}: ')) ¿Qué tipo de variable es $a$? ¿Por qué sería necesario el comando \textit{int}? ¿Cambia la función del + con el tipo de variable que vincula?
+ \item Aplique el comando \textit{len(variable)} sobre una de las variables con texto y vea qué devuelve.
 \end{enumerate}
 
 
@@ -137,7 +139,7 @@ Haga que Python realice las siguientes tareas:
  \item Guarde en una variable \textit{a} el valor 7, en otra variable \textit{b} el valor 9, y que los sume.
  \item Pruebe ahora restarlas, multiplicarlas y dividirlas. ¿Qué otras operaciones matemáticas se pueden hacer con Python?
  \item Guarde en una variable el resultado de la división de dos variables \textit{integer}. ¿Qué tipo de variable es este resultado?
- \item Averigue: ¿Cuántas cifras puede almacenar una variable tipo \textit{float}?
+ \item Averigue: ¿Cuántas cifras puede almacenar una variable tipo \textit{float}? \footnote{Pista: \url{https://docs.python.org/3/tutorial/floatingpoint.html}}
  \item ¿Qué tipo de variable devuelve Python al aplicar \textit{round}(x,n)? (siendo \textit{x} un \textit{float} y \textit{n} la cantidad de decimales que uno desea redondear).
 \end{enumerate}
 
@@ -146,8 +148,8 @@ Haga que Python realice las siguientes tareas:
 
 \begin{enumerate}
  \item ¿Qué valor obtendrá de $5>5$? ¿Y de $5>=5$?
- \item ¿Qué obtendrá de escribir $ 4==5 == 3=!2$? ¿Son necesarios los paréntesis?
- \item ¿Valen los operadores $=$ y $\ne$ para \textit{strings}?
+ \item ¿Qué obtendrá de escribir $ 4==5 == 3 !=2$? ¿Son útiles los paréntesis?
+ \item ¿Valen los operadores $==$ y $!=$ para \textit{strings}?
 \end{enumerate}
 
 \item Variables tipo \textit{list} y tipo \textit{tuple}
@@ -155,23 +157,24 @@ Haga que Python realice las siguientes tareas:
 ¿Qué diferencia hay entre ambos tipos de variables?
 
 \begin{enumerate}
- \item Arme una lista con las materias en las que debe el examen final.
- \item Pasó el cuatrimestre y nos colgamos todos. Agregue un elemento a la lista anterior (\textit{append}) y pedile que te muestre el segundo elemento.
+ \item Arme una \textit{lista} con las materias en las que debe el examen final y asígnela a una variable.
+ \item Pasó el cuatrimestre y nos colgamos todos. Agregá un elemento a la lista anterior (\textit{append}) y pedile que te muestre el segundo elemento.
  \item ¿Cuál es la diferencia entre \textit{extend} y \textit{append}? ¿Y con  \textit{insert}?
  \item ¿Qué diferencia hay entre los comandos \textit{remove} y \textit{pop}? ¿Qué hace el comando \textit{sort}?
  \item Armada una lista, aplíquele la función \textit{len}.
  \item Pruebe \textit{range}(10), \textit{range}(3,13), \textit{range}(2,26,2). ¿Qué tipo de variable es el resultado?
+ \item Reconozca algunos de estos métodos en la descripción de las listas usando \textit{help(list)} (para ver más en el \textit{help} presionar \textit{enter} y para salir \textit{q}).
 \end{enumerate}
 \end{itemize}
 \fej
 
   \bigskip
 
-\bej \textbf{Librerías}
+\bej \textbf{Bibliotecas} (o \textbf{libraries} en inglés)
 
-Las librerías contienen funciones pensadas y distribuidas para extender las posibilidades de Python.
-Lo primero que debemos hacer es cargar la librería con el comando \textit{import}.
-Para resolver este ejercicio usaremos la librería \textit{math}.
+Las bibliotecas contienen funciones pensadas y distribuidas para extender las posibilidades de Python.
+Lo primero que debemos hacer es cargar la biblioteca con el comando \textit{import}.
+Para resolver este ejercicio usaremos la biblioteca \textit{math}.
 
 Probar luego de eso resolver los siguientes ejercicios.
 
@@ -192,7 +195,7 @@ Probar luego de eso resolver los siguientes ejercicios.
 
 \bej \textbf{Condicionales y funciones}
 
-Una función es un paquete aislado de acciones a realizar. Pueden ser definidas y nunca utilizadas. Definir funciones como serie de acciones a realizar con una o más variables nos da la posibilidad de aplicar ese paquete más de una vez sin necesidad de repetir código.
+Una función es un paquete aislado e independiente de acciones a realizar. Pueden ser definidas y nunca utilizadas. Definir funciones como serie de acciones a realizar con una o más variables nos da la posibilidad de aplicar ese paquete más de una vez sin necesidad de repetir código.
 
 Implemente las siguientes funciones (\textit{def} o \textit{lambda}) en Python:
 
@@ -211,18 +214,18 @@ Implemente las siguientes funciones (\textit{def} o \textit{lambda}) en Python:
 
 \bej \textbf{Gráficos}
 
-Para encaminarnos al próximo encuentro, resulta básico y muy útil saber graficar funciones de una variable respecto a otra. Para esto hay funciones ya armadas en las librerías \textit{Numpy} y \textit{Matplotlib}.
+Para encaminarnos al próximo encuentro, resulta básico y muy útil saber graficar funciones de una variable respecto a otra. Para esto hay funciones ya armadas en las bibliotecas \textit{Numpy} y \textit{Matplotlib}.
 
 Para experimentos numéricos, procederemos siempre de la misma manera:
 
 \begin{enumerate}
- \item Crearemos un dominio homogéneo con \textit{numpy.linspace()}
- \item Crearemos una imagen asociada a una función $f(x)$ definida por nosotros
+ \item Crearemos un dominio de valores equiespaciados con \textit{numpy.linspace()}.
+ \item Crearemos una imagen asociada a una función $f(x)$ definida por nosotros.
  \item Aportaremos ruido a los datos, simulando "mediciones", con funciones como \textit{numpy.random.rand()}
- \item Graficaremos $x$ vs $y$ en un \textit{scatter} o en un \textit{plot}, aportando una grilla, dándole límites al dominio y la imagen mostrados, dándole nombres tanto a los ejes como al gráfico
+ \item Graficaremos $x$ vs $y$ mediante las funciones \textit{scatter} o \textit{plot}, creando una grilla, dándole límites al dominio y la imagen mostrados y dándole nombres tanto a los ejes como al gráfico.
 \end{enumerate}
 
-Interesante sería ver cómo hacer varios gráficos juntos (\textit{subplot}) o como hacer gráficos de tipo histograma, cosas que abarcaremos en el próximo encuentro.
+Interesante sería ver cómo hacer varios gráficos juntos (\textit{subplot}) o cómo hacer gráficos de tipo histograma, cosas que abarcaremos en el próximo encuentro.
 
 \fej
 
