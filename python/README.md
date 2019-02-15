@@ -22,12 +22,10 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
  - Cuaderno del taller numérico: EN PROGRESO
 
 #### Usuarios y contraseñas de los Laboratorios del DC
-**clinux**
-- Usuario: clinux01, clinux02, ...  
-- Password: clinux01, clinux02, ...  
-**taller latex**
-- Usuario: tallerlatex-01, tallerlatex-02, ...  
-- Password: latex1409
+**Usuario local (borrar todo lo que hagan!)**
+- Usuario: clinux01
+- Password: clinux01
+
 
 ### Scripts simples (o no tanto)
  - [Propagación de errores](http://pastebin.com/WaB8qsQd)
