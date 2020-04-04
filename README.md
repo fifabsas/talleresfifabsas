@@ -1,27 +1,18 @@
 # Talleres FIFA Bs As
-![Taller de Python](https://github.com/Fifabsas/TayeresFifabsas/raw/master/difusion.png)
+En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) podés encontrar más información sobre los cursos.
 
 ### Inscripción
-Para mejorar nuestros talleres te pedimos que completes [un formulario](http://goo.gl/forms/x8ZkT2g026), que se tarda tres segundos en completar (cronometrados). Obviamente el formulario no es requisito para tomar parte del taller.
+Las inscripciones para el primer cuatrimestre de 2020 ya cerraron. Te esperamos el próximo cuatrimestre!
 
 ### LaTeX
-Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [ShareLatex](http://www.sharelatex.com), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles. 
+Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [Overleaft](https://www.overleaf.com/), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles. 
 
-#### [Recursos LaTeX](http://github.com/fifabsas/talleresfifabsas/tree/master/latex)
+En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) hay muchos recursos útiles para Latex!
 
 ### Python
-Nosotros usamos Python v3.x, que lo podés bajar con todas las librerías en el paquete [Anaconda](http://continuum.io/downloads). Como entorno de desarrollo podemos usar Spyder, que lo instala Anaconda, o podemos usar IPython, en la versión notebook, que te da un entorno muy interactivo web.  
+Nosotros usamos Python v3.x, que lo podés bajar con todas las librerías en el paquete [Anaconda](https://www.anaconda.com/distribution/#download-section). Como entorno de desarrollo podemos usar Spyder, que lo instala Anaconda, o Jupyter notebook, que es lo que solemos usar para mostrar el código en el curso.  
   
-Para los que no llegaron a anotar o se lo perdieron pero quieren venir al segundo, [acá está el notebook que usamos](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/introduccion.ipynb) (deben tener Jupyter o IPython Notebook, que viene con Anaconda, para correrlo, o desde acá se puede ver) y también la [presentación](https://github.com/fifabsas/talleresfifabsas/blob/master/python/introductorio/presentacion.pdf) que usamos alguna vez.  
-Si lograste terminar [la guía](https://github.com/Fifabsas/TayeresFifabsas/raw/master/python/introductorio/ejercicios.pdf), no vas a tener problemas en el próximo encuentro. Aún así, venite. *¡No te lo pierdas!*
-
-#### [Recursos Python](http://github.com/fifabsas/talleresfifabsas/tree/master/python)
+En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) pueden encontrar los notebook que mostramos en la clases y muchos otros recursos útiles para Python.
 
 ## Más info
 Para consultas tenemos un [grupo en Facebook](https://www.facebook.com/groups/303815376436624/) y además podés mandar un mail a [fifabsas@gmail.com](mailto:fifabsas@gmail.com)
-
-## Cómo usar este repositorio
-En la carpeta [tutorial_git](http://github.com/fifabsas/talleresfifabsas/tree/master/tutorial_git) está un tutorial visual para manejarse con Github, más que nada si no son administradores y necesitan agregar contenido.
-
-### Página web Talleres
-La página web está en la rama [gh-pages](https://github.com/fifabsas/talleresfifabsas/tree/gh-pages). Ahí hay un pequeño tutorial de como cambiarla.
