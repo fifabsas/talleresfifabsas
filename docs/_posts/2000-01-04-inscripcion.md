@@ -1,6 +1,6 @@
 ---
 title: "Inscripción"
-bg: blue_inscripcion
+bg: "#26547C"
 color: white
 fa-icon: check-square-o
 style: center
