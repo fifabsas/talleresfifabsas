@@ -28,7 +28,7 @@ colors:
   black:            '#111111'
   white:            '#f8f8f8'
   blue:             '#49a7e9'
-  blue_home:        '#4780AE'
+  blue_home:        '#EBF2FA'
   blue_python:      '#4780ae'
   blue_latex:       '#05668D'
   blue_inscripcion: '#26547C'
