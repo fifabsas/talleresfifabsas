@@ -16,4 +16,4 @@ Nosotros usamos Python v3.x, que lo podés bajar con todas las librerías en el 
 En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) pueden encontrar los notebook que mostramos en la clases y muchos otros recursos útiles para Python.
 
 ## Más info
-Para consultas tenemos un [grupo en Facebook](https://www.facebook.com/groups/303815376436624/) y además podés mandar un mail a [fifabsas@gmail.com](mailto:fifabsas@gmail.com)
+Para consultas tenemos un [grupo en Facebook](https://www.facebook.com/groups/303815376436624/), [canal de Discord](https://discord.gg/bN2KeTu) y además podés mandar un mail a [fifabsas@gmail.com](mailto:fifabsas@gmail.com)
