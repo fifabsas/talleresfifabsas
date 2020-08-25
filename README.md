@@ -6,7 +6,7 @@ Las inscripciones para el segundo cuatrimestre de 2020 están por abrir. Te espe
 La pre-inscripción pueden hacerla con este [LINK](https://forms.gle/Z1S8DL1N9YTyh6TP6) por favor, llenenla antes del día 05 de septiembre!
 
 ### LaTeX
-Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [Overleaft](https://www.overleaf.com/), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles.
+Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [Overleaf](https://www.overleaf.com/), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles.
 
 En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) hay muchos recursos útiles para Latex!
 
