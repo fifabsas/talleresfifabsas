@@ -9,27 +9,26 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
 - [Instalación](http://continuum.io/downloads)
 - [Comandos útiles para usar la consola de Anaconda](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
 
-### Elementos del taller introductorio
- - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/presentacion.pdf)
- - [Diapositivas del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf)
- - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/ejercicios.pdf)
- 
- ... y para el hogar (para usar con Jupyter Notebook de Anaconda):
+### Elementos del taller introductorio (1ra Clase)
+<!--  - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/presentacion.pdf) -->
+<!--  - [Diapositivas del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf) -->
+<!--   -->
+<!--  ... y para el hogar (para usar con Jupyter Notebook de Anaconda): -->
  - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.ipynb)
- 
- ### Elementos del taller de cálculo numérico
- - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf)
- - Cuaderno del taller numérico: EN PROGRESO
+ - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/ejercicios.pdf)
+
+### Elementos del taller de cálculo numérico (2da Clase)
+<!--  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf) -->
+ - [Cuaderno del taller numérico](2_Numerico/numerico.ipynb)
 
 #### Usuarios y contraseñas de los Laboratorios del DC
 **Usuario local (borrar todo lo que hagan!)**
 - Usuario: clinux01
 - Password: clinux01
 
-
-### Scripts simples (o no tanto)
- - [Propagación de errores](http://pastebin.com/WaB8qsQd)
-
+<!-- ### Scripts simples (o no tanto) -->
+<!--  - [Propagación de errores](http://pastebin.com/WaB8qsQd) -->
+<!--  -->
 ### Páginas oficiales
 - [python.org](http://www.python.org)
 - Argentina: [PyAr](http://python.org.ar/)
@@ -44,6 +43,7 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
 ### Tutoriales online
 - [Codeacademy](http://www.codecademy.com/tracks/python)
 - [Learn Python](http://www.learnpython.org/)
+- [Python para hacer física](https://marceluda.github.io/python-para-fisicos/)
 
 ### Libros
 - Lutz, M (2013). Learning Python, O’Reilly Media.
