@@ -6,4 +6,5 @@ fa-icon: check-square-o
 style: center
 ---
 
-#### Está lista la inscripcion para este cuatrimestre!! Pueden realizarla [AQUI](https://forms.gle/GWfKGXoGrBkYA9xT6). Por favor completenla lo antes posible!!
+#### Ya está cerrada la inscripción para el segundo cuatri del 2020. Te esperamos la siguiente edición!!
+<!-- #### Está lista la inscripcion para este cuatrimestre!! Pueden realizarla [AQUI](https://forms.gle/GWfKGXoGrBkYA9xT6). Por favor completenla lo antes posible!! -->
