@@ -10,3 +10,4 @@ Si están leyendo esto luego de la primera clase del taller y se topan con algú
 
 Cualquier duda sobre cualquiera de estos, no teman realizarla por nuestras vías habituales de comunicación, que justamente para eso están.
 
+
