@@ -6,16 +6,16 @@
 
 ### Instalación de Anaconda
 Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a mejorar como lenguaje.
-- [Instalación](http://continuum.io/downloads)
-- [Comandos útiles para usar la consola de Anaconda](https://conda.io/docs/_downloads/conda-cheatsheet.pdf)
+- [Instalación](https://www.anaconda.com/distribution/#download-section)
+- [Comandos útiles para usar la consola de Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
 
 ### Elementos del taller introductorio (1ra Clase)
 <!--  - [Presentación de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/presentacion.pdf) -->
 <!--  - [Diapositivas del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.pdf) -->
 <!--   -->
 <!--  ... y para el hogar (para usar con Jupyter Notebook de Anaconda): -->
- - [Cuaderno del taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/introduccion.ipynb)
- - [Ejercicios de taller introductorio](https://github.com/fifabsas/talleresfifabsas/blob/master/python/1_Introductorio/ejercicios.pdf)
+ - [Cuaderno del taller introductorio](1_Introductorio/introduccion.ipynb)
+ - [Ejercicios de taller introductorio](Ejercicios/)
 
 ### Elementos del taller de cálculo numérico (2da Clase)
 <!--  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf) -->
@@ -35,7 +35,7 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
 
 ### Intérpretes y distribuciones
 - [Python](https://www.python.org/downloads/).
-- [Anaconda](http://continuum.io/downloads) y [Miniconda](http://conda.pydata.org/miniconda.html).
+- [Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) y [Miniconda](http://conda.pydata.org/miniconda.html).
 
 ### Documentación oficial
 - [docs.python.org](http://docs.python.org)
