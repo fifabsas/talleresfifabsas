@@ -21,10 +21,10 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
 <!--  - [Presentación del taller numérico](https://github.com/fifabsas/talleresfifabsas/blob/master/python/numerico/presentacion.pdf) -->
  - [Cuaderno del taller numérico](2_Numerico/numerico.ipynb)
 
-#### Usuarios y contraseñas de los Laboratorios del DC
-**Usuario local (borrar todo lo que hagan!)**
-- Usuario: clinux01
-- Password: clinux01
+<!-- #### Usuarios y contraseñas de los Laboratorios del DC -->
+<!-- **Usuario local (borrar todo lo que hagan!)** -->
+<!-- - Usuario: clinux01 -->
+<!-- - Password: clinux01 -->
 
 <!-- ### Scripts simples (o no tanto) -->
 <!--  - [Propagación de errores](http://pastebin.com/WaB8qsQd) -->
@@ -44,6 +44,7 @@ Recomendamos bajar la versión de Python 3, Python 2.x está congelado y no va a
 - [Codeacademy](http://www.codecademy.com/tracks/python)
 - [Learn Python](http://www.learnpython.org/)
 - [Python para hacer física](https://marceluda.github.io/python-para-fisicos/)
+- [Kaggle Learn](https://www.kaggle.com/learn)
 
 ### Libros
 - Lutz, M (2013). Learning Python, O’Reilly Media.
