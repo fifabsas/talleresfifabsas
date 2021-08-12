@@ -17,9 +17,9 @@
 
 - Funciones def y lambda
 
-- Gráficos:
+<!-- - Gráficos: -->
 
-    - Creación de una lista de valores aleatorios
-    - Gráfico en scatter y plot
+<!--    - Creación de una lista de valores aleatorios -->
+<!--    - Gráfico en scatter y plot -->
 
 
