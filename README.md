@@ -2,9 +2,9 @@
 En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) podés encontrar más información sobre los cursos.
 
 ### Inscripción
-<!-- Las inscripciones para el verano 2021 ya cerraron. Te esperamos la próxima edición!! -->
+Las inscripciones para el último taller ya cerraron. Te esperamos la próxima edición!!
 <!-- Abrimos un primer formulario!! -->
-La inscripción para este cuatrimestre pueden hacerla con este [LINK](https://forms.gle/Fqq9aWKLn65qb9W87) por favor, llénenla lo antes posible!!
+<!-- La inscripción para este cuatrimestre pueden hacerla con este [LINK](https://forms.gle/Fqq9aWKLn65qb9W87) por favor, llénenla lo antes posible!! -->
 
 ### LaTeX
 Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [Overleaf](https://www.overleaf.com/), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles.
