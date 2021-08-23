@@ -12,26 +12,25 @@
 \graphicspath{{fig/}}
 
 % Caracteres especiales
-\def\A{\mathbb{A}}
-\def\C{\mathbb{C}}
-\def \N{\mathbb{N}}
-\def \P{\mathbb{P}}
-\def \Q{\mathbb{Q}}
-\def \R{\mathbb{R}}
-\def \Z{\mathbb{Z}}
-
-\def\zC{\mathbb{C}}
-\def \zN{\mathbb{N}}
-
-\def \zQ{\mathbb{Q}}
-\def \zR{\mathbb{R}}
-\def \zZ{\mathbb{Z}}
+% \def\A{\mathbb{A}}
+% \def\C{\mathbb{C}}
+% \def \N{\mathbb{N}}
+% \def \P{\mathbb{P}}
+% \def \Q{\mathbb{Q}}
+% \def \R{\mathbb{R}}
+% \def \Z{\mathbb{Z}}
+%
+% \def\zC{\mathbb{C}}
+% \def \zN{\mathbb{N}}
+%
+% \def \zQ{\mathbb{Q}}
+% \def \zR{\mathbb{R}}
+% \def \zZ{\mathbb{Z}}
 
 %  Ejercicio:
 \newtheorem{ejer}{Unidad}
 \newcommand{\bej}{\begin{ejer} \rm}
 \newcommand{\fej}{\end{ejer}}
-
 
 %
 \def\d{\displaystyle}
@@ -44,11 +43,8 @@
 
 \renewcommand{\headrulewidth}{1.5pt}
 
-
 \renewcommand{\footrulewidth}{1.5pt}
 
-% \fancyhead{} % Blank out the default header
-% \fancyfoot{} % Blank out the default footer
 \fancyhead[L]{Ejercicios complementarios del taller de Python}
 % \fancyhead[R]{{\small Departamento de Física, FCEN, UBA}}% Custom header text
 \fancyfoot[R]{\thepage} % Custom footer text
@@ -99,6 +95,9 @@ Estos ejercicios en general son menos guiados que los anteriores, y por ende má
 
 \item \texttt{es\_primo($n$)}: devuelve True si el input es un número primo. False en caso contrario.
 
+\item \texttt{divisores($n$)}: devuelve una lista con todos los divisores enteros del número $n$.
+    Para generar la lista pueden buscar el método \texttt{append}.
+
 \item \texttt{factorial($n$)}: devuelve el factorial del input $n$. Recordar que el factorial se define: $n! = n\cdot(n-1)\cdot(n-2)\cdot \,\ldots\, \cdot1$
 
 \item \texttt{absoluto($x$)}: devuelve el valor absoluto del input $x$. Si $x<0$ debería devolver $-x$ y si $x\ge 0$ debería devolver $x$.
@@ -131,7 +130,7 @@ Estos ejercicios en general son menos guiados que los anteriores, y por ende má
 \underline{Ejemplo}: La distancia de hamming entre \texttt{lamento} y \texttt{mamerto} es 2, ya que los únicos caracteres diferentes son el primero y el quinto.
 
 \item ¡Adivina un número del uno al diez! Defina un número del 1 al 10, luego pídale al usuario que ingrese un número. Si adivina el número que muestre un mensaje de felicitaciones y si no que siga intentando.\\
-	Para esto puede usar la función \texttt{input}. Deberá buscar en internet o la documentación de esta función, en particular para ver qué tipo de dato devuelve esta función (si es un \texttt{int, str, \ldots}).
+    Para esto puede usar la función \texttt{input}. Deberá buscar en internet o la documentación de esta función, en particular para ver qué tipo de dato devuelve esta función (si es un \texttt{int, str, \ldots}). Además, buscar cómo elegir un número aleatorio (o \texttt{random}) usando python.
 \end{enumerate}
 
 \begin{figure}[H]
