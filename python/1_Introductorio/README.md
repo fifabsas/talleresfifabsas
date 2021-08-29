@@ -2,7 +2,7 @@
 
 ## Lista de temas: 
 
-- Print e input
+- Print y type
 
 - Variables y operaciones:
 
