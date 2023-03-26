@@ -62,3 +62,9 @@ ENV/
 
 # macOS
 .DS_Store
+
+# conda environment
+fifa_env/
+
+# local config
+.flake8
