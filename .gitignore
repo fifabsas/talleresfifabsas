@@ -69,3 +69,6 @@ fifa_env/
 # local config
 .flake8
 .vscode/*
+
+# mails
+mails/*
