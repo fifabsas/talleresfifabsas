@@ -7,7 +7,7 @@ Las inscripciones para el último taller ya cerraron. Te esperamos la próxima e
 <!-- La inscripción para este cuatrimestre pueden hacerla con este [LINK](https://forms.gle/Fqq9aWKLn65qb9W87) por favor, llénenla lo antes posible!! -->
 
 ### LaTeX
-Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [Overleaf](https://www.overleaf.com/), que te permite tener editar varios un mismo archivo, mantieniendo un historial de los cambios y otras cositas más muy útiles.
+Para todo el taller de LaTeX (y para nuestros tps de labo también) usamos [Overleaf](https://www.overleaf.com/), que te permite editar de forma colaborativa (como Google Docs), mantieniendo un historial de los cambios y otras cositas más muy útiles.
 
 En la página de [Talleres FIFA Bs As](https://fifabsas.github.io/talleresfifabsas/) hay muchos recursos útiles para Latex!
 
