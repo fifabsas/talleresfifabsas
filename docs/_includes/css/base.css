@@ -98,7 +98,7 @@ h1, h2, h3 {
 /* #Links
 ================================================== */
 	a, a:visited { font-weight: bold; outline: 0; }
-	a:hover, a:focus { background-color: rgba(255,255,255,0.1); }
+	a:hover, a:focus { }
 	p a, p a:visited { line-height: inherit; }
 
 
