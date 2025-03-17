@@ -13,6 +13,7 @@
 .container               { position: relative; width: 960px; margin: 0 auto; padding: 0; }
 .container .column       { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
 .row                     { margin-bottom: 20px; }
+.row2                    { margin-bottom: 0px; }
 
 .container .small.column { width: 300px; }
 .container .half.column  { width: 460px; }
@@ -33,25 +34,25 @@
 
 /* ----- Mobile (Portrait) ----- */
   @media only screen and (max-width: 767px) {
-    .container                { width:  96%; }
+    .container                { width:  100%; }
     .container .column        { margin:  1%; }
 
     .container .small.column { width: 48%; }
     .container .half.column  { width: 48%; }
-    .container .big.column   { width: 98%; }
-    .container .full.column  { width: 98%; }
+    .container .big.column   { width: 100%; }
+    .container .full.column  { width: 100%; }
   }
 
 
 /* ----- Mobile (Landscape) -- 480px ----- */
   @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .container                { width:  92%; }
+    .container                { width:  100%; }
     .container .column        { margin:  2%; }
 
     .container .small.column { width: 46%; }
     .container .half.column  { width: 46%; }
-    .container .big.column   { width: 96%; }
-    .container .full.column  { width: 96%; }
+    .container .big.column   { width: 100%; }
+    .container .full.column  { width: 100%; }
   }
 
 

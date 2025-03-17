@@ -50,24 +50,29 @@
 
 /* #Basic Styles
 ================================================== */
-	body {
-		background: #fff;
-		font: 14px/21px "Raleway", "HelveticaNeue-Light", Arial, sans-serif;
-		color: #444;
-		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-		-webkit-text-size-adjust: 100%;
- }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+	background-image: url(img/kuramoto.png);
+	background-size:cover;
+	background-attachment: fixed;
+	font: 14px/21px "Roboto", "HelveticaNeue-Light", Arial, sans-serif;
+	color: #fff;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
 
 
 /* #Typography
 ================================================== */
-	h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
+		font-weight: 600; margin-top: 1.2em; margin-bottom: 0.6em;}
+	h4, h5, h6 {
 		font-weight: 300; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
-	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
-	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
-	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+	h1 { font-size: 46px; line-height: 50px; }
+	h2 { font-size: 35px; line-height: 40px; }
+	h3 { font-size: 28px; line-height: 34px; }
+	h4 { font-size: 21px; line-height: 30px; }
 	h5 { font-size: 17px; line-height: 24px; }
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
@@ -92,8 +97,8 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { text-decoration: underline; outline: 0; }
-	a:hover, a:focus { }
+	a, a:visited { font-weight: bold; outline: 0; }
+	a:hover, a:focus { background-color: rgba(255,255,255,0.1); }
 	p a, p a:visited { line-height: inherit; }
 
 
@@ -150,7 +155,7 @@
 	  margin-bottom: 20px;
 	  line-height: normal;
 	  padding: 8px 10px;
-	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+	  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 	.button:hover,
 	button:hover,

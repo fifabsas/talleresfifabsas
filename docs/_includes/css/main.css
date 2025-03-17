@@ -121,7 +121,7 @@ nav {
   z-index:100;
   top:0;
   left:0;
-  background:#2e2e2e;
+  background:#222222;
 }
 
 nav ul {
@@ -169,10 +169,9 @@ nav ul li:hover, nav ul li.active {
   position:relative;
   display:block;
   width:100%;
-  min-height:300px;
-  padding:210px 0;
-  background:url(img/bgnoise.png);
-  /* generated noise from noisetexturegenerator.com */
+  min-height:0px;
+  margin-bottom: 40px;
+  padding: 150px 0px;
 }
 
 .section:first-of-type {
@@ -184,10 +183,10 @@ nav ul li:hover, nav ul li.active {
   padding: 8px 0;
   min-height:0;
   text-align:center;
-  background-color:#2e2e2e;
+  background-color:#111111;
   background-image:none;
 }
-#footer .container p { font-size:13px; margin:0; }
+#footer .container p { font-size:13px; margin:0px !important; }
 
 .subtlecircle {
   text-align:center;
@@ -355,3 +354,19 @@ nav ul li:hover, nav ul li.active {
     column-count:         2;
   }
 }
+
+div.scroll-container {
+  display:block;
+  margin-top: 40px;
+	background-color: #333;
+	overflow: auto;
+	white-space: nowrap;
+	padding: 10px 0px;
+  width:99%;
+  height: 200px;
+  }
+  
+  div.scroll-container img {
+	padding: 10px;
+  height: 180px;
+  }
