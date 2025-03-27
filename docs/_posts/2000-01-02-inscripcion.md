@@ -14,4 +14,4 @@ style: center
 
 El curso apunta a cubrir las herramientas necesarias para encarar las materias de física (particularmente los laboratorios), pero está abierto a todes. Vamos a empezar desde cero y terminar usando algunas herramientas para analizar datos. 
 
-Pueden inscribirse [**AQUI**](https://forms.gle/ee56xn9r4e2NJFhbA). Por favor completar lo antes posible!!
+Pueden inscribirse [**AQUI**](https://forms.gle/V8AS16Esojn3BCaFA). Por favor completar lo antes posible!!
