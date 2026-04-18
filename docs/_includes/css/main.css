@@ -356,14 +356,15 @@ nav ul li:hover, nav ul li.active {
 }
 
 div.scroll-container {
-  display:block;
+  display: block;
   margin-top: 40px;
 	background-color: #333;
-	overflow: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
 	white-space: nowrap;
 	padding: 10px 0px;
   width:99%;
-  height: 200px;
+  height: 220px;
   }
   
   div.scroll-container img {

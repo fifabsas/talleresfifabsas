@@ -8,7 +8,7 @@ style: center
 
 <!-- #### Ya está cerrada la inscripción para el taller. Te esperamos la siguiente edición!! -->
 
-# Te esperamos la siguiente edición!!
+# ¡Te esperamos la siguiente edición!
 
 ## Está cerrada la inscripción al Taller de Python 🐍. 
 
